@@ -1,0 +1,322 @@
+fileFormatVersion: 2
+guid: bb013c82f38f97447b4245c2bffe7c9c
+ModelImporter:
+  serializedVersion: 23
+  fileIDToRecycleName:
+    100000: armature
+    100002: becken
+    100004: bein_L
+    100006: bein_R
+    100008: //RootNode
+    100010: bull
+    100012: fuss_L
+    100014: fuss_L2
+    100016: fuss_R
+    100018: fuss_R2
+    100020: hbein_L
+    100022: hbein_R
+    100024: hfuss_L
+    100026: hfuss_L2
+    100028: hfuss_R
+    100030: hfuss_R2
+    100032: kopf
+    100034: maul
+    100036: r_cken
+    100038: root
+    100040: schwanz
+    400000: armature
+    400002: becken
+    400004: bein_L
+    400006: bein_R
+    400008: //RootNode
+    400010: bull
+    400012: fuss_L
+    400014: fuss_L2
+    400016: fuss_R
+    400018: fuss_R2
+    400020: hbein_L
+    400022: hbein_R
+    400024: hfuss_L
+    400026: hfuss_L2
+    400028: hfuss_R
+    400030: hfuss_R2
+    400032: kopf
+    400034: maul
+    400036: r_cken
+    400038: root
+    400040: schwanz
+    4300000: Cube
+    4300002: bull
+    9500000: //RootNode
+    11100000: //RootNode
+    13700000: bull
+    2186277476908879412: ImportLogs
+  externalObjects: {}
+  materials:
+    importMaterials: 1
+    materialName: 3
+    materialSearch: 1
+    materialLocation: 0
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: "Invalid Avatar Rig Configuration. Missing or invalid transform:\n\tRequired
+      human bone 'LeftUpperLeg' not found\n"
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 3
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 0
+    importBlendShapes: 1
+    importCameras: 0
+    importLights: 0
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 0
+    previousCalculatedGlobalScale: 1
+    hasPreviousCalculatedGlobalScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 4
+    normalCalculationMode: 0
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human:
+    - boneName: root
+      humanName: Hips
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: r_cken
+      humanName: RightUpperLeg
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: fuss_R
+      humanName: RightLowerLeg
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: fuss_R2
+      humanName: RightFoot
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: becken
+      humanName: Spine
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: schwanz
+      humanName: Neck
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: hfuss_L
+      humanName: LeftShoulder
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: hfuss_R
+      humanName: RightShoulder
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: hfuss_L2
+      humanName: LeftUpperArm
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: hfuss_R2
+      humanName: RightUpperArm
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    skeleton:
+    - name: Bull(Clone)
+      parentName: 
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: armature
+      parentName: Bull(Clone)
+      position: {x: -0, y: 0.7950663, z: -0.000000003180869}
+      rotation: {x: -0.000000059604645, y: -1.134464e-16, z: 1.1344639e-16, w: 1}
+      scale: {x: 0.29738748, y: 0.29738748, z: 0.29738748}
+    - name: bull
+      parentName: armature
+      position: {x: -9.5e-14, y: 0.00000040730686, z: 0.000000094261075}
+      rotation: {x: -0.7071068, y: 1.6043745e-16, z: 0, w: 0.7071068}
+      scale: {x: 3.3626163, y: 3.3626163, z: 3.3626163}
+    - name: root
+      parentName: armature
+      position: {x: -0, y: -0.002639234, z: 1e-15}
+      rotation: {x: 0.23550631, y: 0.2355062, z: -0.66673607, w: 0.6667359}
+      scale: {x: 1.0000004, y: 1.0000001, z: 1.0000001}
+    - name: becken
+      parentName: root
+      position: {x: -0.7247197, y: -0.000000031678503, z: -0.000000014211796}
+      rotation: {x: -0.843436, y: -0.000000081956365, z: -0.5372297, w: -0.000000089406946}
+      scale: {x: 1.0000012, y: 1.0000013, z: 1.0000011}
+    - name: hbein_R
+      parentName: becken
+      position: {x: -1.4203142, y: -0.00000006208387, z: -0.0000001287921}
+      rotation: {x: -0.13196287, y: -0.7385327, z: -0.05566981, w: -0.6588294}
+      scale: {x: 1, y: 1.0000007, z: 1}
+    - name: hfuss_R
+      parentName: hbein_R
+      position: {x: -2.1027637, y: 0.000000020048992, z: 0.0000001212027}
+      rotation: {x: 0.02974002, y: 0.10407065, z: 0.4805802, w: 0.8702457}
+      scale: {x: 1.0000005, y: 1.0000004, z: 0.9999995}
+    - name: hfuss_R2
+      parentName: hfuss_R
+      position: {x: -1.0157808, y: 0.000000046376048, z: -0.000000068506395}
+      rotation: {x: 0.085050814, y: 0.21563698, z: -0.11883359, w: 0.9654769}
+      scale: {x: 1.0000004, y: 0.99999964, z: 1.0000001}
+    - name: hbein_L
+      parentName: becken
+      position: {x: -1.4203142, y: -0.00000006208387, z: -0.0000001287921}
+      rotation: {x: 0.111228034, y: -0.7364436, z: 0.07863422, w: -0.6626432}
+      scale: {x: 0.9999995, y: 0.99999964, z: 0.99999964}
+    - name: hfuss_L
+      parentName: hbein_L
+      position: {x: -2.1026037, y: -0.00000014118001, z: 0.00000006626486}
+      rotation: {x: -0.03016492, y: 0.074100964, z: -0.486229, w: 0.87016124}
+      scale: {x: 1.0000001, y: 1.0000001, z: 1.0000001}
+    - name: hfuss_L2
+      parentName: hfuss_L
+      position: {x: -1.0155691, y: -0.00000005928664, z: -0.00000014456282}
+      rotation: {x: -0.1146114, y: 0.21918947, z: 0.1116978, w: 0.9624676}
+      scale: {x: 1.0000004, y: 1.0000002, z: 1.0000004}
+    - name: schwanz
+      parentName: becken
+      position: {x: -1.4203142, y: -0.00000006208387, z: -0.0000001287921}
+      rotation: {x: -0.000000524577, y: -0.5158102, z: 0.00000069936993, w: -0.856703}
+      scale: {x: 0.9999998, y: 0.9999995, z: 0.9999995}
+    - name: r_cken
+      parentName: root
+      position: {x: -0.7247197, y: -0.000000031678503, z: -0.000000014211796}
+      rotation: {x: 0.8103362, y: -0.036726847, z: -0.58275056, w: -0.04907448}
+      scale: {x: 1.0000006, y: 1.0000012, z: 1.0000012}
+    - name: bein_R
+      parentName: r_cken
+      position: {x: -1.6334362, y: -0.00000005953146, z: -0.00000028134613}
+      rotation: {x: 0.096066594, y: 0.7436709, z: -0.09143383, w: -0.65525925}
+      scale: {x: 1.0000007, y: 1.0000007, z: 1}
+    - name: fuss_R
+      parentName: bein_R
+      position: {x: -2.1705108, y: -0.00000007223838, z: -0.000000007326884}
+      rotation: {x: 0.023087768, y: -0.000784941, z: -0.07649199, w: 0.99680257}
+      scale: {x: 0.9999995, y: 0.99999964, z: 0.9999998}
+    - name: fuss_R2
+      parentName: fuss_R
+      position: {x: -0.7838106, y: -0.00000009928813, z: -0.0000002174856}
+      rotation: {x: -0.11054799, y: 0.5268065, z: 0.04077766, w: 0.84177876}
+      scale: {x: 1.0000006, y: 1.0000006, z: 1.0000001}
+    - name: kopf
+      parentName: r_cken
+      position: {x: -1.6334362, y: -0.00000005953146, z: -0.00000028134613}
+      rotation: {x: -0.024118286, y: -0.080060534, z: 0.0014946756, w: -0.9964971}
+      scale: {x: 1.0000007, y: 1.0000011, z: 1.0000012}
+    - name: maul
+      parentName: kopf
+      position: {x: -1.3250158, y: -0.0000000525058, z: 0.00000017603476}
+      rotation: {x: -0.0054087895, y: -0.2907925, z: 0.0073385043, w: 0.95674276}
+      scale: {x: 0.99999964, y: 0.9999991, z: 0.99999917}
+    - name: bein_L
+      parentName: r_cken
+      position: {x: -1.6334362, y: -0.00000005953146, z: -0.00000028134613}
+      rotation: {x: -0.14429356, y: 0.74254435, z: 0.09966752, w: -0.6464315}
+      scale: {x: 1.0000004, y: 1.0000004, z: 0.9999999}
+    - name: fuss_L
+      parentName: bein_L
+      position: {x: -2.1740677, y: -0.00000046139434, z: 0.000000056118775}
+      rotation: {x: -0.05417167, y: 0.0015803871, z: 0.078436516, w: 0.99544495}
+      scale: {x: 0.99999964, y: 0.9999997, z: 0.9999998}
+    - name: fuss_L2
+      parentName: fuss_L
+      position: {x: -0.78395915, y: -0.0000000637049, z: 0.000000036724156}
+      rotation: {x: 0.10231547, y: 0.32602432, z: 0.055728845, w: 0.9381545}
+      scale: {x: 1.0000001, y: 1.0000004, z: 0.9999999}
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 3
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

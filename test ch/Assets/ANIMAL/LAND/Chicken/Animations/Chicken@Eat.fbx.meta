@@ -1,0 +1,204 @@
+fileFormatVersion: 2
+guid: 93853212295009a4289352ac12c40233
+ModelImporter:
+  serializedVersion: 23
+  fileIDToRecycleName:
+    100000: Armature
+    100002: //RootNode
+    100004: leg-1L
+    100006: leg-1R
+    100008: leg-2L
+    100010: leg-2R
+    100012: neck
+    100014: root
+    100016: spine
+    400000: Armature
+    400002: //RootNode
+    400004: leg-1L
+    400006: leg-1R
+    400008: leg-2L
+    400010: leg-2R
+    400012: neck
+    400014: root
+    400016: spine
+    7400000: Default Take
+    9500000: //RootNode
+    11100000: //RootNode
+    2186277476908879412: ImportLogs
+  externalObjects: {}
+  materials:
+    importMaterials: 1
+    materialName: 3
+    materialSearch: 1
+    materialLocation: 0
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: "Invalid Avatar Rig Configuration. Missing or invalid transform:\n\tRequired
+      human bone 'LeftUpperLeg' not found\n"
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 3
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 2
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 0
+    importBlendShapes: 1
+    importCameras: 0
+    importLights: 0
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 0
+    previousCalculatedGlobalScale: 1
+    hasPreviousCalculatedGlobalScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 4
+    normalCalculationMode: 0
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human:
+    - boneName: Armature
+      humanName: Hips
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: root
+      humanName: Spine
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: neck
+      humanName: Neck
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: leg-2L
+      humanName: LeftShoulder
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: leg-1R
+      humanName: RightShoulder
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: leg-2R
+      humanName: RightUpperArm
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    skeleton:
+    - name: Chicken@Eat(Clone)
+      parentName: 
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Armature
+      parentName: Chicken@Eat(Clone)
+      position: {x: -0, y: 0.11532224, z: -0.012567792}
+      rotation: {x: -0.024488205, y: -1.07466445e-16, z: 1.1084798e-16, w: 0.9997001}
+      scale: {x: 1, y: 1.0000001, z: 1.0000001}
+    - name: root
+      parentName: Armature
+      position: {x: 0.000000001360933, y: 0.021432344, z: -0.036094315}
+      rotation: {x: 0.0056602964, y: -0.018910436, z: -0.73111635, w: 0.6819672}
+      scale: {x: 1, y: 1, z: 1}
+    - name: leg-1L
+      parentName: root
+      position: {x: -0.0869418, y: -0.000000003800347, z: 0.000000003677}
+      rotation: {x: -0.094533764, y: 0.774314, z: 0.47728634, w: 0.40459728}
+      scale: {x: 0.9999999, y: 1, z: 1.0000001}
+    - name: leg-2L
+      parentName: leg-1L
+      position: {x: -0.16892467, y: 0.000000004340711, z: -0.000000004724903}
+      rotation: {x: 0.7306168, y: -0.34920734, z: 0.50361484, w: -0.30104056}
+      scale: {x: 0.99999994, y: 1.0000001, z: 1}
+    - name: leg-1R
+      parentName: root
+      position: {x: -0.0869418, y: -0.000000003800347, z: 0.000000003677}
+      rotation: {x: -0.353512, y: 0.50051045, z: -0.555943, w: 0.56164587}
+      scale: {x: 1, y: 1, z: 1.0000001}
+    - name: leg-2R
+      parentName: leg-1R
+      position: {x: -0.16892464, y: -0.000000029314684, z: -0.000000016675612}
+      rotation: {x: 0.7322205, y: 0.3465035, z: 0.5054776, w: 0.29712108}
+      scale: {x: 0.9999998, y: 0.99999994, z: 0.9999999}
+    - name: spine
+      parentName: root
+      position: {x: -0.0869418, y: -0.000000003800347, z: 0.000000003677}
+      rotation: {x: 0.9286608, y: 0.00258419, z: -0.34410337, w: -0.1384748}
+      scale: {x: 0.9999998, y: 1, z: 0.99999994}
+    - name: neck
+      parentName: spine
+      position: {x: -0.24525143, y: -0.000000012603247, z: -0.000000008276902}
+      rotation: {x: -0.13317803, y: -0.27187183, z: 0.03802107, w: 0.952315}
+      scale: {x: 1, y: 0.99999994, z: 1}
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 3
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

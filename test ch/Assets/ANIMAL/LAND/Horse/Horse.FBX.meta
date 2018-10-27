@@ -1,0 +1,1302 @@
+fileFormatVersion: 2
+guid: 25011e2b5cb5bfb40b7c8925cd29d8ae
+labels:
+- character
+- fantasy
+- fight
+- horse
+- horseman
+- king
+- knight
+- lord
+- medieval
+- mount
+- rider
+- warrior
+ModelImporter:
+  serializedVersion: 23
+  fileIDToRecycleName:
+    100000: horse back_armor_plate_04
+    100002: horse back_armor_plate_06
+    100004: horse L Thigh
+    100006: horse back_armor_plate_06Opp
+    100008: horse R Calf
+    100010: horse L Foot
+    100012: horse L Clavicle
+    100014: horse R HorseLink
+    100016: horse Spine1
+    100018: horse back_armor_plate_05Opp
+    100020: horse back_armor_plate_03Opp
+    100022: horse L Calf
+    100024: horse R Clavicle
+    100026: horse back_armor_plate_05
+    100030: horse back_armor_plate_04Opp
+    100032: Horse_Reins
+    100034: horse back_armor_plate_02
+    100036: horse R Forearm
+    100038: horse L Toe0
+    100040: horse Tail2
+    100042: horse L UpperArm
+    100044: Horse_saddle
+    100046: horse back_armor_plate_02Opp
+    100048: horse_armor
+    100050: horse back_armor_plate_01Opp
+    100052: horse Neck3
+    100054: horse Neck2
+    100056: horse_BIP
+    100058: //RootNode
+    100060: horse HORSEMAN_BONE
+    100070: horse R UpperArm
+    100072: horse
+    100074: horse Neck1
+    100076: horse L HorseLink
+    100080: horse L Forearm
+    100082: horse bone_reins
+    100086: horse Spine
+    100088: horse Pelvis
+    100090: horse R Thigh
+    100092: horse L Finger0
+    100094: horse L Hand
+    100096: Horse_mask
+    100098: horse Jaw
+    100102: horse stirrupOpp
+    100104: horse Head
+    100110: horse back_armor_plate_07
+    100112: horse back_armor_plate_07Opp
+    100114: horse Tail1
+    100116: horse back_armor_plate_03
+    100118: horse stirrup
+    100120: horse R Finger0
+    100122: Horse_Stirrups
+    100124: horse R Hand
+    100126: horse Tail
+    100128: horse R Foot
+    100130: horse back_armor_plate_01
+    100132: horse Neck
+    100134: horse Spine2
+    100136: horse R Toe0
+    400000: horse back_armor_plate_04
+    400002: horse back_armor_plate_06
+    400004: horse L Thigh
+    400006: horse back_armor_plate_06Opp
+    400008: horse R Calf
+    400010: horse L Foot
+    400012: horse L Clavicle
+    400014: horse R HorseLink
+    400016: horse Spine1
+    400018: horse back_armor_plate_05Opp
+    400020: horse back_armor_plate_03Opp
+    400022: horse L Calf
+    400024: horse R Clavicle
+    400026: horse back_armor_plate_05
+    400030: horse back_armor_plate_04Opp
+    400032: Horse_Reins
+    400034: horse back_armor_plate_02
+    400036: horse R Forearm
+    400038: horse L Toe0
+    400040: horse Tail2
+    400042: horse L UpperArm
+    400044: Horse_saddle
+    400046: horse back_armor_plate_02Opp
+    400048: horse_armor
+    400050: horse back_armor_plate_01Opp
+    400052: horse Neck3
+    400054: horse Neck2
+    400056: horse_BIP
+    400058: //RootNode
+    400060: horse HORSEMAN_BONE
+    400070: horse R UpperArm
+    400072: horse
+    400074: horse Neck1
+    400076: horse L HorseLink
+    400080: horse L Forearm
+    400082: horse bone_reins
+    400086: horse Spine
+    400088: horse Pelvis
+    400090: horse R Thigh
+    400092: horse L Finger0
+    400094: horse L Hand
+    400096: Horse_mask
+    400098: horse Jaw
+    400102: horse stirrupOpp
+    400104: horse Head
+    400110: horse back_armor_plate_07
+    400112: horse back_armor_plate_07Opp
+    400114: horse Tail1
+    400116: horse back_armor_plate_03
+    400118: horse stirrup
+    400120: horse R Finger0
+    400122: Horse_Stirrups
+    400124: horse R Hand
+    400126: horse Tail
+    400128: horse R Foot
+    400130: horse back_armor_plate_01
+    400132: horse Neck
+    400134: horse Spine2
+    400136: horse R Toe0
+    2300000: Horse_saddle
+    2300002: Horse_mask
+    3300000: Horse_saddle
+    3300002: Horse_mask
+    4300000: Horse_mask
+    4300002: Horse_saddle
+    4300004: Horse_Stirrups
+    4300006: Horse_Reins
+    4300008: horse
+    4300010: horse_armor
+    6400000: Horse_mask
+    6400002: Horse_saddle
+    7400114: horse_Idle
+    7400116: horse_looking_around
+    7400118: horse_sniff
+    7400120: horse_rear_up
+    7400122: horse_kick
+    7400124: horse_bite
+    7400126: horse_death
+    7400128: horse_kick_ground
+    7400130: horse_eating
+    7400132: horse_walk
+    7400134: horse_trot
+    7400136: horse_galloping
+    7400138: horse_jump
+    7400140: horse_running_death
+    7400142: RM_horse_galloping
+    7400144: RM_horse_jump
+    7400146: RM_horse_running_death
+    7400148: RM_horse_trot
+    7400150: RM_horse_walk
+    9500000: //RootNode
+    11100000: //RootNode
+    13700000: Horse_Reins
+    13700002: horse_armor
+    13700004: horse
+    13700006: Horse_Stirrups
+    2186277476908879412: ImportLogs
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: horse_armor
+    second: {fileID: 2100000, guid: 4590a7770b5b6c14284f3aedfb967c8d, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: horse_gray
+    second: {fileID: 2100000, guid: cfd9536c14d1b2449847c7d98a6ca024, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: horse_gray_tail
+    second: {fileID: 2100000, guid: 9d2add12abefdfb44a63f09fa5c4bf7f, type: 2}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 0
+    materialLocation: 0
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: "Avatar Rig Configuration mis-match. Inbetween bone rotation
+      in configuration does not match rotation in animation file:\n\t'horse L HorseLink'
+      : rotation error = 50.526775 deg\n\t'horse R HorseLink' : rotation error = 45.087929
+      deg\n"
+    animationImportErrors: 
+    animationImportWarnings: "\nClip 'Take 001' has import animation warnings that
+      might lower retargeting quality:\n\t'horse Neck1' has translation animation
+      that will be discarded.\n\t'horse Neck1' is inbetween humanoid transforms and
+      has rotation animation that will be discarded.\n\t'horse Neck2' is inbetween
+      humanoid transforms and has rotation animation that will be discarded.\n\t'horse
+      Neck3' is inbetween humanoid transforms and has rotation animation that will
+      be discarded.\n\t'horse L HorseLink' is inbetween humanoid transforms and has
+      rotation animation that will be discarded.\n\t'horse R HorseLink' is inbetween
+      humanoid transforms and has rotation animation that will be discarded.\n"
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 3
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: horse_Idle
+      takeName: 
+      firstFrame: 0
+      lastFrame: 100
+      wrapMode: 2
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 1
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 1
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 1
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: horse_looking_around
+      takeName: 
+      firstFrame: 101
+      lastFrame: 226
+      wrapMode: 2
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 1
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 1
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 1
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: horse_sniff
+      takeName: 
+      firstFrame: 227
+      lastFrame: 287
+      wrapMode: 2
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 1
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 1
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 1
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: horse_rear_up
+      takeName: 
+      firstFrame: 288
+      lastFrame: 373
+      wrapMode: 2
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 1
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 1
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 1
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: horse_kick
+      takeName: 
+      firstFrame: 374
+      lastFrame: 400
+      wrapMode: 2
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 1
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 1
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 1
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: horse_bite
+      takeName: 
+      firstFrame: 401
+      lastFrame: 441
+      wrapMode: 2
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 1
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 1
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 1
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: horse_death
+      takeName: 
+      firstFrame: 442
+      lastFrame: 468
+      wrapMode: 1
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 1
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 1
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: horse_kick_ground
+      takeName: 
+      firstFrame: 473
+      lastFrame: 507
+      wrapMode: 2
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 1
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 1
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 1
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: horse_eating
+      takeName: 
+      firstFrame: 512
+      lastFrame: 612
+      wrapMode: 2
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 1
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 1
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 1
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: horse_walk
+      takeName: 
+      firstFrame: 617
+      lastFrame: 651
+      wrapMode: 2
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 1
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 1
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 1
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: horse_trot
+      takeName: 
+      firstFrame: 656
+      lastFrame: 680
+      wrapMode: 2
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 1
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 1
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 1
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: horse_galloping
+      takeName: 
+      firstFrame: 685
+      lastFrame: 700
+      wrapMode: 2
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 1
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 1
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 1
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: horse_jump
+      takeName: 
+      firstFrame: 701
+      lastFrame: 736
+      wrapMode: 2
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 1
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 1
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 1
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: horse_running_death
+      takeName: 
+      firstFrame: 737
+      lastFrame: 777
+      wrapMode: 1
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 1
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 1
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: RM_horse_galloping
+      takeName: 
+      firstFrame: 783
+      lastFrame: 797
+      wrapMode: 2
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 1
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 1
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 1
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: RM_horse_jump
+      takeName: 
+      firstFrame: 803
+      lastFrame: 837
+      wrapMode: 2
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 1
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 1
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 1
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: RM_horse_running_death
+      takeName: 
+      firstFrame: 843
+      lastFrame: 882
+      wrapMode: 1
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 1
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 1
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: RM_horse_trot
+      takeName: 
+      firstFrame: 888
+      lastFrame: 911
+      wrapMode: 2
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 1
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 1
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 1
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: RM_horse_walk
+      takeName: 
+      firstFrame: 917
+      lastFrame: 950
+      wrapMode: 2
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 1
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 1
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 1
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 0.01
+    meshCompression: 0
+    addColliders: 1
+    importVisibility: 0
+    importBlendShapes: 1
+    importCameras: 0
+    importLights: 0
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 0
+    previousCalculatedGlobalScale: 0.01
+    hasPreviousCalculatedGlobalScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 4
+    normalCalculationMode: 0
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human:
+    - boneName: horse Pelvis
+      humanName: Hips
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: horse L Thigh
+      humanName: LeftUpperLeg
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: horse R Thigh
+      humanName: RightUpperLeg
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: horse L Calf
+      humanName: LeftLowerLeg
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: horse R Calf
+      humanName: RightLowerLeg
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: horse L Foot
+      humanName: LeftFoot
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: horse R Foot
+      humanName: RightFoot
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: horse Spine
+      humanName: Spine
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: horse Spine1
+      humanName: Chest
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: horse Neck
+      humanName: Neck
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: horse Head
+      humanName: Head
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: horse L Clavicle
+      humanName: LeftShoulder
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: horse R Clavicle
+      humanName: RightShoulder
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: horse L UpperArm
+      humanName: LeftUpperArm
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: horse R UpperArm
+      humanName: RightUpperArm
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: horse L Forearm
+      humanName: LeftLowerArm
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: horse R Forearm
+      humanName: RightLowerArm
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: horse L Hand
+      humanName: LeftHand
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: horse R Hand
+      humanName: RightHand
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: horse L Toe0
+      humanName: LeftToes
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: horse R Toe0
+      humanName: RightToes
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: horse L Finger0
+      humanName: Left Thumb Proximal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: horse R Finger0
+      humanName: Right Thumb Proximal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: horse Spine2
+      humanName: UpperChest
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    skeleton:
+    - name: Horse(Clone)
+      parentName: 
+      position: {x: 0, y: 0, z: 0}
+      rotation: {x: -0.7071068, y: 0.0000005628475, z: 0.0000005628475, w: 0.7071068}
+      scale: {x: 1, y: 1, z: 1}
+    - name: horse
+      parentName: Horse(Clone)
+      position: {x: -0.0000000021718414, y: 1.2647212, z: 0.11097838}
+      rotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071068}
+      scale: {x: 1.1999999, y: 1.1999999, z: 1.1999999}
+    - name: horse_armor
+      parentName: Horse(Clone)
+      position: {x: -9.78734e-10, y: 1.3951603, z: 0.06640444}
+      rotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071068}
+      scale: {x: 1.1999999, y: 1.1999999, z: 1.1999999}
+    - name: horse_BIP
+      parentName: Horse(Clone)
+      position: {x: -0, y: 1.2899063, z: -0.6626232}
+      rotation: {x: 8.4845444e-17, y: -8.4845444e-17, z: 0.7071068, w: 0.7071068}
+      scale: {x: 1, y: 1, z: 1}
+    - name: horse Pelvis
+      parentName: horse_BIP
+      position: {x: -1.2898093, y: 0.0000021457672, z: 1.987757}
+      rotation: {x: 0.5, y: -0.5, z: -0.5, w: -0.5}
+      scale: {x: 1.0000014, y: 1.0000033, z: 1.0000019}
+    - name: horse back_armor_plate_07
+      parentName: horse Pelvis
+      position: {x: 0.25169045, y: -0.117854305, z: 0.10772166}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1.0000004, y: 1.0000006, z: 1.0000002}
+    - name: horse back_armor_plate_04
+      parentName: horse Pelvis
+      position: {x: 0.009930191, y: -0.10897446, z: 0.2809416}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 0.9999999, y: 1.0000005, z: 1.0000005}
+    - name: horse back_armor_plate_05
+      parentName: horse Pelvis
+      position: {x: -0.121066056, y: -0.11653625, z: 0.2878501}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1.0000002, y: 1.0000005, z: 1.0000006}
+    - name: horse Spine
+      parentName: horse Pelvis
+      position: {x: -0.122076035, y: -0.0002670288, z: 0.00000016966543}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1.0000007, y: 1.000002, z: 1.000001}
+    - name: horse R Thigh
+      parentName: horse Spine
+      position: {x: 0.12207565, y: 0.00036468505, z: -0.15956435}
+      rotation: {x: 0, y: 1, z: 0, w: -0.00000004371139}
+      scale: {x: 0.99999905, y: 1, z: 0.9999997}
+    - name: horse R Calf
+      parentName: horse R Thigh
+      position: {x: -0.4461451, y: -0.000000057220458, z: 0}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1.0000001, y: 1.0000007, z: 1}
+    - name: horse R HorseLink
+      parentName: horse R Calf
+      position: {x: -0.37467852, y: 0, z: 0.000000009536743}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 0.9999997, y: 0.9999996, z: 0.9999996}
+    - name: horse R Foot
+      parentName: horse R HorseLink
+      position: {x: -0.33756202, y: 0.000000038146972, z: -0.000000019073486}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 0.9999995, y: 1, z: 1}
+    - name: horse R Toe0
+      parentName: horse R Foot
+      position: {x: -0.12814957, y: -0.048491895, z: -0.000000019073486}
+      rotation: {x: 0, y: 0, z: 0.7071068, w: -0.7071068}
+      scale: {x: 1, y: 1.0000002, z: 1}
+    - name: horse Tail
+      parentName: horse Spine
+      position: {x: 0.32412255, y: -0.1364035, z: -0.00000033003394}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1.0000008, y: 1, z: 1.0000001}
+    - name: horse Tail1
+      parentName: horse Tail
+      position: {x: -0.17914878, y: -0.00022872924, z: -0.00000027377158}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 0.9999994, y: 1.0000005, z: 1.0000002}
+    - name: horse Tail2
+      parentName: horse Tail1
+      position: {x: -0.36164275, y: -0.00037597655, z: -0.0000006699562}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1.0000001, y: 0.9999999, z: 1.0000002}
+    - name: horse L Thigh
+      parentName: horse Spine
+      position: {x: 0.12207565, y: 0.00036376953, z: 0.15956435}
+      rotation: {x: 0, y: 1, z: 0, w: -0.00000004371139}
+      scale: {x: 1.0000006, y: 1.0000005, z: 1.0000005}
+    - name: horse L Calf
+      parentName: horse L Thigh
+      position: {x: -0.44614518, y: -0.00000015258789, z: -0.000000009536743}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1.0000001, y: 0.99999964, z: 0.9999996}
+    - name: horse L HorseLink
+      parentName: horse L Calf
+      position: {x: -0.37467852, y: -0.000000076293944, z: 0.000000009536743}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 0.99999976, y: 1.000001, z: 1.0000008}
+    - name: horse L Foot
+      parentName: horse L HorseLink
+      position: {x: -0.33756208, y: 0.00000015258789, z: -0.000000019073486}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1.0000001, y: 0.99999994, z: 1.0000002}
+    - name: horse L Toe0
+      parentName: horse L Foot
+      position: {x: -0.12814957, y: -0.048491895, z: 0.000000009536743}
+      rotation: {x: 0, y: 0, z: 0.7071068, w: -0.7071068}
+      scale: {x: 0.9999994, y: 1.0000002, z: 0.9999995}
+    - name: horse Spine1
+      parentName: horse Spine
+      position: {x: -0.33543715, y: -0.00028289793, z: -7.843482e-10}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1.0000019, y: 1.0000036, z: 1.0000021}
+    - name: horse HORSEMAN_BONE
+      parentName: horse Spine1
+      position: {x: -0.1464361, y: -0.4346898, z: -0.0000006304761}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Horse_saddle
+      parentName: horse Spine1
+      position: {x: -0.20979661, y: -0.32717118, z: -0.00000061035155}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1.1999997, y: 1.1999996, z: 1.1999992}
+    - name: horse stirrup
+      parentName: horse Spine1
+      position: {x: -0.32085395, y: 0.25404412, z: 0.42390504}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1.0000002, y: 1.0000007, z: 1.0000004}
+    - name: horse stirrupOpp
+      parentName: horse Spine1
+      position: {x: -0.34646645, y: 0.25058556, z: -0.4400473}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1.0000001, y: 1.0000006, z: 1}
+    - name: horse Spine2
+      parentName: horse Spine1
+      position: {x: -0.35508883, y: -0.00029418943, z: -8.160714e-10}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1.0000007, y: 1.0000012, z: 1.0000005}
+    - name: horse Neck
+      parentName: horse Spine2
+      position: {x: -0.36337137, y: 0.030630797, z: 0.000000044663174}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1.0000005, y: 1.0000011, z: 1.0000002}
+    - name: horse R Clavicle
+      parentName: horse Neck
+      position: {x: 0.04987831, y: 0.21145011, z: -0.118353784}
+      rotation: {x: 0.7071068, y: -0.000000030908623, z: 0.7071068, w: -0.000000030908623}
+      scale: {x: 0.99999976, y: 0.9999996, z: 0.999999}
+    - name: horse R UpperArm
+      parentName: horse R Clavicle
+      position: {x: -0.30056053, y: -0.000000038146972, z: 0.000000038146972}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 0.99999845, y: 1.0000012, z: 1.0000001}
+    - name: horse R Forearm
+      parentName: horse R UpperArm
+      position: {x: -0.34163114, y: 0.000000038146972, z: 0}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1.0000008, y: 1.0000011, z: 1.0000005}
+    - name: horse R Hand
+      parentName: horse R Forearm
+      position: {x: -0.3418476, y: -0.000000019073486, z: -0.000000019073486}
+      rotation: {x: 0.7071068, y: 0, z: 0, w: 0.7071068}
+      scale: {x: 1.0000005, y: 1.0000004, z: 1.0000001}
+    - name: horse R Finger0
+      parentName: horse R Hand
+      position: {x: -0.111329354, y: -0.00076568604, z: -0.030762328}
+      rotation: {x: 0, y: 0.38268346, z: 0, w: 0.9238795}
+      scale: {x: 1.0000011, y: 1.0000008, z: 1.0000014}
+    - name: horse L Clavicle
+      parentName: horse Neck
+      position: {x: 0.049878385, y: 0.21144943, z: 0.11835498}
+      rotation: {x: 0.7071068, y: -0.000000030908623, z: -0.7071068, w: 0.000000030908623}
+      scale: {x: 0.99999887, y: 0.99999917, z: 0.99999803}
+    - name: horse L UpperArm
+      parentName: horse L Clavicle
+      position: {x: -0.30056044, y: -0.000000038146972, z: 0.000000038146972}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1.0000001, y: 0.9999999, z: 0.9999999}
+    - name: horse L Forearm
+      parentName: horse L UpperArm
+      position: {x: -0.34163123, y: 0, z: 0}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 0.9999984, y: 1.0000023, z: 1.0000012}
+    - name: horse L Hand
+      parentName: horse L Forearm
+      position: {x: -0.34184754, y: -0.000000038146972, z: -0.000000019073486}
+      rotation: {x: 0.7071068, y: 0, z: 0, w: -0.7071068}
+      scale: {x: 1.0000007, y: 1.0000006, z: 0.99999976}
+    - name: horse L Finger0
+      parentName: horse L Hand
+      position: {x: -0.111329384, y: -0.0007657051, z: 0.03076229}
+      rotation: {x: 0, y: 0.3826835, z: 0, w: -0.9238795}
+      scale: {x: 1.0000002, y: 1.0000004, z: 0.9999998}
+    - name: horse Neck1
+      parentName: horse Neck
+      position: {x: -0.17001937, y: -0.00019393921, z: -5.1048116e-10}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 0.999993, y: 1.0000005, z: 0.999998}
+    - name: horse bone_reins
+      parentName: horse Neck1
+      position: {x: -0.40981567, y: -0.46277198, z: 0.10628952}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1.0000006, y: 1.0000006, z: 1.0000006}
+    - name: horse Neck2
+      parentName: horse Neck1
+      position: {x: -0.281454, y: -0.0001816368, z: -4.1589374e-10}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1.0000007, y: 1.0000001, z: 0.9999996}
+    - name: horse Neck3
+      parentName: horse Neck2
+      position: {x: -0.23037872, y: -0.00013805389, z: -3.830064e-10}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1.0000019, y: 0.9999999, z: 1.0000005}
+    - name: horse Head
+      parentName: horse Neck3
+      position: {x: -0.19416533, y: 0.06879562, z: 0.00000008231858}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1.0000002, y: 0.99999946, z: 1.0000007}
+    - name: Horse_mask
+      parentName: horse Head
+      position: {x: -0.11029404, y: 0.2414936, z: 0.0000016784668}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1.1999999, y: 1.2000005, z: 1.2000005}
+    - name: horse Jaw
+      parentName: horse Head
+      position: {x: 0.057607114, y: 0.32014823, z: 0.0000011806094}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1.0000005, y: 1.0000005, z: 1.0000002}
+    - name: horse back_armor_plate_06
+      parentName: horse Spine
+      position: {x: -0.15229629, y: -0.107622676, z: 0.26053375}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1.0000001, y: 1.0000006, z: 1.0000008}
+    - name: horse back_armor_plate_01
+      parentName: horse Spine
+      position: {x: -0.293505, y: -0.109992675, z: 0.22153904}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1.0000005, y: 1.000001, z: 1.0000007}
+    - name: horse back_armor_plate_01Opp
+      parentName: horse Spine
+      position: {x: -0.282313, y: -0.109963685, z: -0.22049496}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1.0000006, y: 1.000001, z: 1.0000006}
+    - name: horse back_armor_plate_06Opp
+      parentName: horse Spine
+      position: {x: -0.145663, y: -0.10762436, z: -0.272281}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1.0000006, y: 1.0000005, z: 1.0000008}
+    - name: horse back_armor_plate_02
+      parentName: horse Pelvis
+      position: {x: 0.21854545, y: -0.11672974, z: 0.2090591}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 0.9999999, z: 1}
+    - name: horse back_armor_plate_03
+      parentName: horse Pelvis
+      position: {x: 0.12140213, y: -0.109018095, z: 0.2718357}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1.0000006, y: 1.0000006, z: 1.0000007}
+    - name: horse back_armor_plate_04Opp
+      parentName: horse Pelvis
+      position: {x: 0.01615921, y: -0.12083664, z: -0.28598532}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1.0000004, y: 1.0000007, z: 1.0000006}
+    - name: horse back_armor_plate_05Opp
+      parentName: horse Pelvis
+      position: {x: -0.11496215, y: -0.1097467, z: -0.3032212}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1.0000007, y: 1.0000006, z: 1.000001}
+    - name: horse back_armor_plate_02Opp
+      parentName: horse Pelvis
+      position: {x: 0.21897666, y: -0.1249707, z: -0.20660168}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 1.0000006, z: 1.0000007}
+    - name: horse back_armor_plate_03Opp
+      parentName: horse Pelvis
+      position: {x: 0.13450547, y: -0.118710175, z: -0.28138235}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 0.9999999, y: 1.0000005, z: 1.0000006}
+    - name: horse back_armor_plate_07Opp
+      parentName: horse Pelvis
+      position: {x: 0.2506288, y: -0.1273117, z: -0.11305699}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1.0000001, y: 1.0000007, z: 1.000001}
+    - name: Horse_Reins
+      parentName: Horse(Clone)
+      position: {x: -9.78734e-10, y: 1.6876915, z: 1.3406874}
+      rotation: {x: -0.74895567, y: 0, z: -0, w: 0.6626201}
+      scale: {x: 1.1999999, y: 1.2000002, z: 1.2000002}
+    - name: Horse_Stirrups
+      parentName: Horse(Clone)
+      position: {x: -9.78734e-10, y: 1.2345362, z: 0.041581716}
+      rotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071068}
+      scale: {x: 1.1999999, y: 1.1999999, z: 1.1999999}
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: horse_BIP
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 1
+    hasExtraRoot: 1
+    skeletonHasParents: 0
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 3
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -1,0 +1,487 @@
+fileFormatVersion: 2
+guid: 3d04b3ce40b5d9a468a7e1174adfb590
+ModelImporter:
+  serializedVersion: 23
+  fileIDToRecycleName:
+    100000: //RootNode
+    100002: BOAR
+    100004: BOAR_
+    100006: BOAR_ Head
+    100008: BOAR_ L Calf
+    100010: BOAR_ L Clavicle
+    100012: BOAR_ L Finger0
+    100014: BOAR_ L Finger0Nub
+    100016: BOAR_ L Foot
+    100018: BOAR_ L Forearm
+    100020: BOAR_ L Hand
+    100022: BOAR_ L HorseLink
+    100024: BOAR_ L Thigh
+    100026: BOAR_ L UpperArm
+    100028: BOAR_ Neck
+    100030: BOAR_ Neck1
+    100032: BOAR_ Neck2
+    100034: BOAR_ Pelvis
+    100036: BOAR_ Queue de cheval 1
+    100038: BOAR_ R Calf
+    100040: BOAR_ R Clavicle
+    100042: BOAR_ R Finger0
+    100044: BOAR_ R Finger0Nub
+    100046: BOAR_ R Foot
+    100048: BOAR_ R Forearm
+    100050: BOAR_ R Hand
+    100052: BOAR_ R HorseLink
+    100054: BOAR_ R Thigh
+    100056: BOAR_ R UpperArm
+    100058: BOAR_ Spine
+    100060: BOAR_ Spine1
+    400000: //RootNode
+    400002: BOAR
+    400004: BOAR_
+    400006: BOAR_ Head
+    400008: BOAR_ L Calf
+    400010: BOAR_ L Clavicle
+    400012: BOAR_ L Finger0
+    400014: BOAR_ L Finger0Nub
+    400016: BOAR_ L Foot
+    400018: BOAR_ L Forearm
+    400020: BOAR_ L Hand
+    400022: BOAR_ L HorseLink
+    400024: BOAR_ L Thigh
+    400026: BOAR_ L UpperArm
+    400028: BOAR_ Neck
+    400030: BOAR_ Neck1
+    400032: BOAR_ Neck2
+    400034: BOAR_ Pelvis
+    400036: BOAR_ Queue de cheval 1
+    400038: BOAR_ R Calf
+    400040: BOAR_ R Clavicle
+    400042: BOAR_ R Finger0
+    400044: BOAR_ R Finger0Nub
+    400046: BOAR_ R Foot
+    400048: BOAR_ R Forearm
+    400050: BOAR_ R Hand
+    400052: BOAR_ R HorseLink
+    400054: BOAR_ R Thigh
+    400056: BOAR_ R UpperArm
+    400058: BOAR_ Spine
+    400060: BOAR_ Spine1
+    4300000: BOAR
+    7400000: Take 001
+    9500000: //RootNode
+    11100000: //RootNode
+    13700000: BOAR
+    2186277476908879412: ImportLogs
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: BOAR
+    second: {fileID: 2100000, guid: 14c2f35dd5e58e44ea6f56f558ad9c84, type: 2}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 0
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: "Avatar Rig Configuration mis-match. Inbetween bone rotation
+      in configuration does not match rotation in animation file:\n\t'BOAR_ L HorseLink'
+      : rotation error = 47.456669 deg\n\t'BOAR_ R HorseLink' : rotation error = 47.456669
+      deg\n"
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 3
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 0.01
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 0
+    importBlendShapes: 1
+    importCameras: 0
+    importLights: 0
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 0
+    previousCalculatedGlobalScale: 0.01
+    hasPreviousCalculatedGlobalScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 4
+    normalCalculationMode: 0
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human:
+    - boneName: BOAR_ Pelvis
+      humanName: Hips
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: BOAR_ L Thigh
+      humanName: LeftUpperLeg
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: BOAR_ R Thigh
+      humanName: RightUpperLeg
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: BOAR_ L Calf
+      humanName: LeftLowerLeg
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: BOAR_ R Calf
+      humanName: RightLowerLeg
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: BOAR_ L Foot
+      humanName: LeftFoot
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: BOAR_ R Foot
+      humanName: RightFoot
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: BOAR_ Spine
+      humanName: Spine
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: BOAR_ Spine1
+      humanName: Chest
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: BOAR_ Neck
+      humanName: Neck
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: BOAR_ Head
+      humanName: Head
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: BOAR_ L Clavicle
+      humanName: LeftShoulder
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: BOAR_ R Clavicle
+      humanName: RightShoulder
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: BOAR_ L UpperArm
+      humanName: LeftUpperArm
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: BOAR_ R UpperArm
+      humanName: RightUpperArm
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: BOAR_ L Forearm
+      humanName: LeftLowerArm
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: BOAR_ R Forearm
+      humanName: RightLowerArm
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: BOAR_ L Hand
+      humanName: LeftHand
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: BOAR_ R Hand
+      humanName: RightHand
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: BOAR_ L Finger0
+      humanName: Left Thumb Proximal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: BOAR_ R Finger0
+      humanName: Right Thumb Proximal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    skeleton:
+    - name: BOAR(Clone)
+      parentName: 
+      position: {x: 0, y: 0, z: 0}
+      rotation: {x: -0.7071068, y: 0.00000058555537, z: 0.00000058555537, w: 0.7071068}
+      scale: {x: 1, y: 1, z: 1}
+    - name: BOAR
+      parentName: BOAR(Clone)
+      position: {x: -0, y: 0.0000001734575, z: 0}
+      rotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071068}
+      scale: {x: 1, y: 1, z: 1}
+    - name: BOAR_
+      parentName: BOAR(Clone)
+      position: {x: -0, y: 0.826, z: -0.571}
+      rotation: {x: 0.00000155359, y: 0.00000155359, z: 0.7071068, w: 0.7071068}
+      scale: {x: 1, y: 1, z: 1}
+    - name: BOAR_ Pelvis
+      parentName: BOAR_
+      position: {x: -0.8258013, y: 0.000008046627, z: 1.492613}
+      rotation: {x: 0.5, y: -0.5, z: -0.5, w: -0.5}
+      scale: {x: 1.0000007, y: 1.0000017, z: 1.000001}
+    - name: BOAR_ Spine
+      parentName: BOAR_ Pelvis
+      position: {x: -0.24983554, y: -0.00023628234, z: 0.00000034679962}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1.0000004, y: 1.0000012, z: 1.0000005}
+    - name: BOAR_ Spine1
+      parentName: BOAR_ Spine
+      position: {x: -0.29671043, y: -0.00023628234, z: -6.554182e-10}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1.0000002, y: 1.0000013, z: 1.0000006}
+    - name: BOAR_ Neck
+      parentName: BOAR_ Spine1
+      position: {x: -0.29673377, y: -0.00012062072, z: -3.3469405e-10}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 0.9999996, y: 0.9999995, z: 0.9999996}
+    - name: BOAR_ L Clavicle
+      parentName: BOAR_ Neck
+      position: {x: 0.0037032603, y: -0.018971939, z: 0.10110022}
+      rotation: {x: 0.7071068, y: -0.000000030908623, z: -0.7071068, w: 0.000000030908623}
+      scale: {x: 0.99999964, y: 1.0000001, z: 1}
+    - name: BOAR_ L UpperArm
+      parentName: BOAR_ L Clavicle
+      position: {x: -0.23600523, y: -0.000000076293944, z: 0.000000038146972}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1.0000012, y: 1.0000005, z: 1.0000004}
+    - name: BOAR_ L Forearm
+      parentName: BOAR_ L UpperArm
+      position: {x: -0.24056262, y: 0.000000019073486, z: 0.000000009536743}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 0.9999985, y: 1.000001, z: 1.0000011}
+    - name: BOAR_ L Hand
+      parentName: BOAR_ L Forearm
+      position: {x: -0.18273285, y: -0.000000019073486, z: -0.000000028610229}
+      rotation: {x: 0.7071068, y: 0, z: 0, w: -0.7071068}
+      scale: {x: 1.0000012, y: 1.0000007, z: 1.0000013}
+    - name: BOAR_ L Finger0
+      parentName: BOAR_ L Hand
+      position: {x: -0.24287124, y: 0, z: -0.000000019073486}
+      rotation: {x: 0, y: 0.3826835, z: 0, w: -0.9238795}
+      scale: {x: 1.0000007, y: 1, z: 0.99999994}
+    - name: BOAR_ L Finger0Nub
+      parentName: BOAR_ L Finger0
+      position: {x: -0.13060531, y: 0, z: -0.000000019073486}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1.0000001, y: 1.0000001, z: 1}
+    - name: BOAR_ R Clavicle
+      parentName: BOAR_ Neck
+      position: {x: 0.0037032412, y: -0.018971404, z: -0.10110032}
+      rotation: {x: 0.7071068, y: -0.000000030908623, z: 0.7071068, w: -0.000000030908623}
+      scale: {x: 1.0000011, y: 0.99999994, z: 1.0000017}
+    - name: BOAR_ R UpperArm
+      parentName: BOAR_ R Clavicle
+      position: {x: -0.23600519, y: -0.000000076293944, z: 0}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1.0000006, y: 0.99999994, z: 1.0000002}
+    - name: BOAR_ R Forearm
+      parentName: BOAR_ R UpperArm
+      position: {x: -0.24056266, y: 0.000000038146972, z: 0.000000009536743}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 0.9999989, y: 1.0000005, z: 1.0000005}
+    - name: BOAR_ R Hand
+      parentName: BOAR_ R Forearm
+      position: {x: -0.1827328, y: -0.000000019073486, z: 0}
+      rotation: {x: 0.7071068, y: 0, z: 0, w: 0.7071068}
+      scale: {x: 1.0000002, y: 1.0000012, z: 1.0000002}
+    - name: BOAR_ R Finger0
+      parentName: BOAR_ R Hand
+      position: {x: -0.24287121, y: 0, z: 0}
+      rotation: {x: 0, y: 0.38268346, z: 0, w: 0.9238795}
+      scale: {x: 1.0000005, y: 1.0000005, z: 0.9999996}
+    - name: BOAR_ R Finger0Nub
+      parentName: BOAR_ R Finger0
+      position: {x: -0.13060533, y: 0, z: 0}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: -1.0000001, y: -1.0000001, z: -1}
+    - name: BOAR_ Neck1
+      parentName: BOAR_ Neck
+      position: {x: -0.15433972, y: -0.00012062072, z: -3.34403e-10}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1.0000005, y: 1.000001, z: 1.0000004}
+    - name: BOAR_ Neck2
+      parentName: BOAR_ Neck1
+      position: {x: -0.15433975, y: -0.00012062072, z: -3.352761e-10}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1.0000001, y: 1.0000019, z: 1.0000006}
+    - name: BOAR_ Head
+      parentName: BOAR_ Neck2
+      position: {x: -0.19772644, y: -0.02588768, z: -0.00000013803772}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 0.99999917, y: 1.0000018, z: 1}
+    - name: BOAR_ Queue de cheval 1
+      parentName: BOAR_ Head
+      position: {x: 0.17547958, y: 0.18950799, z: 0.00000040956598}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1.0000005, y: 1.0000013, z: 1.0000002}
+    - name: BOAR_ L Thigh
+      parentName: BOAR_ Spine
+      position: {x: 0.24983528, y: 0.0004346466, z: 0.21735531}
+      rotation: {x: 0, y: 1, z: 0, w: -0.00000004371139}
+      scale: {x: 0.9999994, y: 0.99999994, z: 1.0000001}
+    - name: BOAR_ L Calf
+      parentName: BOAR_ L Thigh
+      position: {x: -0.37111282, y: 0, z: -0.000000019073486}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1.0000007, y: 1.0000011, z: 1.0000004}
+    - name: BOAR_ L HorseLink
+      parentName: BOAR_ L Calf
+      position: {x: -0.20907192, y: 0, z: 0}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1.0000011, y: 0.9999998, z: 1.0000005}
+    - name: BOAR_ L Foot
+      parentName: BOAR_ L HorseLink
+      position: {x: -0.23540126, y: 0, z: 0}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1.0000001, y: 0.99999994, z: 1.0000002}
+    - name: BOAR_ R Thigh
+      parentName: BOAR_ Spine
+      position: {x: 0.24983528, y: 0.000435791, z: -0.21735531}
+      rotation: {x: 0, y: 1, z: 0, w: -0.00000004371139}
+      scale: {x: 0.9999996, y: 1.0000001, z: 1.0000001}
+    - name: BOAR_ R Calf
+      parentName: BOAR_ R Thigh
+      position: {x: -0.37111276, y: 0, z: 0}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 0.99999994, y: 1.0000002, z: 1.0000004}
+    - name: BOAR_ R HorseLink
+      parentName: BOAR_ R Calf
+      position: {x: -0.20907192, y: -0.000000076293944, z: 0}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1.0000001, y: 1.0000008, z: 1}
+    - name: BOAR_ R Foot
+      parentName: BOAR_ R HorseLink
+      position: {x: -0.23540126, y: 0, z: 0}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 0.99999917, z: 0.9999997}
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 1
+    hasExtraRoot: 1
+    skeletonHasParents: 0
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 3
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
