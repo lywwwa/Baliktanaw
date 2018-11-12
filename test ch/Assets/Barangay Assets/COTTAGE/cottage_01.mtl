@@ -1,0 +1,206 @@
+# Max2Mtl Version 4.0 Mar 10th, 2001
+#
+newmtl roof_big
+Ka  0.6 0.6 0.6
+Kd  0.6 0.6 0.6
+Ks  0.9 0.9 0.9
+d  1
+Ns  1
+illum 2
+map_Kd -s 11 8 1 Tašky_OD01b_opak.tga
+map_d -s 11 8 1 tašky_OD01b_opak_jen2.png
+#
+# Multi/Sub roof_III (5) to come 
+#
+newmtl roof-triangle3
+Ka  0.6 0.6 0.6
+Kd  0.6 0.6 0.6
+Ks  0.9 0.9 0.9
+d  1
+Ns  2
+illum 2
+map_Kd -s 15 2.5 1 driftwood_opak_typ_IV_zel.tga
+map_d -s 15 2.5 1 driftwood_opak_typ_IV_jen2.png
+#
+newmtl roof-triangle3
+Ka  0.6 0.6 0.6
+Kd  0.6 0.6 0.6
+Ks  0.9 0.9 0.9
+d  1
+Ns  2
+illum 2
+map_Kd -s 15 2.5 1 driftwood_opak_typ_IV_zel.tga
+map_d -s 15 2.5 1 driftwood_opak_typ_IV_jen2.png
+#
+newmtl roof-triangle3
+Ka  0.6 0.6 0.6
+Kd  0.6 0.6 0.6
+Ks  0.9 0.9 0.9
+d  1
+Ns  2
+illum 2
+map_Kd -s 15 2.5 1 driftwood_opak_typ_IV_zel.tga
+map_d -s 15 2.5 1 driftwood_opak_typ_IV_zel.tga
+#
+newmtl roof-triangle3
+Ka  0.6 0.6 0.6
+Kd  0.6 0.6 0.6
+Ks  0.9 0.9 0.9
+d  1
+Ns  2
+illum 2
+map_Kd -s 15 2.5 1 driftwood_opak_typ_IV_zel.tga
+map_d -s 15 2.5 1 driftwood_opak_typ_IV_zel.tga
+#
+newmtl roof-triangle3
+Ka  0.6 0.6 0.6
+Kd  0.6 0.6 0.6
+Ks  0.9 0.9 0.9
+d  1
+Ns  2
+illum 2
+map_Kd -s 15 2.5 1 driftwood_opak_typ_IV_zel.tga
+map_d -s 15 2.5 1 driftwood_opak_typ_IV_zel.tga
+#
+# Multi/Sub roof_III done 
+#
+newmtl little_beams
+Ka  0.6 0.6 0.6
+Kd  0.6 0.6 0.6
+Ks  0.9 0.9 0.9
+d  1
+Ns  0.5
+illum 2
+map_Kd -s 1 7 1 driftwood_opak_typ_IV.tga
+map_d -s 1 7 1 driftwood_opak_typ_IV_jen2.png
+#
+newmtl roof_-_small
+Ka  0.6 0.6 0.6
+Kd  0.6 0.6 0.6
+Ks  0.9 0.9 0.9
+d  1
+Ns  1
+illum 2
+map_Kd -s 12 6 1 tašky_OD03bb.tga
+map_d -s 12 6 1 tašky_OD03bb_jen2.png
+#
+newmtl posts_and_beams
+Ka  0.6 0.6 0.6
+Kd  0.6 0.6 0.6
+Ks  0.9 0.9 0.9
+d  1
+Ns  0.5
+illum 2
+map_Kd -s 2 12 1 driftwood_opak_typ_IV.tga
+map_d -s 2 12 1 driftwood_opak_typ_IV_jen2.png
+#
+newmtl short_posts
+Ka  0.6 0.6 0.6
+Kd  0.6 0.6 0.6
+Ks  0.9 0.9 0.9
+d  1
+Ns  0.5
+illum 2
+map_Kd -s 2 2.5 1 driftwood_opak_typ_IV.tga
+map_d -s 2 2.5 1 driftwood_opak_typ_IV_jen2.png
+#
+newmtl fence_02
+Ka  0.6 0.6 0.6
+Kd  0.6 0.6 0.6
+Ks  0.9 0.9 0.9
+d  1
+Ns  0.5
+illum 2
+map_Kd -s 1 4 1 driftwood_opak_typ_IV_svìtlá.tga
+map_d -s 1 4 1 driftwood_opak_typ_IV_jen2.png
+#
+newmtl stairs
+Ka  0.6 0.6 0.6
+Kd  0.6 0.6 0.6
+Ks  0.9 0.9 0.9
+d  1
+Ns  0.5
+illum 2
+map_Kd -s 1 4 1 driftwood_opak_typ_IV.tga
+map_d -s 1 4 1 driftwood_opak_typ_IV_jen2.png
+#
+newmtl fence_01
+Ka  0.6 0.6 0.6
+Kd  0.6 0.6 0.6
+Ks  0.9 0.9 0.9
+d  1
+Ns  0.5
+illum 2
+map_Kd -s 1 3.5 1 driftwood_opak_typ_IV_svìtlá.tga
+map_d -s 1 3.5 1 driftwood_opak_typ_IV_jen2.png
+#
+newmtl hadr
+Ka  0.6 0.6 0.6
+Kd  0.6 0.6 0.6
+Ks  0.9 0.9 0.9
+d  1
+Ns  0
+illum 2
+map_Kd -s 2 2 1 hadr_II.tga
+map_d hadr_jen2.png
+#
+# Multi/Sub pøední_IIb (4) to come 
+#
+newmtl roof-triangle3
+Ka  0.6 0.6 0.6
+Kd  0.6 0.6 0.6
+Ks  0.9 0.9 0.9
+d  1
+Ns  2
+illum 2
+map_Kd -s 15 2.5 1 driftwood_opak_typ_IV_zel.tga
+#
+newmtl SIDE
+Ka  0.6 0.6 0.6
+Kd  0.6 0.6 0.6
+Ks  0.9 0.9 0.9
+d  1
+Ns  0
+illum 2
+#
+newmtl SIDE
+Ka  0.6 0.6 0.6
+Kd  0.6 0.6 0.6
+Ks  0.9 0.9 0.9
+d  1
+Ns  0
+illum 2
+#
+newmtl roof-triangle3
+Ka  0.6 0.6 0.6
+Kd  0.6 0.6 0.6
+Ks  0.9 0.9 0.9
+d  1
+Ns  1
+illum 2
+map_Kd -s 15 2.5 1 driftwood_opak_typ_IV.tga
+#
+# Multi/Sub pøední_IIb done 
+#
+# Multi/Sub boèní_II (2) to come 
+#
+newmtl SIDE
+Ka  0.6 0.6 0.6
+Kd  0.6 0.6 0.6
+Ks  0.9 0.9 0.9
+d  1
+Ns  0
+illum 2
+#
+newmtl roof-triangle3
+Ka  0.6 0.6 0.6
+Kd  0.6 0.6 0.6
+Ks  0.9 0.9 0.9
+d  1
+Ns  2
+illum 2
+map_Kd -s 15 2.5 1 driftwood_opak_typ_IV_zel.tga
+#
+# Multi/Sub boèní_II done 
+#
+# EOF
