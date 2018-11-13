@@ -5,7 +5,19 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
+  - enabled: 0
+    path: 
+    guid: 00000000000000000000000000000000
   - enabled: 1
-    path: Assets/Scenes/SampleScene.unity
-    guid: 99c9720ab356a0642a771bea13969a05
+    path: Assets/Scenes/StartMenu.unity
+    guid: af57b5bdba729ce4883c53f1aaef5e6c
+  - enabled: 1
+    path: Assets/Scenes/Barangay.unity
+    guid: 3f6320cc5ec818c4c87ffef154cb4e29
+  - enabled: 1
+    path: Assets/Scenes/Forest.unity
+    guid: 924649185134cb44482d9cc3720b5699
+  - enabled: 1
+    path: Assets/Scenes/mountain creek.unity
+    guid: 27bbe1f4a33b1f1499743dae8a75b419
   m_configObjects: {}

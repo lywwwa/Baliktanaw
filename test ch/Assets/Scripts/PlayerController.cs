@@ -11,14 +11,14 @@ public class PlayerController : MonoBehaviour {
 	private Rigidbody rb;
 	public Vector3 jump;
 	private float jumpforce = 3.0f;
-
+	private CharacterController controller;
 	public float verticalVelocity;
 	public float gravity = 14.0f;
 
 	// Use this for initialization
 	void Start () {
-		//controller = GetComponent <CharacterController>();
-		rb=GetComponent<Rigidbody>();
+		controller = GetComponent <CharacterController>();
+		//rb=GetComponent<Rigidbody>();
 		jump = new Vector3 (0.0f, 2.0f, 0.0f);
 	}
 
@@ -26,7 +26,7 @@ public class PlayerController : MonoBehaviour {
 	void OnCollisionStay(){
 		//isGrounded = true;
 
-		if(!isGrounded && rb.velocity.y <= 0) {
+		if(!isGrounded && controller.velocity.y <= 0) {
 			isGrounded = true; 
 			//jumpsLeft = 1; 
 		}
