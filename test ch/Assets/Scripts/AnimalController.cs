@@ -12,7 +12,7 @@ public class AnimalController : MonoBehaviour {
 
 	public float EnemyDistanceRun;
 
-	public Animator anim;
+	private Animator anim;
 
 	void Start()
 	{
