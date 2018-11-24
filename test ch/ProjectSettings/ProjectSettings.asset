@@ -653,7 +653,7 @@ PlayerSettings:
   cloudServicesEnabled:
     UNet: 1
   facebookSdkVersion: 7.9.4
-  apiCompatibilityLevel: 2
+  apiCompatibilityLevel: 3
   cloudProjectId: 72d2f86f-2a0f-4166-8b77-81e3ff041ea7
   projectName: test ch
   organizationId: lyradainelle98
