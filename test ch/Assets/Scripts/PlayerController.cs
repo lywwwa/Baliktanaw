@@ -15,6 +15,8 @@ public class PlayerController : MonoBehaviour {
 	public float verticalVelocity;
 	public float gravity = 14.0f;
 
+
+	public GameObject PausePanel;
 	// Use this for initialization
 	void Start () {
 		controller = GetComponent <CharacterController>();
@@ -46,7 +48,10 @@ public class PlayerController : MonoBehaviour {
 			}
 
 
-
+		if (Input.GetButton ("Start")) {
+			Debug.Log ("paused clicked");
+			PauseClicked (PausePanel);
+		}
 	}
 
 
@@ -67,5 +72,8 @@ public class PlayerController : MonoBehaviour {
 		isGrounded = false;
 
 	}
-
+	public void PauseClicked(GameObject panel){
+	
+		panel.SetActive (!panel.activeSelf);
+	}
 }

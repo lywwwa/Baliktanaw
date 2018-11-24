@@ -23,7 +23,7 @@ public class Player : MonoBehaviour {
 	Transform cameraT;
 	CharacterController characterController_;
 
-
+	public GameObject PausePanel;
 	public  void Start() {
 
 		cameraT = Camera.main.transform;
@@ -40,6 +40,11 @@ public class Player : MonoBehaviour {
 		if(Input.GetButton("Jump"))
 		{
 			Jump();
+		}
+
+		if (Input.GetButton ("Start")) {
+			Debug.Log ("paused clicked");
+			PauseClicked (PausePanel);
 		}
 	
 	}
@@ -91,5 +96,9 @@ public class Player : MonoBehaviour {
 		return smoothTime / airControlPercent;
 	}
 
+	public void PauseClicked(GameObject panel){
+
+		panel.SetActive (!panel.activeSelf);
+	}
 }
 
