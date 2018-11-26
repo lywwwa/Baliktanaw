@@ -12,7 +12,9 @@ public var waiting : boolean = false;
 
 private var randomPosition : Vector3;
 
-var moveDelay : float = 1;
+var moveDelay: float = 1;
+
+var r;
 
 var minX : float = 0;
 var maxX : float = 0;
@@ -54,7 +56,7 @@ r = Random.Range(minFlickerSpeed, maxFlickerSpeed);
 var temp = r;
 var t : float = 0;
 	while(t < 1.0){
-	t += Time.deltaTime / temp;
+	//t += Time.deltaTime / temp;
 	GetComponent.<Light>().intensity = Mathf.Lerp(Light_Temp, randomizer,t);
 	yield;
 	}	

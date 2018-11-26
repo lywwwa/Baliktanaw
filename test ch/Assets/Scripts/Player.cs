@@ -1,27 +1,27 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using UnityStandardAssets.CrossPlatformInput;
 
 public class Player : MonoBehaviour {
-	public float walkSpeed = 2;
-	public float runSpeed = 6;
-	public float gravity = -12;
-	public float jumpHeight = 1;
+    public float walkSpeed = 2;
+    public float runSpeed = 6;
+    public float gravity = -12;
+    public float jumpHeight = 1;
 
-	[Range(0,1)]
-	public float airControlPercent;
+    [Range(0, 1)]
+    public float airControlPercent;
 
-	public float turnSmoothTime = 0.2f;
-	float turnSmoothVelocity;
-	float velocityY;
+    public float turnSmoothTime = 0.2f;
+    float turnSmoothVelocity;
+    float velocityY;
 
-	public float speedSmoothTime = 0.1f;
-	float speedSmoothvelocity;
-	float currentSpeed;
-	Collision collision;
-	Transform cameraT;
-	CharacterController characterController_;
+    public float speedSmoothTime = 0.1f;
+    float speedSmoothvelocity;
+    float currentSpeed;
+    Collision collision;
+    Transform cameraT;
+    CharacterController characterController_;
 
 	public GameObject PausePanel;
 	public  void Start() {
@@ -77,7 +77,6 @@ public class Player : MonoBehaviour {
 		{
 			float jumpVelocity = Mathf.Sqrt(-2 * gravity * jumpHeight);
 			velocityY = jumpVelocity;
-
 		}
 
 	}
