@@ -74,6 +74,6 @@ public class PlayerController : MonoBehaviour {
 	}
 	public void PauseClicked(GameObject panel){
 	
-		panel.SetActive (!panel.activeSelf);
+		panel.SetActive (panel.activeSelf);
 	}
 }
