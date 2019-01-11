@@ -19,19 +19,26 @@ public class PlayerCont : MonoBehaviour {
 	public Transform vrCam;
 	public Transform Cap;
 
-	void Start()
+
+    private bool grabObj = false;
+    private GameObject hitObj;
+    private RaycastHit hit;
+
+    void Start()
 	{
 		controller = GetComponent<CharacterController>();
 		Cap = this.gameObject.transform;
 		LookRotation (Cap.transform,vrCam.transform);
-		// let the gameObject fall down
-		gameObject.transform.position = new Vector3(XPosition, YPosition, ZPosition);
-	}
+        // let the gameObject fall down
+       // gameObject.transform.position = new Vector3(0, 5, 0);
+        gameObject.transform.position = new Vector3(XPosition, YPosition, ZPosition);
+    }
 
 	void Update()
 	{
 		PlayerMovement ();
-	}
+        GrabObject();
+    }
 
 	public void PlayerMovement()
 	{
@@ -78,4 +85,22 @@ public class PlayerCont : MonoBehaviour {
 
 	}
 
+    public void GrabObject()
+    {
+        if (hit.collider.gameObject && (Input.GetButton("Fire2")|| Input.GetButton("XButton")) && grabObj == false)
+        {
+            hitObj = hit.collider.gameObject;
+            grabObj = true;
+        }
+        else if ((Input.GetButton("Fire2")|| Input.GetButton("XButton")) && grabObj == true)
+        {
+            grabObj = false;
+        }
+
+        //		if (grabObj) {
+        //			hitObj.transform.position.x = gameObject.transform.position.x;
+        //			hitObj.transform.position.y = gameObject.transform.position.y;
+        //			hitObj.transform.position.z = gameObject.transform.position.z+2;
+        //		}
+    }
 }
