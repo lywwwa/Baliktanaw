@@ -31,6 +31,7 @@ public class PlayerCont : MonoBehaviour {
 		LookRotation (Cap.transform,vrCam.transform);
         // let the gameObject fall down
        // gameObject.transform.position = new Vector3(0, 5, 0);
+
         gameObject.transform.position = new Vector3(XPosition, YPosition, ZPosition);
        // Debug.Log(XPosition+","+YPosition+","+ZPosition);
     }
