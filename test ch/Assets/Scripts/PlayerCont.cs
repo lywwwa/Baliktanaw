@@ -32,12 +32,14 @@ public class PlayerCont : MonoBehaviour {
         // let the gameObject fall down
        // gameObject.transform.position = new Vector3(0, 5, 0);
         gameObject.transform.position = new Vector3(XPosition, YPosition, ZPosition);
+       // Debug.Log(XPosition+","+YPosition+","+ZPosition);
     }
 
 	void Update()
 	{
 		PlayerMovement ();
         GrabObject();
+      //  Debug.Log(XPosition + "," + YPosition + "," + ZPosition);
     }
 
 	public void PlayerMovement()
@@ -47,17 +49,18 @@ public class PlayerCont : MonoBehaviour {
 			// We are grounded, so recalculate
 			// move direction directly from axes
 
-			moveDirection = new Vector3(Input.GetAxis("LeftJoystickHorizontal"), 0.0f, Input.GetAxis("RightJoystickVertical"));
-			moveDirection = transform.TransformDirection(moveDirection);
+			moveDirection = new Vector3(Input.GetAxis("LeftJoystickHorizontal"), 0.0f, Input.GetAxis("LeftJoystickVertical"));
+            Debug.Log(""+moveDirection.x+","+moveDirection.z);
+            moveDirection = transform.TransformDirection(moveDirection);
 			moveDirection = moveDirection * speed;
 
-			if (Input.GetButton ("Fire1")|| Input.GetButton("XButton")) {
+			if (Input.GetButton("XButton")) {
 
 				moveDirection = moveDirection *runSpeed;
 			} 
 
 
-			if (Input.GetButton("Jump")||Input.GetButton("YButton"))
+			if (Input.GetButton("YButton"))
 			{
 				moveDirection.y = jumpSpeed;
 			}
