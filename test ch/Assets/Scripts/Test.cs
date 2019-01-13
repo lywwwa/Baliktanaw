@@ -4,16 +4,34 @@ using UnityEngine;
 using UnityEngine.UI;
 using BayesServer;
 using System;
+using UnityEngine.SceneManagement;
 
 public class Test : MonoBehaviour {
 
-    Variable question;
-    Variable c1;
-    Variable c2;
-    Variable c3;
+    static Variable question;
+    static Variable c1;
+    static Variable c2;
+    static Variable c3;
+
+    static Variable scriptDatu;
+    static Variable scriptLupas;
+    static Variable scriptLAma;
+
+    public GameObject Lupas;
+    public GameObject nameDatu;
+    public GameObject nameEnita;
+
+    public GameObject dialogueBox;
+
+    int weedCount = 0;
+    bool weedQuest = false;
+
+    bool dlBoxEnabler = true;
 
     int x;
     int scoreCount = 0;
+
+    
 
     void SetUp()
     {
@@ -77,9 +95,17 @@ public class Test : MonoBehaviour {
 
     }
 
+    void ScriptSetUp()
+    {
+        scriptDatu = new Variable("DatuScript", new string[] { "Kabani, alam kong gusto mong pumunta sa iyong mga kaibigan. Pinapayagan kita ngayong araw. Lagi ka lamang mag-iingat." });
+
+        scriptLupas = new Variable("LupasScript", new string[] { "Tamang tama!Pupunta ako kay ama sa bukid upang magsaka. Malaking bagay ang iyong tulong."});
+
+        scriptLAma = new Variable("LAmaScript", new string[] { "Masyado pa kayong bata para magsaka. Ngunit maganda ang naisip niyong pagtulong kung gusto niyong matuto. Sa ngayon ay nakapagtanim na kami ng mga palay. Ang gawin niyo na lang muna ay magtanggal ng mga ligaw na damo" });
+    }
+
     void TextUpdates()
     {
-
         //Changing the texts of questions and choices every time the player answers
 
         if (x < 12)
@@ -95,17 +121,127 @@ public class Test : MonoBehaviour {
     }
 
 
-	// Use this for initialization
-	void Start () {
-        SetUp();
+    // Use this for initialization
+    void Start() {
+        Scene currentScene = SceneManager.GetActiveScene();
+
+        string sceneName = currentScene.name;
+
+        if (sceneName == "Test")
+        {
+            SetUp();
+        }
+        else if(sceneName == "Barangay")
+        {
+            ScriptSetUp();
+        }
+        
     }
 	
 	// Update is called once per frame
 	void Update () {
-        TextUpdates();
 
-        Debug.Log(scoreCount);
+        Scene currentScene = SceneManager.GetActiveScene();
+
+        string sceneName = currentScene.name;
+
+        if (sceneName == "Test")
+        {
+            TextUpdates();
+        }
+
+        //Debug.Log(scoreCount);
+
+        NpcName();
     }
+
+    void NpcName()
+    {
+        //Lupas.transform.LookAt(Camera.main.transform.position);
+        //nameLupas.transform.Rotate(0,180,0);
+        //nameDatu.transform.LookAt(Camera.main.transform.position);
+        //nameDatu.transform.Rotate(0, 180, 0);
+        //nameEnita.transform.LookAt(Camera.main.transform.position);
+        //nameEnita.transform.Rotate(0, 180, 0);
+    }
+
+    void OnCollisionStay(Collision other)
+    {
+        Debug.Log(other.gameObject.tag);
+
+
+        if (other.gameObject.tag == "Datu")
+        {
+            Debug.Log("Collide Success!");
+            if(Input.GetButton("AButton"))
+            {
+                Debug.Log("Enter Success!");
+                if (dlBoxEnabler)
+                {
+                    dialogueBox.SetActive(true);
+                }
+                GameObject.Find("CharacterName").GetComponentInChildren<Text>().text = "Datu Gunsad";
+                GameObject.Find("dialoguetext").GetComponentInChildren<Text>().text = Convert.ToString(scriptDatu.States[0]);
+
+                weedCount = 1;
+            }
+        }
+        else if (other.gameObject.tag == "Lupas")
+        {
+            Debug.Log("Collide Success!");
+            if (Input.GetButton("AButton"))
+            {
+                Debug.Log("Enter Success!");
+                if (dlBoxEnabler)
+                {
+                    dialogueBox.SetActive(true);
+                }
+                GameObject.Find("CharacterName").GetComponentInChildren<Text>().text = "Lupas";
+                GameObject.Find("dialoguetext").GetComponentInChildren<Text>().text = Convert.ToString(scriptLupas.States[0]);
+
+                weedCount = 2;
+            }
+        }
+
+        if (other.gameObject.tag == "AmaLupas")
+        {
+            Debug.Log("Collide Success!");
+            if (Input.GetButton("AButton"))
+            {
+                Debug.Log("Enter Success!");
+                if (dlBoxEnabler)
+                {
+                    dialogueBox.SetActive(true);
+                }
+                GameObject.Find("CharacterName").GetComponentInChildren<Text>().text = "Ama ni Lupas";
+                GameObject.Find("dialoguetext").GetComponentInChildren<Text>().text = Convert.ToString(scriptLAma.States[0]);
+
+                weedCount = 3;
+            }
+        }
+
+        if (other.gameObject.tag == "Grass")
+        {
+            Debug.Log("Grass Collide");
+            if (Input.GetButton("AButton") && weedCount == 3)
+            {
+                DestroyObject(other.gameObject);
+                Debug.Log("Grass Destroyed~!");
+            }
+        }
+    }
+
+    void OnCollisionExit(Collision other)
+    {
+        dialogueBox.SetActive(false);
+    }
+    
+
+
+
+
+
+    //Button OnCliCK
 
     public void ChoiceOne()
     {

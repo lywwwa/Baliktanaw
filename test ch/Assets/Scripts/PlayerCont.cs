@@ -51,7 +51,7 @@ public class PlayerCont : MonoBehaviour {
 			// move direction directly from axes
 
 			moveDirection = new Vector3(Input.GetAxis("LeftJoystickHorizontal"), 0.0f, Input.GetAxis("LeftJoystickVertical"));
-            Debug.Log(""+moveDirection.x+","+moveDirection.z);
+            //Debug.Log(""+moveDirection.x+","+moveDirection.z);
             moveDirection = transform.TransformDirection(moveDirection);
 			moveDirection = moveDirection * speed;
 
@@ -91,15 +91,15 @@ public class PlayerCont : MonoBehaviour {
 
     public void GrabObject()
     {
-        if (hit.collider.gameObject && (Input.GetButton("Fire2")|| Input.GetButton("XButton")) && grabObj == false)
-        {
-            hitObj = hit.collider.gameObject;
-            grabObj = true;
-        }
-        else if ((Input.GetButton("Fire2")|| Input.GetButton("XButton")) && grabObj == true)
-        {
-            grabObj = false;
-        }
+        //if (hit.collider.gameObject && (Input.GetButton("Fire2")|| Input.GetButton("XButton")) && grabObj == false)
+        //{
+        //    hitObj = hit.collider.gameObject;
+        //    grabObj = true;
+        //}
+        //else if ((Input.GetButton("Fire2")|| Input.GetButton("XButton")) && grabObj == true)
+        //{
+        //    grabObj = false;
+        //}
 
         //		if (grabObj) {
         //			hitObj.transform.position.x = gameObject.transform.position.x;
