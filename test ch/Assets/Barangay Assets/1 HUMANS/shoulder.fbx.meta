@@ -1,0 +1,489 @@
+fileFormatVersion: 2
+guid: d592506f5f151424fbaf5e99d159066d
+ModelImporter:
+  serializedVersion: 23
+  fileIDToRecycleName:
+    100000: afro01Mesh
+    100002: ball_l
+    100004: ball_l 1
+    100006: ball_l_end
+    100008: ball_l_end 1
+    100010: ball_r
+    100012: ball_r 1
+    100014: ball_r_end
+    100016: ball_r_end 1
+    100018: basic_loincloth1Mesh
+    100020: calf_l
+    100022: calf_l 1
+    100024: calf_r
+    100026: calf_r 1
+    100028: Camera
+    100030: clavicle_l
+    100032: clavicle_l 1
+    100034: clavicle_r
+    100036: clavicle_r 1
+    100038: Cube
+    100040: Cube.001
+    100042: Cube.002
+    100044: Cube.003
+    100046: Cube.004
+    100048: Cylinder
+    100050: Cylinder.001
+    100052: datuMesh
+    100054: eyebrow009Mesh
+    100056: eyebrow010Mesh
+    100058: eyelashes01Mesh
+    100060: foot_l
+    100062: foot_l 1
+    100064: foot_r
+    100066: foot_r 1
+    100068: Game_engine
+    100070: Game_engine.001
+    100072: hand_l
+    100074: hand_l 1
+    100076: hand_r
+    100078: hand_r 1
+    100080: head
+    100082: head 1
+    100084: head_end
+    100086: head_end 1
+    100088: high-polyMesh
+    100090: high-polyMesh.001
+    100092: index_01_l
+    100094: index_01_l 1
+    100096: index_01_r
+    100098: index_01_r 1
+    100100: index_02_l
+    100102: index_02_l 1
+    100104: index_02_r
+    100106: index_02_r 1
+    100108: index_03_l
+    100110: index_03_l 1
+    100112: index_03_l_end
+    100114: index_03_l_end 1
+    100116: index_03_r
+    100118: index_03_r 1
+    100120: index_03_r_end
+    100122: index_03_r_end 1
+    100124: Lamp
+    100126: lowerarm_l
+    100128: lowerarm_l 1
+    100130: lowerarm_r
+    100132: lowerarm_r 1
+    100134: middle_01_l
+    100136: middle_01_l 1
+    100138: middle_01_r
+    100140: middle_01_r 1
+    100142: middle_02_l
+    100144: middle_02_l 1
+    100146: middle_02_r
+    100148: middle_02_r 1
+    100150: middle_03_l
+    100152: middle_03_l 1
+    100154: middle_03_l_end
+    100156: middle_03_l_end 1
+    100158: middle_03_r
+    100160: middle_03_r 1
+    100162: middle_03_r_end
+    100164: middle_03_r_end 1
+    100166: neck_01
+    100168: neck_01 1
+    100170: parent_femaleMesh
+    100172: pelvis
+    100174: pelvis 1
+    100176: pinky_01_l
+    100178: pinky_01_l 1
+    100180: pinky_01_r
+    100182: pinky_01_r 1
+    100184: pinky_02_l
+    100186: pinky_02_l 1
+    100188: pinky_02_r
+    100190: pinky_02_r 1
+    100192: pinky_03_l
+    100194: pinky_03_l 1
+    100196: pinky_03_l_end
+    100198: pinky_03_l_end 1
+    100200: pinky_03_r
+    100202: pinky_03_r 1
+    100204: pinky_03_r_end
+    100206: pinky_03_r_end 1
+    100208: Plane
+    100210: Plane.001
+    100212: Plane.002
+    100214: Plane.003
+    100216: ring_01_l
+    100218: ring_01_l 1
+    100220: ring_01_r
+    100222: ring_01_r 1
+    100224: ring_02_l
+    100226: ring_02_l 1
+    100228: ring_02_r
+    100230: ring_02_r 1
+    100232: ring_03_l
+    100234: ring_03_l 1
+    100236: ring_03_l_end
+    100238: ring_03_l_end 1
+    100240: ring_03_r
+    100242: ring_03_r 1
+    100244: ring_03_r_end
+    100246: ring_03_r_end 1
+    100248: Root
+    100250: Root 1
+    100252: //RootNode
+    100254: spine_01
+    100256: spine_01 1
+    100258: spine_02
+    100260: spine_02 1
+    100262: spine_03
+    100264: spine_03 1
+    100266: teeth_baseMesh
+    100268: teeth_baseMesh.001
+    100270: thigh_l
+    100272: thigh_l 1
+    100274: thigh_r
+    100276: thigh_r 1
+    100278: thumb_01_l
+    100280: thumb_01_l 1
+    100282: thumb_01_r
+    100284: thumb_01_r 1
+    100286: thumb_02_l
+    100288: thumb_02_l 1
+    100290: thumb_02_r
+    100292: thumb_02_r 1
+    100294: thumb_03_l
+    100296: thumb_03_l 1
+    100298: thumb_03_l_end
+    100300: thumb_03_l_end 1
+    100302: thumb_03_r
+    100304: thumb_03_r 1
+    100306: thumb_03_r_end
+    100308: thumb_03_r_end 1
+    100310: tongue01Mesh
+    100312: tongue01Mesh.001
+    100314: upperarm_l
+    100316: upperarm_l 1
+    100318: upperarm_r
+    100320: upperarm_r 1
+    400000: afro01Mesh
+    400002: ball_l
+    400004: ball_l 1
+    400006: ball_l_end
+    400008: ball_l_end 1
+    400010: ball_r
+    400012: ball_r 1
+    400014: ball_r_end
+    400016: ball_r_end 1
+    400018: basic_loincloth1Mesh
+    400020: calf_l
+    400022: calf_l 1
+    400024: calf_r
+    400026: calf_r 1
+    400028: Camera
+    400030: clavicle_l
+    400032: clavicle_l 1
+    400034: clavicle_r
+    400036: clavicle_r 1
+    400038: Cube
+    400040: Cube.001
+    400042: Cube.002
+    400044: Cube.003
+    400046: Cube.004
+    400048: Cylinder
+    400050: Cylinder.001
+    400052: datuMesh
+    400054: eyebrow009Mesh
+    400056: eyebrow010Mesh
+    400058: eyelashes01Mesh
+    400060: foot_l
+    400062: foot_l 1
+    400064: foot_r
+    400066: foot_r 1
+    400068: Game_engine
+    400070: Game_engine.001
+    400072: hand_l
+    400074: hand_l 1
+    400076: hand_r
+    400078: hand_r 1
+    400080: head
+    400082: head 1
+    400084: head_end
+    400086: head_end 1
+    400088: high-polyMesh
+    400090: high-polyMesh.001
+    400092: index_01_l
+    400094: index_01_l 1
+    400096: index_01_r
+    400098: index_01_r 1
+    400100: index_02_l
+    400102: index_02_l 1
+    400104: index_02_r
+    400106: index_02_r 1
+    400108: index_03_l
+    400110: index_03_l 1
+    400112: index_03_l_end
+    400114: index_03_l_end 1
+    400116: index_03_r
+    400118: index_03_r 1
+    400120: index_03_r_end
+    400122: index_03_r_end 1
+    400124: Lamp
+    400126: lowerarm_l
+    400128: lowerarm_l 1
+    400130: lowerarm_r
+    400132: lowerarm_r 1
+    400134: middle_01_l
+    400136: middle_01_l 1
+    400138: middle_01_r
+    400140: middle_01_r 1
+    400142: middle_02_l
+    400144: middle_02_l 1
+    400146: middle_02_r
+    400148: middle_02_r 1
+    400150: middle_03_l
+    400152: middle_03_l 1
+    400154: middle_03_l_end
+    400156: middle_03_l_end 1
+    400158: middle_03_r
+    400160: middle_03_r 1
+    400162: middle_03_r_end
+    400164: middle_03_r_end 1
+    400166: neck_01
+    400168: neck_01 1
+    400170: parent_femaleMesh
+    400172: pelvis
+    400174: pelvis 1
+    400176: pinky_01_l
+    400178: pinky_01_l 1
+    400180: pinky_01_r
+    400182: pinky_01_r 1
+    400184: pinky_02_l
+    400186: pinky_02_l 1
+    400188: pinky_02_r
+    400190: pinky_02_r 1
+    400192: pinky_03_l
+    400194: pinky_03_l 1
+    400196: pinky_03_l_end
+    400198: pinky_03_l_end 1
+    400200: pinky_03_r
+    400202: pinky_03_r 1
+    400204: pinky_03_r_end
+    400206: pinky_03_r_end 1
+    400208: Plane
+    400210: Plane.001
+    400212: Plane.002
+    400214: Plane.003
+    400216: ring_01_l
+    400218: ring_01_l 1
+    400220: ring_01_r
+    400222: ring_01_r 1
+    400224: ring_02_l
+    400226: ring_02_l 1
+    400228: ring_02_r
+    400230: ring_02_r 1
+    400232: ring_03_l
+    400234: ring_03_l 1
+    400236: ring_03_l_end
+    400238: ring_03_l_end 1
+    400240: ring_03_r
+    400242: ring_03_r 1
+    400244: ring_03_r_end
+    400246: ring_03_r_end 1
+    400248: Root
+    400250: Root 1
+    400252: //RootNode
+    400254: spine_01
+    400256: spine_01 1
+    400258: spine_02
+    400260: spine_02 1
+    400262: spine_03
+    400264: spine_03 1
+    400266: teeth_baseMesh
+    400268: teeth_baseMesh.001
+    400270: thigh_l
+    400272: thigh_l 1
+    400274: thigh_r
+    400276: thigh_r 1
+    400278: thumb_01_l
+    400280: thumb_01_l 1
+    400282: thumb_01_r
+    400284: thumb_01_r 1
+    400286: thumb_02_l
+    400288: thumb_02_l 1
+    400290: thumb_02_r
+    400292: thumb_02_r 1
+    400294: thumb_03_l
+    400296: thumb_03_l 1
+    400298: thumb_03_l_end
+    400300: thumb_03_l_end 1
+    400302: thumb_03_r
+    400304: thumb_03_r 1
+    400306: thumb_03_r_end
+    400308: thumb_03_r_end 1
+    400310: tongue01Mesh
+    400312: tongue01Mesh.001
+    400314: upperarm_l
+    400316: upperarm_l 1
+    400318: upperarm_r
+    400320: upperarm_r 1
+    2000000: Camera
+    2100000: No Name
+    2100002: tongue01.001
+    2100004: teeth_base.001
+    2100006: parent_female
+    2100008: eyebrow010
+    2100010: high-poly.001
+    2100012: eyelashes01
+    2100014: Material.008
+    2100016: Material.006
+    2100018: Material.009
+    2100020: tongue01
+    2100022: teeth_base
+    2100024: basic_loincloth1
+    2100026: eyebrow009
+    2100028: datu
+    2100030: high-poly
+    2100032: afro01
+    2300000: Cube
+    2300002: Cube.001
+    2300004: Cube.002
+    2300006: Cube.003
+    2300008: Cube.004
+    2300010: Cylinder
+    2300012: Cylinder.001
+    2300014: Plane
+    2300016: Plane.001
+    2300018: Plane.002
+    2300020: Plane.003
+    3300000: Cube
+    3300002: Cube.001
+    3300004: Cube.002
+    3300006: Cube.003
+    3300008: Cube.004
+    3300010: Cylinder
+    3300012: Cylinder.001
+    3300014: Plane
+    3300016: Plane.001
+    3300018: Plane.002
+    3300020: Plane.003
+    4300000: Plane.003
+    4300002: Plane.002
+    4300004: tongue01Mesh.001
+    4300006: teeth_baseMesh.001
+    4300008: parent_femaleMesh
+    4300010: eyebrow010Mesh
+    4300012: high-polyMesh.001
+    4300014: eyelashes01Mesh
+    4300016: Plane.001
+    4300018: Plane
+    4300020: Cube.004
+    4300022: Cylinder.001
+    4300024: Cylinder
+    4300026: Cube.003
+    4300028: Cube.002
+    4300030: Cube.001
+    4300032: Cube
+    4300034: tongue01Mesh
+    4300036: teeth_baseMesh
+    4300038: basic_loincloth1Mesh
+    4300040: eyebrow009Mesh
+    4300042: datuMesh
+    4300044: high-polyMesh
+    4300046: afro01Mesh
+    9500000: //RootNode
+    10800000: Lamp
+    13700000: afro01Mesh
+    13700002: basic_loincloth1Mesh
+    13700004: datuMesh
+    13700006: eyebrow009Mesh
+    13700008: eyebrow010Mesh
+    13700010: eyelashes01Mesh
+    13700012: high-polyMesh
+    13700014: high-polyMesh.001
+    13700016: parent_femaleMesh
+    13700018: teeth_baseMesh
+    13700020: teeth_baseMesh.001
+    13700022: tongue01Mesh
+    13700024: tongue01Mesh.001
+  externalObjects: {}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+    previousCalculatedGlobalScale: 0.01
+    hasPreviousCalculatedGlobalScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
