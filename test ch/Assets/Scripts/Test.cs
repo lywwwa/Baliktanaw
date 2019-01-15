@@ -229,6 +229,16 @@ public class Test : MonoBehaviour {
                 Debug.Log("Grass Destroyed~!");
             }
         }
+
+        if (other.gameObject.tag == "Fish")
+        {
+            Debug.Log("Fish Collide");
+            if (Input.GetButton("AButton"))
+            {
+                DestroyObject(other.gameObject);
+                Debug.Log("Fish Destroyed~!");
+            }
+        }
     }
 
     void OnCollisionExit(Collision other)

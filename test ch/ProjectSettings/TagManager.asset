@@ -9,6 +9,7 @@ TagManager:
   - Datu
   - Lupas
   - AmaLupas
+  - Fish
   layers:
   - Default
   - TransparentFX
