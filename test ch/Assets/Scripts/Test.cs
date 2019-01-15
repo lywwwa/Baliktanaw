@@ -101,7 +101,7 @@ public class Test : MonoBehaviour {
 
         scriptLupas = new Variable("LupasScript", new string[] { "Tamang tama!Pupunta ako kay ama sa bukid upang magsaka. Malaking bagay ang iyong tulong."});
 
-        scriptLAma = new Variable("LAmaScript", new string[] { "Masyado pa kayong bata para magsaka. Ngunit maganda ang naisip niyong pagtulong kung gusto niyong matuto. Sa ngayon ay nakapagtanim na kami ng mga palay. Ang gawin niyo na lang muna ay magtanggal ng mga ligaw na damo" });
+        scriptLAma = new Variable("LAmaScript", new string[] { "Masyado pa kayong bata para magtanim ng mga halamang ugat. Ngunit maganda ang naisip niyong pagtulong kung gusto niyong matuto. Sa ngayon, ang gawin niyo na lang muna ay magtanggal ng mga ligaw na damo." });
     }
 
     void TextUpdates()
