@@ -31,7 +31,9 @@ public class Test : MonoBehaviour {
     int x;
     int scoreCount = 0;
 
-    
+    Rigidbody P_Rigidbody;
+
+
 
     void SetUp()
     {
@@ -134,6 +136,8 @@ public class Test : MonoBehaviour {
         else if(sceneName == "Barangay")
         {
             ScriptSetUp();
+
+            P_Rigidbody = this.GetComponent<Rigidbody>();
         }
         
     }
@@ -150,6 +154,8 @@ public class Test : MonoBehaviour {
             TextUpdates();
         }
 
+        RaycastDetection();
+
         //Debug.Log(scoreCount);
 
         NpcName();
@@ -163,6 +169,40 @@ public class Test : MonoBehaviour {
         //nameDatu.transform.Rotate(0, 180, 0);
         //nameEnita.transform.LookAt(Camera.main.transform.position);
         //nameEnita.transform.Rotate(0, 180, 0);
+    }
+
+    void RaycastDetection()
+    {
+        RaycastHit hit;
+
+        var fwd = transform.TransformDirection(Vector3.forward);
+        if (Physics.Raycast(transform.position, fwd, out hit, 300))
+        {
+            Debug.Log(hit.collider.gameObject.tag);
+
+            if (hit.collider.gameObject.tag == "AmaLupas")
+            {
+                if (Input.GetButton("AButton"))
+                {
+                    if (dlBoxEnabler)
+                    {
+                        dialogueBox.SetActive(true);
+
+                        this.transform.position = new Vector3(hit.transform.position.x, hit.transform.position.y, hit.transform.position.z + 10f);
+
+                        P_Rigidbody.constraints = RigidbodyConstraints.FreezePosition;
+                        GameObject.Find("CharacterName").GetComponentInChildren<Text>().text = "Ama ni Lupas";
+                        GameObject.Find("dialoguetext").GetComponentInChildren<Text>().text = Convert.ToString(scriptLAma.States[0]);
+                    }
+                    else
+                    {
+                        dialogueBox.SetActive(false);
+                        //P_Rigidbody.constraints = RigidbodyConstraints.None;
+                    }
+                    dlBoxEnabler= !dlBoxEnabler;
+                }
+            }
+        }
     }
 
     void OnCollisionStay(Collision other)
@@ -241,10 +281,10 @@ public class Test : MonoBehaviour {
         }
     }
 
-    void OnCollisionExit(Collision other)
-    {
-        dialogueBox.SetActive(false);
-    }
+    //void OnCollisionExit(Collision other)
+    //{
+    //    dialogueBox.SetActive(false);
+    //}
     
 
 
