@@ -28,24 +28,27 @@ public class PlayerCont : MonoBehaviour {
 	{
 		controller = GetComponent<CharacterController>();
 		Cap = this.gameObject.transform;
-		LookRotation (Cap.transform,vrCam.transform);
-        // let the gameObject fall down
-       // gameObject.transform.position = new Vector3(0, 5, 0);
 
+        // let the gameObject fall down
+        // gameObject.transform.position = new Vector3(0, 5, 0);
+        LookRotation(Cap.transform, vrCam.transform);
         gameObject.transform.position = new Vector3(XPosition, YPosition, ZPosition);
        // Debug.Log(XPosition+","+YPosition+","+ZPosition);
     }
 
 	void Update()
 	{
-		PlayerMovement ();
+       
+        PlayerMovement ();
         GrabObject();
       //  Debug.Log(XPosition + "," + YPosition + "," + ZPosition);
     }
 
 	public void PlayerMovement()
 	{
-		if (controller.isGrounded)
+        
+
+        if (controller.isGrounded)
 		{
 			// We are grounded, so recalculate
 			// move direction directly from axes
@@ -77,6 +80,7 @@ public class PlayerCont : MonoBehaviour {
 
 	public void LookRotation(Transform character, Transform camera){
 
+        Debug.Log("rotate");
 		//change the view x/y to joystick right
 		float yRot = Input.GetAxis ("RightJoystickVertical") *Time.deltaTime*3.0f ;
 		float xRot = Input.GetAxis ("RightJoystickHorizontal") *Time.deltaTime*3.0f ;

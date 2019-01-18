@@ -16,15 +16,14 @@ public class SelectionController : MonoBehaviour {
 	// Update is called once per frame
 	void Update () 
 	{
-		if (Input.GetAxis ("Vertical") != 0 && buttonSelected == false) 
+		if (Input.GetAxis ("LeftJoystickVertical") != 0 && buttonSelected == false) 
 		{
 			eventSystem.SetSelectedGameObject(selectedObject);
 			buttonSelected = true;
 		}
 
-		if (Input.GetButton("Submit")) {
+		if (Input.GetButton("BButton")) {
 			Debug.Log ("b button clicked");
-
 		}
 	}
 

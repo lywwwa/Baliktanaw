@@ -22,7 +22,7 @@ public class ExitButton : MonoBehaviour {
 	}
 
 	public void StartGame(){
-		SceneManager.LoadScene("Barangay");
+		SceneManager.LoadScene("test");
 	}
 
 

@@ -8,10 +8,15 @@ public class GrabCasting : MonoBehaviour {
     float xDistance = 3;
     float yDistance = 1;
 
-	// Use this for initialization
-	void Start () {
-		
-	}
+    private Animator anim;
+    private GameObject holdObj;
+
+    // Use this for initialization
+    void Start () {
+        anim = GetComponent<Animator>();
+
+        Debug.Log("Working script");
+    }
 	
 	// Update is called once per frame
 	void Update () {
@@ -21,7 +26,7 @@ public class GrabCasting : MonoBehaviour {
         var fwd = transform.TransformDirection(Vector3.forward);
         if(Physics.Raycast(transform.position,  fwd, out hit, 500))
         {
-            Debug.Log(hit.collider.gameObject.tag);
+            //Debug.Log(hit.collider.gameObject.tag);
             
             if(hit.collider.gameObject.tag == "Grass")
             {
@@ -31,8 +36,16 @@ public class GrabCasting : MonoBehaviour {
                     hit.transform.localPosition = new Vector3(0f, -.672f, 0f);
                 }
             }
-        }
-        
+            else if (hit.collider.gameObject.tag == "Weapon")
+            {
+                if (Input.GetButton("AButton"))
+                {
+                    anim.SetBool("IsHolding", true);
+                    holdObj = hit.collider.gameObject;
 
+                    holdObj.transform.parent = this.gameObject.transform;
+                }
+            }
+        }
     }
 }

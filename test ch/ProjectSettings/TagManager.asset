@@ -10,6 +10,13 @@ TagManager:
   - Lupas
   - AmaLupas
   - Fish
+  - Weapon
+  - Makindo
+  - Piyan
+  - TimawaBuwis
+  - Taro
+  - Door
+  - Matanda
   layers:
   - Default
   - TransparentFX

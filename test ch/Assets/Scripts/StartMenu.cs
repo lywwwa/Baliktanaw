@@ -14,6 +14,7 @@ public class StartMenu : MonoBehaviour {
 	void Update () {
 		
 	}
+
 	public void ToStartMenu(){
 		SceneManager.LoadScene("StartMenu");
 	}
