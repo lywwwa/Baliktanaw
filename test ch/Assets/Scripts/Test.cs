@@ -47,6 +47,7 @@ public class Test : MonoBehaviour {
 
     Rigidbody P_Rigidbody;
 
+    LoadScreen loadScreen;
 
 
     void SetUp()
@@ -153,7 +154,10 @@ public class Test : MonoBehaviour {
         }
         else
         {
-            SceneManager.LoadScene("Barangay");
+            Debug.Log("Loadlevel");
+            loadScreen.LoadLevel();
+            //levelLoader.FadeToLevel();
+            //SceneManager.LoadScene("Barangay");
         }
     }
 
@@ -162,6 +166,7 @@ public class Test : MonoBehaviour {
     void Start() {
         Scene currentScene = SceneManager.GetActiveScene();
 
+        loadScreen=GetComponent<LoadScreen>();
         string sceneName = currentScene.name;
 
         if (sceneName == "Test")

@@ -10,26 +10,27 @@ public class LevelLoader : MonoBehaviour {
 	public GameObject guiObject;
 	public string LevelToLoad;
 
+    
 	public Animator animator;
 	void Start()
 	{
-		guiObject.SetActive(false);
+		//guiObject.SetActive(false);
 	}
 
+    
 
-
-	void OnTriggerStay(Collider other)
-	{
-		if (other.gameObject.tag == "Player")
-		{
-			guiObject.SetActive(true);
-			if (guiObject.activeInHierarchy == true && (Input.GetButton("XButton")))
-			{
-				FadeToLevel();
-				//SceneManager.LoadScene(ToLevel);
-			}
-		}
-	}
+	//void OnTriggerStay(Collider other)
+	//{
+	//	if (other.gameObject.tag == "Player")
+	//	{
+	//		guiObject.SetActive(true);
+	//		if (guiObject.activeInHierarchy == true && (Input.GetButton("XButton")))
+	//		{
+	//			FadeToLevel();
+	//			//SceneManager.LoadScene(ToLevel);
+	//		}
+	//	}
+	//}
 
 	public void FadeToLevel(){
 
@@ -45,7 +46,7 @@ public class LevelLoader : MonoBehaviour {
 
 	void OnTriggerExit()
 	{
-		guiObject.SetActive(false);
+		//guiObject.SetActive(false);
 	}
 
 }

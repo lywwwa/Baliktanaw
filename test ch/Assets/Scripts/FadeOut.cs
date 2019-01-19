@@ -4,16 +4,23 @@ using UnityEngine;
 
 public class FadeOut : MonoBehaviour {
 
-	public GameObject title;
+	//public GameObject title;
+    Color color;
 
-	//SpriteRenderer rend;
+    //SpriteRenderer rend;
 
-	void Start ()
+    //IEnumerator 
+    void Start ()
 	{
-		//rend = GetComponent<SpriteRenderer>();
-		//startFading();
-		StartCoroutine(cone1UP(10f));
-	}
+        //yield return new WaitForSeconds(0.5f);
+        //title.GetComponent<TextMesh>.SetAlpha(0.0f);
+        //title.GetComponent<TextMesh>().color.a = 0.0f;
+        //title.a = title.a - 0.1f;
+        color.a = 0.0f;
+        //rend = GetComponent<SpriteRenderer>();
+        //startFading();
+        //StartCoroutine(cone1UP(10f));
+    }
 
 	/*IEnumerator Fade()
 	{
@@ -31,13 +38,13 @@ public class FadeOut : MonoBehaviour {
 		StartCoroutine("Fade");
 	}*/
 
-	IEnumerator cone1UP(float seconds)
+	/*IEnumerator cone1UP(float seconds)
 	{
 		yield return new WaitForSeconds(seconds);
 		//title.a = 0.42f;
 		//title.alpha = "0";
 		//cone1.transform.Translate(0, 400, 0);
-	}
+	}*/
 }
 
 

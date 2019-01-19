@@ -31,14 +31,14 @@ public class PlayerCont : MonoBehaviour {
 
         // let the gameObject fall down
         // gameObject.transform.position = new Vector3(0, 5, 0);
-        LookRotation(Cap.transform, vrCam.transform);
+       // LookRotation(Cap.transform);
         gameObject.transform.position = new Vector3(XPosition, YPosition, ZPosition);
        // Debug.Log(XPosition+","+YPosition+","+ZPosition);
     }
 
 	void Update()
 	{
-       
+        LookRotation(Cap.transform);
         PlayerMovement ();
         GrabObject();
       //  Debug.Log(XPosition + "," + YPosition + "," + ZPosition);
@@ -78,17 +78,17 @@ public class PlayerCont : MonoBehaviour {
 	
 	}
 
-	public void LookRotation(Transform character, Transform camera){
-
+	public void LookRotation(Transform character){
+        ///CHARACTER ROTATE
         Debug.Log("rotate");
 		//change the view x/y to joystick right
 		float yRot = Input.GetAxis ("RightJoystickVertical") *Time.deltaTime*3.0f ;
 		float xRot = Input.GetAxis ("RightJoystickHorizontal") *Time.deltaTime*3.0f ;
 
 		//Camera.main.transform.localRotation *= Quaternion.Euler (-xRot, 0f, 0f);
-		camera.rotation*= Quaternion.Euler(0f,yRot,0f);
-		character.rotation = Quaternion.Euler (0f,camera.eulerAngles.y, 0f);
-		camera.position = new Vector3(character.position.x,YPositionCam,character.position.z);
+		//camera.rotation*= Quaternion.Euler(0f,yRot,0f);
+		character.rotation = Quaternion.Euler (xRot,0F, 0f);
+		//camera.position = new Vector3(character.position.x,YPositionCam,character.position.z);
 		//camera.position=character.position;
 
 	}

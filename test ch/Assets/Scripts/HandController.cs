@@ -12,4 +12,9 @@ public class HandController : MonoBehaviour {
 	void Update () {
         animator.SetBool("isGrabbing", Input.GetButton("AButton"));
 	}
+
+    public void HandCont() {
+       
+        
+    }
 }
