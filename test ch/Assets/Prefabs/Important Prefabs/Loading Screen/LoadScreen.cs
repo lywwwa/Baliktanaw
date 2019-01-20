@@ -27,9 +27,14 @@ public class LoadScreen : MonoBehaviour {
     {
         Debug.Log("loadscreen");
     }
-	
 
-		public void LoadLevel(){
+    void Update()
+    {
+        LoadLevel(3);
+    }
+
+
+    public void LoadLevel(int sceneIndex){
         // If the player has pressed the space bar and a new scene is not loading yet...
         Debug.Log("LoadLevel");
              testPanel.SetActive(false);
@@ -61,6 +66,8 @@ public class LoadScreen : MonoBehaviour {
         }
 
     }
+
+    
 
 
 	// The coroutine runs on its own at the same time as Update() and takes an integer indicating which scene to load.

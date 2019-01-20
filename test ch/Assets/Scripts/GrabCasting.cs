@@ -11,6 +11,10 @@ public class GrabCasting : MonoBehaviour
 
     private Animator anim;
     private GameObject holdObj;
+
+    public Vector3 pickPosition;
+    public Vector3 pickRotation;
+
     // Use this for initialization
     void Start()
     {
@@ -26,7 +30,7 @@ public class GrabCasting : MonoBehaviour
         var fwd = transform.TransformDirection(Vector3.forward);
         if (Physics.Raycast(transform.position, fwd, out hit, 500))
         {
-            Debug.Log(hit.collider.gameObject.tag);
+            //Debug.Log(hit.collider.gameObject.tag);
 
             if (hit.collider.gameObject.tag == "Grass")
             {
@@ -44,10 +48,8 @@ public class GrabCasting : MonoBehaviour
                     holdObj = hit.collider.gameObject;
                     Debug.Log("Collided with player-weapon");
                     holdObj.transform.parent = this.gameObject.transform;
-
-                    //fix for trident pos and rot
-                    holdObj.transform.position = new Vector3(0.1909f, -0.0609f, 0.0517f);
-                    holdObj.transform.rotation = Quaternion.Euler(-28.947f, -173.321f,10.885f);
+                    holdObj.transform.localPosition = pickPosition;
+                    holdObj.transform.localEulerAngles = pickRotation;
                 }
             }
 
