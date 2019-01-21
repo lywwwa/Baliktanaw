@@ -16,11 +16,16 @@ public class Test : MonoBehaviour {
 
     string[] scriptDatu = new string[10];
     string[] scriptLupas = new string[10];
-    string[] scriptLAma = new string[10];
+    string[] scriptAmal = new string[10];
     string[] scriptEnita = new string[10];
     string[] scriptMakindo = new string[10];
     string[] scriptPiyan = new string[10];
     string[] scriptTimawa = new string[10];
+    string[] scriptIbusun = new string[10];
+    string[] scriptSilanday = new string[10];
+    string[] scriptBiraman = new string[10];
+    string[] scriptRarak = new string[10];
+    string[] scriptDarok = new string[10];
 
     //3D Text
     //public GameObject Lupas;
@@ -34,10 +39,6 @@ public class Test : MonoBehaviour {
     static bool[] q = new bool[12];
 
     bool dlBoxEnabler = true;
-
-    int weedQuestCount = 0;
-    int fishQuestCount = 0;
-    int taroQuestCount = 0;
 
     bool finishWeed = false;
 
@@ -155,26 +156,78 @@ public class Test : MonoBehaviour {
 
     void Script()
     {
-        string[] scriptDatu = { "Kabani, alam kong gusto mong pumunta sa iyong mga kaibigan. Pinapayagan kita ngayong araw. Lagi ka lamang mag-iingat.",
-                                "Siguro ay nagtataka ka kung bakit may nagbibigay ng mga ani sa atin o kaya naman ay pinagsisilbihan tayo. Iyon ay tinatawag na buhis. Ibinibigay nila iyon sa atin kapalit ng pamumuno ko sa kanila. Hindi na kabilang sa mga nagbabayad ang mga kapamilya natin. "};
+        string[] scriptDatu = { "Puntahan mo ang kaibigan mong si Lupas. Kanina ay hinahanap ka niya.",
+                                "Samahan mo muna ang iyong mga kaibigan at ako ay may iniisip.",
+                                "Puntahan mo ang kaibigan mong si Makindo. Kanina ay hinahanap ka niya.",
+                                "Puntahan mo ang kaibigan mong si Piyan. Kanina ay hinahanap ka niya.",
+                                "Galing ito kay Silanday? Siguro ay nagtataka ka kung bakit may nagbibigay ng mga ani sa atin o kaya alagang hayop. Iyon ay tinatawag na buwis. Ibinibigay nila iyon sa atin kapalit ng pamumuno ko sa kanila. Hindi na kabilang sa mga nagbabayad ang mga kapamilya natin.",
+                                "Pumunta ka sa iyong ina at tulungan mo siya.",
+                                "Ang imbakan natin ay nasa baba ng bahay."};
 
-        string[] scriptEnita = { "Puntahan mo na ang iyong mga kaibigan. Pumayag naman ang iyong ama." };
+        string[] scriptEnita = { "Bisitahin mo ang iyong kaibigang si Lupas.",
+                                 "Kabani, bisitahin mo ang iyong mga kaibigan.",
+                                 "Bisitahin mo ang iyong kaibigang si Piyan.",
+                                 "Kabani, anak. Maghahanda na ako ng ating kakainin. Pumunta ka sa baba sa ating imbakan at kumuha ka ng isang taro.",
+                                 "Ang taro ay halamang ugat na bilugan, kayumanggi ang balat, at maputi ang laman.",
+                                 "Salamat sa pagkuha ng taro, anak. Sagana man tayo sa mga halamang ugat, ang pinakamasustansiya sa lahat ay ang taro. Bukod pa roon, maraming gamit ang halamang iyon – ang apay (leaves) ay ginagamit sa pagbalot ng pagkaing iihawin at ang laon (edible leaves) ay maaaring kainin."};
 
-        string[] scriptLupas = { "Marahil ay magsabi ka muna kay Datu Gunsad bago tayo maglaro.",
-                                 "Mabuti naman at pinayagan ka ngayong araw. Tamang tama!Pupunta ako kay ama sa bukid upang magsaka. Malaking bagay ang iyong tulong.",
-                                 "Sinabi sa akin ni Makindo na siya ay pupunta sa ilog. Kaya na namin ito ni ama. Puntahan mo siya at mangisda kayo."};
+        string[] scriptLupas = { "Kabani, pupunta ako kay ama. Sumama ka sa akin upang may matutunan ka.",
+                                 "Alamin natin kay ama kung ano ang maaari nating maitulong.",
+                                 "Marahil ay inihahanda pa lang natin ang lupa.",
+                                 "Ngayon ay may natutunan na tayo sa pagtatanim",
+                                 "Sinabi sa akin ni Makindo ay pupunta siya sa ilog mamaya.",
+                                 "Baka nasa ilog na si Makindo.",
+                                 "Nahiligan ko din ang pagtatanim tulad ni ama.",
+                                 "Hindi ko akalaing magkakaroon ako ng kaibigang datu. Isa lang naman kasi akong tumataban. Hindi tulad mo, nagsisilbi ako sa aking panginoon ng limang araw sa isang buwan."};
 
-        string[] scriptLAma = { "Masyado pa kayong bata para magtanim ng mga halamang ugat. Ngunit maganda ang naisip niyong pagtulong kung gusto niyong matuto. Sa ngayon, ang gawin niyo na lang muna ay magtanggal ng mga ligaw na damo.",
-                                "Maganda ang mga inani naming taro. Tulungan mo kaming itabi ang mga ito."};
+        string[] scriptAmal = { "Ang pagtatanim ay gawain naming mga oripun. Ngunit maganda ang naisip mong pagtulong kung gusto mong matuto. Sa ngayon, ang gawin mo na lang muna ay magtanggal ng mga ligaw na damo. Kailangan ay matanggal mo lahat.",
+                                "Kailangan ay walang matitirang damo.",
+                                "Mahalaga ang naitulong mong pagtatanggal ng mga ligaw na damo sa paghahanda ng lupang tataniman. Kapag hindi tinanggal ang mga iyon, sila ang kukuha ng sustansiya ng pataba na dapat ay sa mga pananim. Huwag mo iyong kakalimutan. Sa ngayon, ako na lang muna ang magtatanim.",
+                                "Para sa akin, masaya ang pagtatanim kahit matagal ang paghihintay bago mag-ani.",
+                                "Mukhang nakapagtanim na ang asawa ng aming kapitbahay na si Darok. Ang asawa niya ang  kumikilos sa kanila dahil siya ay lumpo.",
+                                "Napansin kong wala pang palatandaan ang kanilang pananim."};
 
-        string[] scriptMakindo = { "Kabani! Sumama ka sa akin na mangisda sa ilog. Siguradong may matututunan ka at matutuwa ang iyong ama kapag marami kang mahuhuli.",
-                                   "At dahil wala ka pang karanasan sa paghuhuli ng isda, tuturuan kita. Kunin mo iyong sarapang.",
-                                   "Ang kailangan lamang nating gawin ay mag-abang tayo ng isdang lalapit. Kapag may lumapit na, saka natin tutusukin ng sarapang. Sapat na makakahuli ka ng limang isda.",
-                                   "Natututo ka pa lang ngunit nakahuli ka na agad. Hindi ko iyon inaasahan. Ngayon ay marunong ka nang mangisda. "};
+        string[] scriptMakindo = { "Napakarami talagang isda sa ilog.",
+                                   "Kabani! Sumama ka sa akin na mangisda sa ilog. Kumuha ka muna ng sarapang kay Rarak. Pagkakuha mo ay puntahan mo ako sa ilog.",
+                                   "Kunin mo muna kay Rarak ang sarapang bago tayo pumunta sa ilog.",
+                                   "Mauna na ako sa ilog.",
+                                   "Ang kailangan mo lang gawin ay mag-abang tayo ng isdang lalapit. Kapag may lumapit na, saka mo tutusukin ng sarapang. Sapat na kapg nakahuli ka ng limang isda.",
+                                   "Natututo ka pa lang ngunit nakahuli ka na agad. Hindi ko iyon inaasahan. Ngayon ay marunong ka nang mangisda. Ako na ang bahala sa mga nahuli mong isda at dadalhin ko ito sa iyong ama.",
+                                   "Mabuti ka pa, anak ka ng ating datu. Lahat ng oras mo ay sa iyo lamang. Ako bilang tumaranpok, may panginoon akong pinagsisilbihan ng apat na araw kada linggo."};
 
-        string[] scriptPiyan = { "Mukhang may bagong batas na nabuo si Datu Gunsad. Marahil ay ipapahayag na ito ni Ibusun. Siya ang ating Umalohokan. Anumang batas ang mabuo ng datu, hindi ito agad ipinatutupad hangga’t hindi ito naipapahayag ng Umalohokan." };
+        string[] scriptPiyan = { "Magandang umaga, Kabani.",
+                                 "Ito ang bahay ng aking panginoon na si Silanday. Mukhang hinahanap niya ang iyong ama.",
+                                 "Manok lang ang inaalagaan naming hayop.",
+                                 "Alam mo bang ipinanganak kang mapalad, Kabani? May sarili kang tahanan. Kaming mga ayuey, nakatira kami sa bahay ng aming panginoon at sila ang nagbibigay sa amin ng damit at pagkain. Pinagsisilbihan din namin sila ng tatlong araw sa kada apat na araw."};
 
         string[] scriptTimawa = { "Oh, Kabani. Nasaan nga pala ang iyong ama? Magbabayad kase ako ng buhis. Pagsisilbihan ko na lang siya. Hindi ko maibabayad ang mga inani namin dahil kakaunti lamang ang mga ito." };
+
+        string[] scriptSilanday = { "Ngayon ang libreng araw ni Piyan kaya makakasama mo siya.",
+                                    "Kabani! Nasaan nga pala ang iyong ama? Magbabayad kasi ako ng buwis. Hindi ko maibabayad ang mga inani namin dahil kakaunti lamang ang mga ito. Isang manok na lang ang ibabayad ko at sa iyo ko na lang ito ipapahatid.",
+                                    "Kumuha ka ng isang manok sa aming bakuran at ibigay mo iyon kay Datu Gunsad. Pakisabi na iyon ay kabayaran sa aking buwis. Salamat!"};
+
+        string[] scriptIbusun = { "Ako ang Umalohokan ng ating barangay.",
+                                  "Mukhang abala ang iyong ina at kailangan niya ng tulong.",
+                                  "Ang mabuting anak ay marunong sumunod sa anumang utos ng kanyang magulang."};
+
+        string[] scriptDarok = { "Maganda ang panahon ngayon, hindi ba Kabani?",
+                                 "Nakapagtanim na ang asawa ko ng mga halamang ugat. Ngunit umalis siya agad at may pinuntahan. Nakalimutan niyang maglagay ng palatandaan. Hindi ko ito magagawa dahil ako ay lumpo. Maaari ba akong tulungan?",
+                                 "Salamat iyong tulong. Ngayon ay may palatandaan na kami na amin ang mga pananim na iyon."};
+
+        string[] scriptBiraman = { "Kabani, nais kong magsalaysay ng isang mito. Tungkol ito sa pinagmulan ng daigdig at ang unang lalaki at babae.",
+                                   "Noong unang panahon ay wala kundi langit, dagat, at isang ibong lipad ng lipad sa pagitan.",
+                                   "Sa katagalan ng paglipad ay napagod ang ibon. Nais nitong magpahinga ngunit nagalit ito nang walang mahanap na madadapuan.",
+                                   "Naisipan ng ibon na pagkagalitin ang langit at dagat. ",
+                                   "Sa pagkakagalit ng dalawa, ang langit ay naghuho (poured) ng maraming bato at lupa sa dagat na kinalaunan ay naging mga isla.",
+                                   "Sa wakas, ang ibon ay nagkaroon na ng madadapuan.",
+                                   "Isang araw, ang ibon ay nasa tabing-dagat.",
+                                   "Mula sa agos ng dagat, may napadpad na kawayan sa tapat ng ibon.",
+                                   "Tinuka niya ito hanggang sa mahati sa dalawa at mabukas.",
+                                   "Sa isang bahagi nito lumabas ang isang lalaki at sa isang bahagi naman ay isang babae.",
+                                   };
+
+        string[] scriptRarak = { "Ipinagmamalaki ko na mayroon akong mga batuk (tattoo). Patunay lamang na may silbi ako kapag mayroong digmaan. Unang beses kong magkaroon ay sa paa. Kailangan ko pang galingan kung magkakaroon muli ng digmaan. Nang sa gayon ay magkaroon na rin ako sa braso at dibdib." };
+
     }
 
     void Text()
@@ -475,11 +528,30 @@ public class Test : MonoBehaviour {
     }
 
     int check = 0;
-    
+
+    //Finished Quest
+    bool weedFinish = false;
+    bool fishingFinish = false;
+    bool taxFinish = false;
+    bool taroFinish = false;
+    bool stakeFinish = false;
+
+    //Activation of Quest
+    bool weedActivated = false;
+    bool fishingActivated = false;
+    bool taxActivated = false;
+    bool taroActivated = false;
+    bool stakeActivated = false;
+
+
+    //QuestCounting
+    int weedCount = 0;
+    int fishCount = 0;
+    int taroCount = 0;
+
     void DDNRaycastDetection()
     {
-        Debug.Log(Input.GetButton("XButton"));
-
+        //Debug.Log(Input.GetButton("XButton"));
 
         if (stop)
         {
@@ -498,14 +570,668 @@ public class Test : MonoBehaviour {
         {
             if (Input.GetButton("BButton"))
             {
-                if (hit.collider.gameObject.tag == "Datu")
+                //ALL NOT ACTIVATED FUNCTION MUST HAVE A && QUESTION = False
+                if (!weedActivated)
                 {
-                    dialogueBox.SetActive(true);
-                    stop = true;
-                    LookatPlayer(hit.collider.gameObject);
+                    if (hit.collider.gameObject.tag == "Makindo")
+                    {
+                        Makindo();
+                    }
+                    else if (hit.collider.gameObject.tag == "Piyan")
+                    {
+                        Neutral(hit.collider.gameObject);
+                    }
+                    else if (hit.collider.gameObject.tag == "Darok")
+                    {
+                        Darok();
+                    }
+                    else if (hit.collider.gameObject.tag == "Silanday")
+                    {
+                        Silanday();
+                    }
+                    else if (hit.collider.gameObject.tag == "Ibusun")
+                    {
+                        Neutral(hit.collider.gameObject);
+                    }
+                    else if(hit.collider.gameObject.tag == "Lupas")
+                    {
+                        if(weedCount == 0)
+                        {
+                            //Increase probability
+                            ActivateDialogue();
+                            dialogueBox.GetComponent<Text>().text = scriptLupas[0];
+                        }
+                        else if(weedCount == 1)
+                        {
+                            ActivateDialogue();
+                            dialogueBox.GetComponent<Text>().text = scriptLupas[1];
+                        }
+                    }
+                    else if (hit.collider.gameObject.tag == "Enita")
+                    {
+                        //Increase probability
+                        ActivateDialogue();
+                        dialogueBox.GetComponent<Text>().text = scriptEnita[0];
+                    }
+                    else if (hit.collider.gameObject.tag == "Datu")
+                    {
+                        //Increase probability
+                        ActivateDialogue();
+                        dialogueBox.GetComponent<Text>().text = scriptDatu[0];
+                    }
+                    else if (hit.collider.gameObject.tag == "AmaLupas")
+                    {
+                        AmaLupas();
+                    }
+                }
+
+                if (weedActivated && !weedFinish)
+                {
+                    if (hit.collider.gameObject.tag == "Makindo")
+                    {
+                        Neutral(hit.collider.gameObject);
+                    }
+                    else if (hit.collider.gameObject.tag == "Piyan")
+                    {
+                        Neutral(hit.collider.gameObject);
+                    }
+                    else if (hit.collider.gameObject.tag == "Darok")
+                    {
+                        Neutral(hit.collider.gameObject);
+                    }
+                    else if (hit.collider.gameObject.tag == "Silanday")
+                    {
+                        Neutral(hit.collider.gameObject);
+                    }
+                    else if (hit.collider.gameObject.tag == "Ibusun")
+                    {
+                        Neutral(hit.collider.gameObject);
+                    }
+                    else if (hit.collider.gameObject.tag == "Lupas")
+                    {
+                        ActivateDialogue();
+                        dialogueBox.GetComponent<Text>().text = scriptLupas[3];
+                    }
+                    else if (hit.collider.gameObject.tag == "Enita")
+                    {
+                        Neutral(hit.collider.gameObject);
+                    }
+                    else if (hit.collider.gameObject.tag == "Datu")
+                    {
+                        Neutral(hit.collider.gameObject);
+                    }
+                    else if (hit.collider.gameObject.tag == "AmaLupas")
+                    {
+                        ActivateDialogue();
+                        dialogueBox.GetComponent<Text>().text = scriptAmal[1];
+                    }
+                }
+
+                if (weedFinish)
+                {
+                    if (hit.collider.gameObject.tag == "Lupas")
+                    {
+                        ActivateDialogue();
+                        dialogueBox.GetComponent<Text>().text = scriptLupas[3];
+                        //Go River
+                    }
+                }
+
+                if (!fishingActivated)
+                {
+                    if(hit.collider.gameObject.tag == "AmaLupas")
+                    {
+                        AmaLupas();
+                    }
+                    else if (hit.collider.gameObject.tag == "Piyan")
+                    {
+                        Neutral(hit.collider.gameObject);
+                    }
+                    else if (hit.collider.gameObject.tag == "Darok")
+                    {
+                        Darok();
+                    }
+                    else if (hit.collider.gameObject.tag == "Silanday")
+                    {
+                        Silanday();
+                    }
+                    else if (hit.collider.gameObject.tag == "Ibusun")
+                    {
+                        Neutral(hit.collider.gameObject);
+                    }
+                    else if (hit.collider.gameObject.tag == "Lupas")
+                    {
+                        //Hint
+                        ActivateDialogue();
+                        dialogueBox.GetComponent<Text>().text = scriptLupas[4];
+                    }
+                    else if (hit.collider.gameObject.tag == "Datu")
+                    {
+                        //Hint
+                        ActivateDialogue();
+                        dialogueBox.GetComponent<Text>().text = scriptDatu[2];
+                    }
+                    else if (hit.collider.gameObject.tag == "Makindo")
+                    {
+                        Makindo();
+                    }
+                }
+
+                if (fishingActivated && !fishingFinish)
+                {
+                    if (hit.collider.gameObject.tag == "Makindo")
+                    {
+                        //if makindo is walking
+                        ActivateDialogue();
+                        dialogueBox.GetComponent<Text>().text = scriptMakindo[3];
+                        //if Makindo is in location == river
+                        ActivateDialogue();
+                        dialogueBox.GetComponent<Text>().text = scriptMakindo[4];
+                        //ifMakindo is in location == ?
+                        ActivateDialogue();
+                        dialogueBox.GetComponent<Text>().text = scriptMakindo[2];
+                    }
+                    else if (hit.collider.gameObject.tag == "Piyan")
+                    {
+                        Neutral(hit.collider.gameObject);
+                    }
+                    else if (hit.collider.gameObject.tag == "Darok")
+                    {
+                        Neutral(hit.collider.gameObject);
+                    }
+                    else if (hit.collider.gameObject.tag == "Silanday")
+                    {
+                        Neutral(hit.collider.gameObject);
+                    }
+                    else if (hit.collider.gameObject.tag == "Ibusun")
+                    {
+                        Neutral(hit.collider.gameObject);
+                    }
+                    else if (hit.collider.gameObject.tag == "Lupas")
+                    {
+                        ActivateDialogue();
+                        dialogueBox.GetComponent<Text>().text = scriptLupas[5];
+                    }
+                    else if (hit.collider.gameObject.tag == "Enita")
+                    {
+                        Neutral(hit.collider.gameObject);
+                    }
+                    else if (hit.collider.gameObject.tag == "Datu")
+                    {
+                        Neutral(hit.collider.gameObject);
+                    }
+                    else if (hit.collider.gameObject.tag == "AmaLupas")
+                    {
+                        Neutral(hit.collider.gameObject);
+                    }
+                }
+
+                if (fishingFinish)
+                {
+                    if (hit.collider.gameObject.tag == "Makindo")
+                    {
+                        ActivateDialogue();
+                        dialogueBox.GetComponent<Text>().text = scriptMakindo[5];
+                        //Move to River
+                    }
+                }
+
+                if (!taxActivated)
+                {
+                    if (hit.collider.gameObject.tag == "AmaLupas")
+                    {
+                        AmaLupas();
+                    }
+                    else if (hit.collider.gameObject.tag == "Lupas")
+                    {
+                        ActivateDialogue();
+                        dialogueBox.GetComponent<Text>().text = scriptLupas[6];
+                    }
+                    else if (hit.collider.gameObject.tag == "Darok")
+                    {
+                        Darok();
+                    }
+                    else if (hit.collider.gameObject.tag == "Makindo")
+                    {
+                        Makindo();
+                    }
+                    else if (hit.collider.gameObject.tag == "Ibusun")
+                    {
+                        Neutral(hit.collider.gameObject);
+                    }
+                    else if (hit.collider.gameObject.tag == "Piyan")
+                    {
+                        //Hint
+                        ActivateDialogue();
+                        dialogueBox.GetComponent<Text>().text = scriptPiyan[1];
+                    }
+                    else if (hit.collider.gameObject.tag == "Enita")
+                    {
+                        //Hint
+                        ActivateDialogue();
+                        dialogueBox.GetComponent<Text>().text = scriptEnita[2];
+                    }
+                    else if (hit.collider.gameObject.tag == "Datu")
+                    {
+                        //Hint
+                        ActivateDialogue();
+                        dialogueBox.GetComponent<Text>().text = scriptDatu[3];
+                    }
+                    else if (hit.collider.gameObject.tag == "Silanday")
+                    {
+                        Silanday();
+                    }
+                }
+
+                if(taxActivated && !taxFinish)
+                {
+                    if (hit.collider.gameObject.tag == "Makindo")
+                    {
+                        Neutral(hit.collider.gameObject);
+                    }
+                    else if (hit.collider.gameObject.tag == "Piyan")
+                    {
+                        ActivateDialogue();
+                        dialogueBox.GetComponent<Text>().text = scriptPiyan[2];
+                    }
+                    else if (hit.collider.gameObject.tag == "Darok")
+                    {
+                        Neutral(hit.collider.gameObject);
+                    }
+                    else if (hit.collider.gameObject.tag == "Silanday")
+                    {
+                        ActivateDialogue();
+                        dialogueBox.GetComponent<Text>().text = scriptSilanday[2];
+                    }
+                    else if (hit.collider.gameObject.tag == "Ibusun")
+                    {
+                        Neutral(hit.collider.gameObject);
+                    }
+                    else if (hit.collider.gameObject.tag == "Lupas")
+                    {
+                        ActivateDialogue();
+                        dialogueBox.GetComponent<Text>().text = scriptLupas[6];
+                    }
+                    else if (hit.collider.gameObject.tag == "Enita")
+                    {
+                        Neutral(hit.collider.gameObject);
+                    }
+                    else if (hit.collider.gameObject.tag == "Datu")
+                    {
+                        //if chicken delivered
+                        ActivateDialogue();
+                        dialogueBox.GetComponent<Text>().text = scriptDatu[4];
+                        //else
+                        Neutral(hit.collider.gameObject);
+                    }
+                    else if (hit.collider.gameObject.tag == "AmaLupas")
+                    {
+                        Neutral(hit.collider.gameObject);
+                    }
+                }
+
+                if (taxFinish)
+                {
+                    //Move Piyan
+                }
+
+                if (!taroActivated)
+                {
+                    if(hit.collider.gameObject.tag == "AmaLupas")
+                    {
+                        AmaLupas();
+                    }
+                    else if (hit.collider.gameObject.tag == "Lupas")
+                    {
+                        ActivateDialogue();
+                        dialogueBox.GetComponent<Text>().text = scriptLupas[6];
+                    }
+                    else if (hit.collider.gameObject.tag == "Piyan")
+                    {
+                        Neutral(hit.collider.gameObject);
+                    }
+                    else if (hit.collider.gameObject.tag == "Silanday")
+                    {
+                        Silanday();
+                    }
+                    else if (hit.collider.gameObject.tag == "Darok")
+                    {
+                        Darok();
+                    }
+                    else if (hit.collider.gameObject.tag == "Makindo")
+                    {
+                        Makindo();
+                    }
+                    else if (hit.collider.gameObject.tag == "Datu")
+                    {
+                        //Hint
+                        ActivateDialogue();
+                        dialogueBox.GetComponent<Text>().text = scriptDatu[5];
+                    }
+                    else if (hit.collider.gameObject.tag == "Ibusun")
+                    {
+                        //Hint
+                        ActivateDialogue();
+                        dialogueBox.GetComponent<Text>().text = scriptIbusun[1];
+                    }
+                    else if (hit.collider.gameObject.tag == "Enita")
+                    {
+                        Enita();
+                    }
+                }
+
+                if (taroActivated && !taroFinish)
+                {
+                    if(hit.collider.gameObject.tag == "Enita")
+                    {
+                        ActivateDialogue();
+                        dialogueBox.GetComponent<Text>().text = scriptEnita[4];
+                    }
+                    else if (hit.collider.gameObject.tag == "Datu")
+                    {
+                        ActivateDialogue();
+                        dialogueBox.GetComponent<Text>().text = scriptDatu[6];
+                    }
+                    else if (hit.collider.gameObject.tag == "Ibusun")
+                    {
+                        ActivateDialogue();
+                        dialogueBox.GetComponent<Text>().text = scriptIbusun[2];
+                    }
+                    else
+                    {
+                        Neutral(hit.collider.gameObject);
+                    }
+                }
+
+                if (taroFinish)
+                {
+                    if (hit.collider.gameObject.tag == "Enita")
+                    {
+                        ActivateDialogue();
+                        dialogueBox.GetComponent<Text>().text = scriptEnita[5];
+                    }
+                    //Datu
+                }
+
+                if (!stakeActivated)
+                {
+                    if(hit.collider.gameObject.tag == "Lupas")
+                    {
+                        ActivateDialogue();
+                        dialogueBox.GetComponent<Text>().text = scriptLupas[6];
+                    }
+                    else if (hit.collider.gameObject.tag == "Silanday")
+                    {
+                        Silanday();
+                    }
+                    else if (hit.collider.gameObject.tag == "Enita")
+                    {
+                        Enita();
+                    }
+                    else if (hit.collider.gameObject.tag == "Makindo")
+                    {
+                        Makindo();
+                    }
+                    else if (hit.collider.gameObject.tag == "AmaLupas")
+                    {
+                        //Hint
+                        ActivateDialogue();
+                        dialogueBox.GetComponent<Text>().text = scriptAmal[4];
+                    }
+                    else if (hit.collider.gameObject.tag == "Darok")
+                    {
+                        Darok();
+                    }
+                    else
+                    {
+                        Neutral(hit.collider.gameObject);
+                    }
+                }
+
+                if(stakeActivated && !stakeFinish)
+                {
+                    if (hit.collider.gameObject.tag == "AmaLupas")
+                    {
+                        ActivateDialogue();
+                        dialogueBox.GetComponent<Text>().text = scriptAmal[5];
+                    }
+                    else
+                    {
+                        Neutral(hit.collider.gameObject);
+                    }
+                }
+
+                if (stakeFinish)
+                {
+                    if (hit.collider.gameObject.tag == "Darok")
+                    {
+                        ActivateDialogue();
+                        dialogueBox.GetComponent<Text>().text = scriptDarok[2];
+                    }
+                }
+
+                //INFO GATHERING
+
+                if (!weedFinish && fishingFinish && taxFinish)
+                {
+                    if (hit.collider.gameObject.tag == "Makindo")
+                    {
+                        ActivateDialogue();
+                        dialogueBox.GetComponent<Text>().text = "Nasaan na kaya si Lupas?";
+                    }
+                    else if(hit.collider.gameObject.tag == "Piyan")
+                    {
+                        ActivateDialogue();
+                        dialogueBox.GetComponent<Text>().text = "Nasaan na kaya si Lupas?";
+                    }
+                }
+
+                if (weedFinish && !fishingFinish && taxFinish)
+                {
+                    if (hit.collider.gameObject.tag == "Lupas")
+                    {
+                        ActivateDialogue();
+                        dialogueBox.GetComponent<Text>().text = "Nasaan na kaya si Makindo?";
+                    }
+                    else if (hit.collider.gameObject.tag == "Piyan")
+                    {
+                        ActivateDialogue();
+                        dialogueBox.GetComponent<Text>().text = "Nasaan na kaya si Makindo?";
+                    }
+                }
+
+                if (weedFinish && fishingFinish && !taxFinish)
+                {
+                    if (hit.collider.gameObject.tag == "Lupas")
+                    {
+                        ActivateDialogue();
+                        dialogueBox.GetComponent<Text>().text = "Nasaan na kaya si Piyan?";
+                    }
+                    else if (hit.collider.gameObject.tag == "Makindo")
+                    {
+                        ActivateDialogue();
+                        dialogueBox.GetComponent<Text>().text = "Nasaan na kaya si Piyan?";
+                    }
+                }
+
+                if (!weedFinish && !fishingFinish && taxFinish)
+                {
+                    if (hit.collider.gameObject.tag == "Piyan")
+                    {
+                        ActivateDialogue();
+                        dialogueBox.GetComponent<Text>().text = "Nasaan na kaya sina Lupas at Makindo?";
+                    }
+                }
+
+                if (!weedFinish && fishingFinish && !taxFinish)
+                {
+                    if (hit.collider.gameObject.tag == "Makindo")
+                    {
+                        ActivateDialogue();
+                        dialogueBox.GetComponent<Text>().text = "Nasaan na kaya sina Lupas at Piyan?";
+                    }
+                }
+
+                if (weedFinish && !fishingFinish && !taxFinish)
+                {
+                    if (hit.collider.gameObject.tag == "Lupas")
+                    {
+                        ActivateDialogue();
+                        dialogueBox.GetComponent<Text>().text = "Nasaan na kaya sina Makindo at Piyan?";
+                    }
+                }
+
+                if (weedFinish && fishingFinish && taxFinish)
+                {
+                    if (hit.collider.gameObject.tag == "Lupas")
+                    {
+                        ActivateDialogue();
+                        dialogueBox.GetComponent<Text>().text = scriptLupas[7];
+                    }
+                    else if (hit.collider.gameObject.tag == "Makindo")
+                    {
+                        ActivateDialogue();
+                        dialogueBox.GetComponent<Text>().text = scriptMakindo[6];
+                    }
+                    else if (hit.collider.gameObject.tag == "Piyan")
+                    {
+                        ActivateDialogue();
+                        dialogueBox.GetComponent<Text>().text = scriptPiyan[3];
+                    }
                 }
             }
         }
+    }
+
+    void Neutral(GameObject hit)
+    {
+        if (hit.tag == "Makindo")
+        {
+            ActivateDialogue();
+            dialogueBox.GetComponent<Text>().text = scriptMakindo[0];
+        }
+        else if (hit.tag == "Piyan")
+        {
+            ActivateDialogue();
+            dialogueBox.GetComponent<Text>().text = scriptPiyan[0];
+        }
+        else if (hit.tag == "Darok")
+        {
+            ActivateDialogue();
+            dialogueBox.GetComponent<Text>().text = scriptDarok[0];
+        }
+        else if (hit.tag == "Silanday")
+        {
+            ActivateDialogue();
+            dialogueBox.GetComponent<Text>().text = scriptSilanday[0];
+        }
+        else if (hit.tag == "Ibusun")
+        {
+            ActivateDialogue();
+            dialogueBox.GetComponent<Text>().text = scriptIbusun[0];
+        }
+        else if (hit.tag == "Lupas")
+        {
+            ActivateDialogue();
+            dialogueBox.GetComponent<Text>().text = scriptLupas[3];
+        }
+        else if (hit.tag == "Enita")
+        {
+            ActivateDialogue();
+            dialogueBox.GetComponent<Text>().text = scriptEnita[1];
+        }
+        else if (hit.tag == "Datu")
+        {
+            ActivateDialogue();
+            dialogueBox.GetComponent<Text>().text = scriptDatu[1];
+        }
+        else if (hit.tag == "AmaLupas")
+        {
+            ActivateDialogue();
+            dialogueBox.GetComponent<Text>().text = scriptAmal[3];
+        }
+    }
+
+    void Makindo()
+    {
+        //Trigger
+        if (true)
+        {
+            ActivateDialogue();
+            dialogueBox.GetComponent<Text>().text = scriptMakindo[1];
+        }
+        else
+        {
+            ActivateDialogue();
+            dialogueBox.GetComponent<Text>().text = scriptMakindo[0];
+        }
+    }
+
+    void Silanday()
+    {
+        //Trigger
+        if (true)
+        {
+            ActivateDialogue();
+            dialogueBox.GetComponent<Text>().text = scriptSilanday[1];
+        }
+        else
+        {
+            ActivateDialogue();
+            dialogueBox.GetComponent<Text>().text = scriptSilanday[0];
+        }
+    }
+
+    void Darok()
+    {
+        //Trigger
+        if (true)
+        {
+            ActivateDialogue();
+            dialogueBox.GetComponent<Text>().text = scriptDarok[1];
+        }
+        else
+        {
+            ActivateDialogue();
+            dialogueBox.GetComponent<Text>().text = scriptDarok[0];
+        }
+    }
+
+    void Enita()
+    {
+        //Trigger
+        if (true)
+        {
+            ActivateDialogue();
+            //dialogueBox.GetComponent<Text>().text = scriptEnita[];
+        }
+        else
+        {
+            ActivateDialogue();
+            dialogueBox.GetComponent<Text>().text = scriptEnita[1];
+        }
+    }
+
+    void AmaLupas()
+    {
+        //Trigger
+        if (true)
+        {
+            ActivateDialogue();
+            dialogueBox.GetComponent<Text>().text = scriptAmal[0];
+            weedCount = 1;
+        }
+        else
+        {
+            ActivateDialogue();
+            dialogueBox.GetComponent<Text>().text = scriptAmal[3];
+        }
+    }
+
+    void ActivateDialogue()
+    {
+        dialogueBox.SetActive(true);
+        stop = true;
     }
 
     void LookatPlayer(GameObject hit)
