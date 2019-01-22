@@ -5,12 +5,12 @@ using UnityEngine.SceneManagement;
 
 public class Intro : MonoBehaviour {
 
-    LoadScreen loadScreen;
+    public LoadScreen loadScreen;
     public GameObject lastText;
 
 	// Use this for initialization
 	void Start () {
-		
+      
 	}
 	
 	// Update is called once per frame
@@ -21,7 +21,10 @@ public class Intro : MonoBehaviour {
         {
             //Debug.Log(lastText.transform.position.y);
             //loadScreen.LoadLevel(3);
-            SceneManager.LoadScene(3);
+            // SceneManager.LoadScene(3);
+            Debug.Log("Done");
+            loadScreen.LoadLevel();
+
         }
 	}
 }

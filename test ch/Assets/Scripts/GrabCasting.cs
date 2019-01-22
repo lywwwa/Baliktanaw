@@ -15,6 +15,8 @@ public class GrabCasting : MonoBehaviour
     public Vector3 pickPosition;
     public Vector3 pickRotation;
 
+    public Vector3 pickPositionS;
+    public Vector3 pickRotationS;
     // Use this for initialization
     void Start()
     {
@@ -50,6 +52,18 @@ public class GrabCasting : MonoBehaviour
                     holdObj.transform.parent = this.gameObject.transform;
                     holdObj.transform.localPosition = pickPosition;
                     holdObj.transform.localEulerAngles = pickRotation;
+                }
+            }
+            else if (hit.collider.gameObject.tag == "Stake")
+            {
+                if (Input.GetButton("AButton"))
+                {
+                    anim.SetBool("isHolding", true);
+                    holdObj = hit.collider.gameObject;
+                    Debug.Log("Collided with player-stake");
+                    holdObj.transform.parent = this.gameObject.transform;
+                    holdObj.transform.localPosition = pickPositionS;
+                    holdObj.transform.localEulerAngles = pickRotationS;
                 }
             }
 

@@ -8,11 +8,56 @@ using System;
 using UnityEngine.SceneManagement;
 
 public class Test : MonoBehaviour {
+    
 
-    static string[] question = new string[12];
-    static string[] c1 = new string[12];
-    static string[] c2 = new string[12];
-    static string[] c3 = new string[12];
+    static string[] question = new string[]{ "1.)	Ang lipunan ay nahahati sa tatlong antas: datu, timawa, at oripun. Ang mga oripun ay may iba’t ibang uri. Ano ang tawag sa mga naninirahan sa bahay ng kanilang panginoon (master) at nagtatrabaho para sa kanila ng tatlong araw sa kada apat na araw?",
+                                             "2.)	Sa pagtatanim, mahalaga ang prosesong ito upang masiguro na makukuha ng mga pananim ang sustansiya ng pataba.",
+                                             "3.)	Ang karaniwang itinatamin ng mga tao ay mga halamang ugat. Sa mga halamang ugat, ano ang itinuturing nilang pinakamasustansiya?",
+                                             "4.)	Ano ang prosesong ginagawa upang magkaroon ng palatandaan ang kanilang itinanim sa mga damus (a field of root crop)?",
+                                             "5.)	Bukod sa serbisyo, ang buwis (tribute) na natatanggap ng datu mula sa kanyang nasasakupan ay maaaring _______.",
+                                             "6.)	Sino ang mga hindi kabilang sa pagbabayad ng buwis (tribute)?",
+                                             "7.)	Isa sa mga pangunahing ikinabubuhay ng mga tao ay ang pangingisda. Gumamit sila ng iba’t ibang kagamitan tulad ng busog at pana, paggiyod (a type of net), at ____________.",
+                                             "8.)	Ang mga anyong tubig ay sagana sa isda. Ngunit mas pinipili ng mga taong mangisda sa mga _________ kaysa dagat upang hindi na gumamit ng pansag (a large net).",
+                                             "9.)	Ang batuk (tattoo) ay nagpapahiwatig ng katapangan ng mga lalaki at nagpapatunay na sila ay may naitulong sa mga digmaan. Saang bahagi ng katawan inuumpisahan ang paglalagay ng batuk?",
+                                             "10.)	Ang datu ay may kapangyarihang gumawa at magpatupad ng mga batas. Sino naman ang nagpapahayag nito sa buong barangay?",
+                                             "11.)	May mga mito (myth) na pinaniniwalaan ang mga tao na nagsasalaysay ng pinagmulan ng bagay tulad ng araw at buwan. Sa isang mito tungkol sa pinagmulan ng daigdig, anong hayop ang nagdulot ng pagkakabuo ng mga isla?",
+                                             "12.)	Isinalasay din sa mito ng pinagmulan ng daigdig ang pinagmulan ng unang lalaki at babae. Saan lumabas ang unang lalaki at babae?"};
+    static string[] OneChoice = new string[] {"a.	tumataban",
+                                              "a.	paghihiwalay ng mga pananim",
+                                              "a.	camote",
+                                              "a.	nagpuputol ng isang puno malapit sa damus",
+                                              "a.	mga alagang hayop",
+                                              "a.	mga miyembro ng pamilya ng datu",
+                                              "a.	sarapang (trident)",
+                                              "a.	lawa",
+                                              "a.	braso",
+                                              "a.	isang maginoo",
+                                              "a.	ibon",
+                                              "a.	sa kabibe"};
+    static string[] TwoChoice = new string[]{"b.	ayuey",
+                                             "b.	pagtatanggal ng mga ligaw na damo",
+                                             "b.	ubi",
+                                             "b.	nagtutusok ng kahoy sa lupa",
+                                             "b.	bahagdan ng ani",
+                                             "b.	mga pamilyang malaki ang bilang",
+                                             "b.	kawayan (bamboo)",
+                                             "b.	talon",
+                                             "b.	paa",
+                                             "b.	ang datu mismo",
+                                             "b.	buwaya",
+                                             "b.	sa kawayan"};
+    static string[] ThreeChoice = new string[]{"c.	tumaranpok",
+                                               "c.	paglalagay ng pestisidyo",
+                                               "c.	taro",
+                                               "c.	kinukulayan ang mga nakapaligid na bakod",
+                                               "c.	lahat ng nabanggit",
+                                               "c.	mga pamilya ng sandig sa datu (supporters of datu)",
+                                               "c.	spear (sibat)",
+                                               "c.	ilog",
+                                               "c.	dibdib",
+                                               "c.	ang umalohokan",
+                                               "c.	baboy",
+                                               "c.	sa niyog"};
 
     string[] scriptDatu = new string[10];
     string[] scriptLupas = new string[10];
@@ -84,74 +129,20 @@ public class Test : MonoBehaviour {
     }
 
 
-    int x;
+    int x = 0;
     int scoreCount = 0;
 
     Rigidbody P_Rigidbody;
-
+    public LoadScreen loadscreen;
+    //for quest indicator
+    public GameObject QIndicator;
+    public Animator QIndicatorAnim;
+    public Text QIndText;
 
     void Questions()
     {
         for (int z = 0; z < 12; z++)
             q[z] = false;
-
-        // x is count that increments
-        x = 0;
-        //Variable Setup
-
-        string[] question = { "1.)	Ang lipunan ay nahahati sa tatlong antas: datu, timawa, at oripun. Ang mga oripun ay may iba’t ibang uri. Ano ang tawag sa mga naninirahan sa bahay ng kanilang panginoon (master) at nagtatrabaho para sa kanila ng tatlong araw sa kada apat na araw?",
-                     "2.)	Sa pagtatanim, mahalaga ang prosesong ito upang masiguro na makukuha ng mga pananim ang sustansiya ng pataba.",
-                     "3.)	Ang karaniwang itinatamin ng mga tao ay mga halamang ugat. Sa mga halamang ugat, ano ang itinuturing nilang pinakamasustansiya?",
-                     "4.)	Ano ang prosesong ginagawa upang magkaroon ng palatandaan ang kanilang itinanim sa mga damus (a field of root crop)?",
-                     "5.)	Bukod sa serbisyo, ang buwis (tribute) na natatanggap ng datu mula sa kanyang nasasakupan ay maaaring _______.",
-                     "6.)	Sino ang mga hindi kabilang sa pagbabayad ng buwis (tribute)?",
-                     "7.)	Isa sa mga pangunahing ikinabubuhay ng mga tao ay ang pangingisda. Gumamit sila ng iba’t ibang kagamitan tulad ng busog at pana, paggiyod (a type of net), at ____________.",
-                     "8.)	Ang mga anyong tubig ay sagana sa isda. Ngunit mas pinipili ng mga taong mangisda sa mga _________ kaysa dagat upang hindi na gumamit ng pansag (a large net).",
-                     "9.)	Ang batuk (tattoo) ay nagpapahiwatig ng katapangan ng mga lalaki at nagpapatunay na sila ay may naitulong sa mga digmaan. Saang bahagi ng katawan inuumpisahan ang paglalagay ng batuk?",
-                     "10.)	Ang datu ay may kapangyarihang gumawa at magpatupad ng mga batas. Sino naman ang nagpapahayag nito sa buong barangay?",
-                     "11.)	May mga mito (myth) na pinaniniwalaan ang mga tao na nagsasalaysay ng pinagmulan ng bagay tulad ng araw at buwan. Sa isang mito tungkol sa pinagmulan ng daigdig, anong hayop ang nagdulot ng pagkakabuo ng mga isla?",
-                     "12.)	Isinalasay din sa mito ng pinagmulan ng daigdig ang pinagmulan ng unang lalaki at babae. Saan lumabas ang unang lalaki at babae?"};
-
-
-        string[] c1 = {"a.	tumataban",
-                       "a.	paghihiwalay ng mga pananim",
-                                                    "a.	camote",
-                                                    "a.	nagpuputol ng isang puno malapit sa damus",
-                                                    "a.	mga alagang hayop",
-                                                    "a.	mga miyembro ng pamilya ng datu",
-                                                    "a.	sarapang (trident)",
-                                                    "a.	lawa",
-                                                    "a.	braso",
-                                                    "a.	isang maginoo",
-                                                    "a.	ibon",
-                                                    "a.	sa kabibe"};
-
-        string[] c2 = {"b.	ayuey",
-                       "b.	pagtatanggal ng mga ligaw na damo",
-                       "b.	ubi",
-                       "b.	nagtutusok ng kahoy sa lupa",
-                       "b.	bahagdan ng ani",
-                       "b.	mga pamilyang malaki ang bilang",
-                       "b.	kawayan (bamboo)",
-                       "b.	talon",
-                       "b.	paa",
-                       "b.	ang datu mismo",
-                       "b.	buwaya",
-                       "b.	sa kawayan"};
-
-        string[] c3 = {"c.	tumaranpok",
-                       "c.	paglalagay ng pestisidyo",
-                       "c.	taro",
-                       "c.	kinukulayan ang mga nakapaligid na bakod",
-                       "c.	lahat ng nabanggit",
-                       "c.	mga pamilya ng sandig sa datu (supporters of datu)",
-                       "c.	spear (sibat)",
-                       "c.	ilog",
-                       "c.	dibdib",
-                       "c.	ang umalohokan",
-                       "c.	baboy",
-                       "c.	sa niyog"};
-
     }
 
     void Script()
@@ -234,31 +225,44 @@ public class Test : MonoBehaviour {
     {
         //Changing the texts of questions and choices every time the player answers
         if (x < 12)
-        {
+        { 
+            //Debug.Log("I am the Test");
+
+            //Debug.Log(OneChoice[x]); 
+
             Text txt = gameObject.GetComponent<Text>();
-            GameObject.Find("btn1").GetComponentInChildren<Text>().text = c1[x];
-            GameObject.Find("btn2").GetComponentInChildren<Text>().text = c2[x];
-            GameObject.Find("btn3").GetComponentInChildren<Text>().text = c3[x];
+            GameObject.Find("btn1").GetComponentInChildren<Text>().text = OneChoice[x];
+            GameObject.Find("btn2").GetComponentInChildren<Text>().text = TwoChoice[x];
+            GameObject.Find("btn3").GetComponentInChildren<Text>().text = ThreeChoice[x];
             txt.text = Convert.ToString(question[x]);
         }
         else
         {
             Debug.Log("Loadlevel");
             //levelLoader.FadeToLevel();
-            SceneManager.LoadScene(2);
+            //SceneManager.LoadScene(2);
+            loadscreen.LoadLevel();
         }
     }
 
 
     // Use this for initialization
     void Start() {
-        Scene currentScene = SceneManager.GetActiveScene();
 
+        QIndicator.SetActive(true);
+        QIndText.text = "BAGONG MISYON!";
+            QIndicatorAnim.SetBool("isPlaying", true);
+        Scene currentScene = SceneManager.GetActiveScene();
+        loadscreen.GetComponent<LoadScreen>();
         string sceneName = currentScene.name;
 
         if (sceneName == "Test")
         {
-            Text();
+            Questions();
+
+            Debug.Log("Hello this is a test");
+
+            Debug.Log(OneChoice[2]);
         }
         else if(sceneName == "Barangay")
         {
@@ -1158,6 +1162,9 @@ public class Test : MonoBehaviour {
         if (true)
         {
             ActivateDialogue();
+            QIndicator.SetActive(true);
+            QIndText.text = "BAGONG MISYON!";
+            QIndicatorAnim.SetBool("isPlaying", true);
             dialogueBox.GetComponent<Text>().text = scriptMakindo[1];
         }
         else

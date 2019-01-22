@@ -37,8 +37,8 @@ GameObject:
   m_Component:
   - component: {fileID: 4553161638741618}
   - component: {fileID: 95394796594673350}
-  - component: {fileID: 114544719298015336}
   - component: {fileID: 65769141930787472}
+  - component: {fileID: 114799656244215160}
   m_Layer: 0
   m_Name: LevelChanger
   m_TagString: Untagged
@@ -145,20 +145,6 @@ MonoBehaviour:
   m_BlockingMask:
     serializedVersion: 2
     m_Bits: 4294967295
---- !u!114 &114544719298015336
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1441239790069022}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cc4129efeb5187449ae2c6da6679e61b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  guiObject: {fileID: 0}
-  LevelToLoad: scene 2
-  animator: {fileID: 95394796594673350}
 --- !u!114 &114549966324181310
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -186,6 +172,25 @@ MonoBehaviour:
   m_FillAmount: 1
   m_FillClockwise: 1
   m_FillOrigin: 0
+--- !u!114 &114799656244215160
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1441239790069022}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ac2b6e4595ba8844c8ad2efd9f4f9cb9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  scene: 0
+  loadingText: {fileID: 0}
+  loadingPanel: {fileID: 0}
+  testPanel: {fileID: 0}
+  vPLayer: {fileID: 0}
+  currentAmount: 0
+  speed: 5
+  animator: {fileID: 95394796594673350}
 --- !u!222 &222464942929637018
 CanvasRenderer:
   m_ObjectHideFlags: 1

@@ -24,11 +24,7 @@ public class PlayerCont : MonoBehaviour {
     public Transform Cam;
 
 
-    private bool grabObj = false;
-    private GameObject hitObj;
-    private RaycastHit hit;
-
-    bool ladder = false;
+   
 
     void Start()
 	{
@@ -37,7 +33,7 @@ public class PlayerCont : MonoBehaviour {
 
         // let the gameObject fall down
         // gameObject.transform.position = new Vector3(0, 5, 0);
-       // LookRotation(Cap.transform);
+      
         gameObject.transform.position = new Vector3(XPosition, YPosition, ZPosition);
        // Debug.Log(XPosition+","+YPosition+","+ZPosition);
     }
@@ -53,7 +49,6 @@ public class PlayerCont : MonoBehaviour {
                 Player.transform.Rotate(0.0f, turn, 0.0f);
             }
 
-        GrabObject();
     }
 
 	public void PlayerMovement()
@@ -68,13 +63,13 @@ public class PlayerCont : MonoBehaviour {
             moveDirection = transform.TransformDirection(moveDirection);
 			moveDirection = moveDirection * speed;
 
-			if (Input.GetButton("XButton")) {
+			if (Input.GetButton("Trigger")) {
 
 				moveDirection = moveDirection *runSpeed;
 			} 
 
 
-			if (Input.GetButton("YButton"))
+			if (Input.GetButton("R1"))
 			{
 				moveDirection.y = jumpSpeed;
 			}
@@ -88,37 +83,8 @@ public class PlayerCont : MonoBehaviour {
 	
 	}
 
-	public void LookRotation(Transform character){
-        ///CHARACTER ROTATE
-  //      Debug.Log("rotate");
-		////change the view x/y to joystick right
-		//float yRot = Input.GetAxis ("RightJoystickVertical") *Time.deltaTime*3.0f ;
-		//float xRot = Input.GetAxis ("RightJoystickHorizontal") *Time.deltaTime*3.0f ;
+	
 
-		////Camera.main.transform.localRotation *= Quaternion.Euler (-xRot, 0f, 0f);
-		////camera.rotation*= Quaternion.Euler(0f,yRot,0f);
-		//character.rotation = Quaternion.Euler (xRot,0F, 0f);
-		//camera.position = new Vector3(character.position.x,YPositionCam,character.position.z);
-		//camera.position=character.position;
-
-	}
-
-    public void GrabObject()
-    {
-        //if (hit.collider.gameObject && (Input.GetButton("Fire2")|| Input.GetButton("XButton")) && grabObj == false)
-        //{
-        //    hitObj = hit.collider.gameObject;
-        //    grabObj = true;
-        //}
-        //else if ((Input.GetButton("Fire2")|| Input.GetButton("XButton")) && grabObj == true)
-        //{
-        //    grabObj = false;
-        //}
-
-        //		if (grabObj) {
-        //			hitObj.transform.position.x = gameObject.transform.position.x;
-        //			hitObj.transform.position.y = gameObject.transform.position.y;
-        //			hitObj.transform.position.z = gameObject.transform.position.z+2;
-        //		}
-    }
+   
+    
 }

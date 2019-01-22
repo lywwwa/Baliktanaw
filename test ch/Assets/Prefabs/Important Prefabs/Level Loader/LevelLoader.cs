@@ -7,7 +7,6 @@ using UnityEngine.UI;
 //FOR SCENE TO SCENE 
 public class LevelLoader : MonoBehaviour {
 
-	public GameObject guiObject;
 	public string LevelToLoad;
 
     

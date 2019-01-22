@@ -23,6 +23,8 @@ TagManager:
   - Biraman
   - Rarak
   - Sound
+  - Stake
+  - Land
   layers:
   - Default
   - TransparentFX

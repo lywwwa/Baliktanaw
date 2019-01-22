@@ -8,9 +8,18 @@ public class TridentController : MonoBehaviour
     public Animator anim;
     public GameObject hand;
     private GameObject stabObj;
-    public Vector3 pickPosition;
-    public Vector3 pickRotation;
+
+    public GameObject stake;
+    public GameObject deadfish;
+    public GameObject stakeland;
+    
     // Use this for initialization
+    void Start() {
+      //  deadfish = GetComponent<GameObject>();
+        deadfish.SetActive(false);
+        stakeland.SetActive(false);
+        //stake = gameObject.GetComponent<GameObject>();
+    }
     void Update()
     {
         WeaponTrigger();
@@ -50,16 +59,33 @@ public class TridentController : MonoBehaviour
     void OnTriggerStay(Collider col)
     {
         //Debug.Log(col.gameObject.tag);
-        if(col.gameObject.tag == "Fish")
-        {
-            if (Input.GetButton("AButton"))
+        
+            if (Input.GetButtonDown("BButton"))
             {
+            anim.SetTrigger("isStabbing");
+            if (col.gameObject.tag == "Fish")
+            {
+                Debug.Log("FIsh dead"+col.gameObject.tag);
+                deadfish.SetActive(true);
                 //put hand animation
-                //anim.SetTrigger("isStabbing");
-                stabObj = col.gameObject;
-                stabObj.transform.parent = this.gameObject.transform;
-                stabObj.transform.localPosition = pickPosition;
-                stabObj.transform.localEulerAngles = pickRotation;
+                Destroy(col.gameObject);
+               
+                //stabObj = col.gameObject;
+                //stabObj.transform.parent = this.gameObject.transform;
+                //stabObj.transform.localPosition = pickPosition;
+                //stabObj.transform.localEulerAngles = pickRotation;
+            }
+            else if (col.gameObject.tag == "Land")
+            {
+                Debug.Log("Land" + col.gameObject.tag);
+               stakeland.SetActive(true);
+                //put hand animation
+                Destroy(stake);
+
+                //stabObj = col.gameObject;
+                //stabObj.transform.parent = this.gameObject.transform;
+                //stabObj.transform.localPosition = pickPosition;
+                //stabObj.transform.localEulerAngles = pickRotation;
             }
         }
     }
