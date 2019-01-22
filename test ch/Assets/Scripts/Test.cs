@@ -48,11 +48,11 @@ public class Test : MonoBehaviour {
                                              "b.	sa kawayan"};
     static string[] ThreeChoice = new string[]{"c.	tumaranpok",
                                                "c.	paglalagay ng pestisidyo",
-                                               "c.	taro",
+                                               "c.	gabi",
                                                "c.	kinukulayan ang mga nakapaligid na bakod",
                                                "c.	lahat ng nabanggit",
                                                "c.	mga pamilya ng sandig sa datu (supporters of datu)",
-                                               "c.	spear (sibat)",
+                                               "c.	bankaw (spear)",
                                                "c.	ilog",
                                                "c.	dibdib",
                                                "c.	ang umalohokan",
