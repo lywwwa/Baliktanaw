@@ -12,6 +12,8 @@ public class GrabCasting : MonoBehaviour
     private Animator anim;
     private GameObject holdObj;
 
+    public GameObject Spear;
+
     public Vector3 pickPosition;
     public Vector3 pickRotation;
 
@@ -28,23 +30,32 @@ public class GrabCasting : MonoBehaviour
     {
         GrabObject();
         RaycastHit hit;
+        if (TridentController.fishing)
+        {
+            Destroy(Spear);
+            anim.SetBool("isHolding", false);
+        }
+        if (TridentController.staking)
+        {
+            anim.SetBool("isHolding", false);
+        }
 
         var fwd = transform.TransformDirection(Vector3.forward);
         if (Physics.Raycast(transform.position, fwd, out hit, 500))
         {
-            //Debug.Log(hit.collider.gameObject.tag);
+            ////Debug.Log(hit.collider.gameObject.tag);
 
-            if (hit.collider.gameObject.tag == "Grass")
+            //if (hit.collider.gameObject.tag == "Grass")
+            //{
+            //    if (Input.GetButton("AButton"))
+            //    {
+            //        hit.transform.SetParent(this.transform);
+            //        hit.transform.localPosition = new Vector3(0f, -.672f, 0f);
+            //    }
+            //}
+            if (hit.collider.gameObject.tag == "Weapon")
             {
-                if (Input.GetButton("AButton"))
-                {
-                    hit.transform.SetParent(this.transform);
-                    hit.transform.localPosition = new Vector3(0f, -.672f, 0f);
-                }
-            }
-            else if (hit.collider.gameObject.tag == "Weapon")
-            {
-                if (Input.GetButton("AButton"))
+                if (Input.GetButton("AButton") && Test.fishingActivated)
                 {
                     anim.SetBool("isHolding", true);
                     holdObj = hit.collider.gameObject;
@@ -56,7 +67,7 @@ public class GrabCasting : MonoBehaviour
             }
             else if (hit.collider.gameObject.tag == "Stake")
             {
-                if (Input.GetButton("AButton"))
+                if (Input.GetButton("AButton") && Test.stakeActivated)
                 {
                     anim.SetBool("isHolding", true);
                     holdObj = hit.collider.gameObject;

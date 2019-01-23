@@ -25,6 +25,9 @@ TagManager:
   - Sound
   - Stake
   - Land
+  - Basket
+  - Chicken
+  - Crowd
   layers:
   - Default
   - TransparentFX

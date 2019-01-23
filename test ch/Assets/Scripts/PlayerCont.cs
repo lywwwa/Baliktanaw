@@ -29,7 +29,6 @@ public class PlayerCont : MonoBehaviour {
     void Start()
 	{
 		controller = GetComponent<CharacterController>();
-        Cam = this.gameObject.transform;
 
         // let the gameObject fall down
         // gameObject.transform.position = new Vector3(0, 5, 0);
@@ -49,6 +48,11 @@ public class PlayerCont : MonoBehaviour {
                 Player.transform.Rotate(0.0f, turn, 0.0f);
             }
 
+            //if (Input.GetAxis("RightJoystickVertical") == 1 || Input.GetAxis("RightJoystickVertical") == -1)
+            //{
+            //    float round = Input.GetAxis("RightJoystickVertical") * rotateSpeed;
+            //    Cam.transform.Rotate(round, 0.0f, 0.0f);
+            //}
     }
 
 	public void PlayerMovement()
@@ -63,7 +67,7 @@ public class PlayerCont : MonoBehaviour {
             moveDirection = transform.TransformDirection(moveDirection);
 			moveDirection = moveDirection * speed;
 
-			if (Input.GetButton("Trigger")) {
+			if (Input.GetButton("YButton")) {
 
 				moveDirection = moveDirection *runSpeed;
 			} 

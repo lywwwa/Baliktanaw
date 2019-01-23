@@ -12,7 +12,15 @@ public class TridentController : MonoBehaviour
     public GameObject stake;
     public GameObject deadfish;
     public GameObject stakeland;
-    
+
+    public static bool staking = false;
+    bool freeHand = false;
+    public static bool fishSpear = false;
+    public static bool fishing = false;
+
+
+    Test testScript;
+
     // Use this for initialization
     void Start() {
       //  deadfish = GetComponent<GameObject>();
@@ -25,6 +33,12 @@ public class TridentController : MonoBehaviour
         WeaponTrigger();
         //anim = trident.GetComponent<Animator> ();
         //Debug.Log("weapon");
+        if (Test.activeSpear)
+        {
+            deadfish.SetActive(false);
+            fishSpear = false;
+            fishing = true;
+        }
     }
 
 
@@ -60,13 +74,15 @@ public class TridentController : MonoBehaviour
     {
         //Debug.Log(col.gameObject.tag);
         
-            if (Input.GetButtonDown("BButton"))
-            {
+        if (Input.GetButtonDown("BButton"))
+        {
             anim.SetTrigger("isStabbing");
             if (col.gameObject.tag == "Fish")
             {
                 Debug.Log("FIsh dead"+col.gameObject.tag);
                 deadfish.SetActive(true);
+                fishSpear = true;
+
                 //put hand animation
                 Destroy(col.gameObject);
                
@@ -78,7 +94,7 @@ public class TridentController : MonoBehaviour
             else if (col.gameObject.tag == "Land")
             {
                 Debug.Log("Land" + col.gameObject.tag);
-               stakeland.SetActive(true);
+                stakeland.SetActive(true);
                 //put hand animation
                 Destroy(stake);
 
@@ -86,6 +102,13 @@ public class TridentController : MonoBehaviour
                 //stabObj.transform.parent = this.gameObject.transform;
                 //stabObj.transform.localPosition = pickPosition;
                 //stabObj.transform.localEulerAngles = pickRotation;
+
+                staking = true;
+
+                Test.stakeFinish = true;
+                Test.q[3] = false;
+                Test.questActive = false;
+
             }
         }
     }
