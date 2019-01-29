@@ -15,7 +15,7 @@ public class Intro : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		transform.Translate(0, 0.1f, 0);
+		transform.Translate(0, 0.03f, 0);
 
         if(lastText.transform.position.y >= 99f)
         {

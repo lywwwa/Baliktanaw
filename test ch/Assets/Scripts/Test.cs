@@ -122,12 +122,30 @@ public class Test : MonoBehaviour {
                                          "Salamat iyong tulong. Ngayon ay may palatandaan na kami na amin ang mga pananim na iyon."};
     string[] scriptCrowd = new string[] { "Mukhang may bagong batas na nabuo si Datu Gunsad.Marahil ay ipapahayag na ito ni Ibusun.Siya ang ating Umalohokan.Anumang batas ang mabuo ng datu, hindi ito agad ipinatutupad hangga’t hindi ito naipapahayag ng Umalohokan." };
 
-    //3D Text
-    //public GameObject Lupas;
-    //public GameObject nameDatu;
-    //public GameObject nameEnita;
+	//3D Text
+	//public GameObject Lupas;
+	//public GameObject nameDatu;
+	//public GameObject nameEnita;
 
-    public GameObject canvas;
+	public AudioSource correct;
+	public AudioSource wrong;
+
+	public GameObject s0;
+	public GameObject s1;
+	public GameObject s2;
+	public GameObject s3;
+	public GameObject s4;
+	public GameObject s5;
+	public GameObject s6;
+	public GameObject s7;
+	public GameObject s8;
+	public GameObject s9;
+	public GameObject s10;
+	public GameObject s11;
+	public GameObject s12;
+
+
+	public GameObject canvas;
 
     public GameObject dialogueBox;
     public GameObject dialogueText;
@@ -2185,13 +2203,17 @@ public class Test : MonoBehaviour {
         {
             if (x == 5 || x == 6 || x == 10)
             {
-                Test.scoreCount++;
+				correct.Play();
+				Debug.Log("TAMA");
+				Test.scoreCount++;
                 Test.q[x] = false;
                 x++;
             }
             else
             {
-                Test.q[x] = true;
+				wrong.Play();
+				Debug.Log("MALI");
+				Test.q[x] = true;
                 x++;
             }
         }
@@ -2207,7 +2229,8 @@ public class Test : MonoBehaviour {
                 x++;
             }
         }
-    }
+		score();
+	}
 
     public void ChoiceTwo()
     {
@@ -2215,13 +2238,17 @@ public class Test : MonoBehaviour {
         {
             if (x == 0 || x == 1 || x == 3 || x == 8 || x == 11)
             {
+				correct.Play();
+				Debug.Log("TAMA");
                 Test.scoreCount++;
                 Test.q[x] = false;
                 x++;
             }
             else
             {
-                Test.q[x] = true;
+				wrong.Play();
+				Debug.Log("MALI");
+				Test.q[x] = true;
                 //this lies the effect if not answered
                 x++;
             }
@@ -2238,7 +2265,8 @@ public class Test : MonoBehaviour {
                 x++;
             }
         }
-    }
+		score();
+	}
 
     public void ChoiceThree()
     {
@@ -2246,13 +2274,17 @@ public class Test : MonoBehaviour {
         {
             if (x == 2 || x == 4 || x == 7 || x == 9)
             {
-                Test.scoreCount++;
+				correct.Play();
+				Debug.Log("TAMA");
+				Test.scoreCount++;
                 Test.q[x] = false;
                 x++;
             }
             else
             {
-                Test.q[x] = true;
+				wrong.Play();
+				Debug.Log("MALI");
+				Test.q[x] = true;
                 //this lies the effect if not answered
                 x++;
             }
@@ -2269,5 +2301,220 @@ public class Test : MonoBehaviour {
                 x++;
             }
         }
+
+		score();
     }
+
+	public void score()
+	{		
+		if (scoreCount == 0)
+		{
+			s0.SetActive(true);
+			s1.SetActive(false);
+			s2.SetActive(false);
+			s3.SetActive(false);
+			s4.SetActive(false);
+			s5.SetActive(false);
+			s6.SetActive(false);
+			s7.SetActive(false);
+			s8.SetActive(false);
+			s9.SetActive(false);
+			s10.SetActive(false);
+			s11.SetActive(false);
+			s12.SetActive(false);
+		}
+		else if (scoreCount == 1)
+		{
+			s0.SetActive(false);
+			s1.SetActive(true);
+			s2.SetActive(false);
+			s3.SetActive(false);
+			s4.SetActive(false);
+			s5.SetActive(false);
+			s6.SetActive(false);
+			s7.SetActive(false);
+			s8.SetActive(false);
+			s9.SetActive(false);
+			s10.SetActive(false);
+			s11.SetActive(false);
+			s12.SetActive(false);
+		}
+		else if (scoreCount == 2)
+		{
+			s0.SetActive(false);
+			s1.SetActive(false);
+			s2.SetActive(true);
+			s3.SetActive(false);
+			s4.SetActive(false);
+			s5.SetActive(false);
+			s6.SetActive(false);
+			s7.SetActive(false);
+			s8.SetActive(false);
+			s9.SetActive(false);
+			s10.SetActive(false);
+			s11.SetActive(false);
+			s12.SetActive(false);
+
+		}
+		else if (scoreCount == 3)
+		{
+			s0.SetActive(false);
+			s1.SetActive(false);
+			s2.SetActive(false);
+			s3.SetActive(true);
+			s4.SetActive(false);
+			s5.SetActive(false);
+			s6.SetActive(false);
+			s7.SetActive(false);
+			s8.SetActive(false);
+			s9.SetActive(false);
+			s10.SetActive(false);
+			s11.SetActive(false);
+			s12.SetActive(false);
+		}
+		else if (scoreCount == 4)
+		{
+			s0.SetActive(false);
+			s1.SetActive(false);
+			s2.SetActive(false);
+			s3.SetActive(false);
+			s4.SetActive(true);
+			s5.SetActive(false);
+			s6.SetActive(false);
+			s7.SetActive(false);
+			s8.SetActive(false);
+			s9.SetActive(false);
+			s10.SetActive(false);
+			s11.SetActive(false);
+			s12.SetActive(false);
+		}
+		else if (scoreCount == 5)
+		{
+			s0.SetActive(false);
+			s1.SetActive(false);
+			s2.SetActive(false);
+			s3.SetActive(false);
+			s4.SetActive(false);
+			s5.SetActive(true);
+			s6.SetActive(false);
+			s7.SetActive(false);
+			s8.SetActive(false);
+			s9.SetActive(false);
+			s10.SetActive(false);
+			s11.SetActive(false);
+			s12.SetActive(false);
+		}
+		else if (scoreCount == 6)
+		{
+			s0.SetActive(false);
+			s1.SetActive(false);
+			s2.SetActive(false);
+			s3.SetActive(false);
+			s4.SetActive(false);
+			s5.SetActive(false);
+			s6.SetActive(true);
+			s7.SetActive(false);
+			s8.SetActive(false);
+			s9.SetActive(false);
+			s10.SetActive(false);
+			s11.SetActive(false);
+			s12.SetActive(false);
+		}
+		else if (scoreCount == 7)
+		{
+			s0.SetActive(false);
+			s1.SetActive(false);
+			s2.SetActive(false);
+			s3.SetActive(false);
+			s4.SetActive(false);
+			s5.SetActive(false);
+			s6.SetActive(false);
+			s7.SetActive(true);
+			s8.SetActive(false);
+			s9.SetActive(false);
+			s10.SetActive(false);
+			s11.SetActive(false);
+			s12.SetActive(false);
+		}
+		else if (scoreCount == 8)
+		{
+			s0.SetActive(false);
+			s1.SetActive(false);
+			s2.SetActive(false);
+			s3.SetActive(false);
+			s4.SetActive(false);
+			s5.SetActive(false);
+			s6.SetActive(false);
+			s7.SetActive(false);
+			s8.SetActive(true);
+			s9.SetActive(false);
+			s10.SetActive(false);
+			s11.SetActive(false);
+			s12.SetActive(false);
+		}
+		else if (scoreCount == 9)
+		{
+			s0.SetActive(false);
+			s1.SetActive(false);
+			s2.SetActive(false);
+			s3.SetActive(false);
+			s4.SetActive(false);
+			s5.SetActive(false);
+			s6.SetActive(false);
+			s7.SetActive(false);
+			s8.SetActive(false);
+			s9.SetActive(true);
+			s10.SetActive(false);
+			s11.SetActive(false);
+			s12.SetActive(false);
+		}
+		else if (scoreCount == 10)
+		{
+			s0.SetActive(false);
+			s1.SetActive(false);
+			s2.SetActive(false);
+			s3.SetActive(false);
+			s4.SetActive(false);
+			s5.SetActive(false);
+			s6.SetActive(false);
+			s7.SetActive(false);
+			s8.SetActive(false);
+			s9.SetActive(false);
+			s10.SetActive(true);
+			s11.SetActive(false);
+			s12.SetActive(false);
+		}
+		else if (scoreCount == 11)
+		{
+			s0.SetActive(false);
+			s1.SetActive(false);
+			s2.SetActive(false);
+			s3.SetActive(false);
+			s4.SetActive(false);
+			s5.SetActive(false);
+			s6.SetActive(false);
+			s7.SetActive(false);
+			s8.SetActive(false);
+			s9.SetActive(false);
+			s10.SetActive(false);
+			s11.SetActive(true);
+			s12.SetActive(false);
+		}
+		else if (scoreCount == 12)
+		{
+			s0.SetActive(false);
+			s1.SetActive(false);
+			s2.SetActive(false);
+			s3.SetActive(false);
+			s4.SetActive(false);
+			s5.SetActive(false);
+			s6.SetActive(false);
+			s7.SetActive(false);
+			s8.SetActive(false);
+			s9.SetActive(false);
+			s10.SetActive(false);
+			s11.SetActive(false);
+			s12.SetActive(true);
+		}
+	}
 }
