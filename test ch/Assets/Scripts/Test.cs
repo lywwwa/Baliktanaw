@@ -85,7 +85,7 @@ public class Test : MonoBehaviour {
                                          "Bisitahin mo ang iyong kaibigang si Piyan.",
                                          "Kabani, anak. Maghahanda na ako ng ating kakainin. Pumunta ka sa baba sa ating imbakan at kumuha ka ng isang gabi.",
                                          "Ang gabi ay halamang ugat na bilugan, kayumanggi ang balat, at maputi ang laman.",
-                                         "Salamat sa pagkuha ng taro, anak. Sagana man tayo sa mga halamang ugat, ang pinakamasustansiya sa lahat ay ang gabi. Bukod pa roon, maraming gamit ang halamang iyon – ang apay (leaves) ay ginagamit sa pagbalot ng pagkaing iihawin at ang laon (edible leaves) ay maaaring kainin."};
+                                         "Salamat sa pagkuha ng gabi, anak. Sagana man tayo sa mga halamang ugat, ang pinakamasustansiya sa lahat ay ang gabi. Bukod pa roon, maraming gamit ang halamang iyon – ang apay (leaves) ay ginagamit sa pagbalot ng pagkaing iihawin at ang laon (edible leaves) ay maaaring kainin."};
     string[] scriptMakindo = new string[]{ "Napakarami talagang isda sa ilog.",
                                            "Kabani! Sumama ka sa akin na mangisda sa ilog. Kumuha ka muna ng sarapang kay Rarak. Pagkakuha mo ay puntahan mo ako sa ilog.",
                                            "Kunin mo muna kay Rarak ang sarapang bago tayo pumunta sa ilog.",
@@ -116,7 +116,7 @@ public class Test : MonoBehaviour {
                                            "Mula sa agos ng dagat, may napadpad na kawayan sa tapat ng ibon.",
                                            "Tinuka niya ito hanggang sa mahati sa dalawa at mabukas.",
                                            "Sa isang bahagi nito lumabas ang isang lalaki at sa isang bahagi naman ay isang babae."};
-    string[] scriptRarak = new string[] { "Ipinagmamalaki ko na mayroon akong mga batuk (tattoo). Patunay lamang na may silbi ako kapag mayroong digmaan. Unang beses kong magkaroon ay sa paa. Kailangan ko pang galingan kung magkakaroon muli ng digmaan. Nang sa gayon ay magkaroon na rin ako sa braso at dibdib." };
+    string[] scriptRarak = new string[] { "Ipinagmamalaki ko na mayroon akong mga batuk (tattoo). Patunay lamang na may silbi ako kapag mayroong digmaan. Unang beses kong magkaroon ay sa paa. Kailangan ko pang galingan kung magkakaroon muli ng digmaan." };
     string[] scriptDarok = new string[]{ "Maganda ang panahon ngayon, hindi ba Kabani?",
                                          "Nakapagtanim na ang asawa ko ng mga halamang ugat. Ngunit umalis siya agad at may pinuntahan. Nakalimutan niyang maglagay ng palatandaan. Hindi ko ito magagawa dahil ako ay lumpo. Maaari ba akong tulungan?",
                                          "Salamat iyong tulong. Ngayon ay may palatandaan na kami na amin ang mga pananim na iyon."};
@@ -312,6 +312,15 @@ public class Test : MonoBehaviour {
         Debug.Log(sceneName);
         if(sceneName == "Barangay")
         {
+
+            //Test.q[1] = false ;
+            //Test.q[6] = true ;
+
+            Test.q[1] = false ;
+            Test.q[6] = false ;
+            Test.q[7] = false ;
+            Test.q[2] = true ;
+
             gabi.SetActive(false);
 
             Prob();
@@ -327,8 +336,6 @@ public class Test : MonoBehaviour {
 
         if (sceneName == "Test")
         {
-            for (int z = 0; z < 12; z++)
-                q[z] = false;
             Text();
         }
         else if (sceneName == "Barangay")
@@ -801,7 +808,7 @@ public class Test : MonoBehaviour {
                                 probWeed = 0.7f;
                                 StartCoroutine(Hint());
                             }
-                            else if(weedTrigger2 && !weedTrigger1)
+                            else if (weedTrigger2 && !weedTrigger1)
                             {
                                 probWeed = 0.8f;
                                 StartCoroutine(Hint());
@@ -923,6 +930,7 @@ public class Test : MonoBehaviour {
                 {
                     if (hit.collider.gameObject.tag == "Lupas")
                     {
+                        Debug.Log("Lupas is here");
                         LookatPlayer(hit.collider.gameObject);
                         ActivateDialogue();
                         nameText.GetComponentInChildren<Text>().text = hit.collider.gameObject.tag;
@@ -933,8 +941,9 @@ public class Test : MonoBehaviour {
                     }
                 }
 
-                else if (!fishingActivated && (q[6] || q[7]) && !q[1])
+                if (!fishingActivated && (q[6] || q[7]) && !q[1])
                 {
+                    Debug.Log("Enter this");
                     if (hit.collider.gameObject.tag == "AmaLupas")
                     {
                         AmaLupas(hit.collider.gameObject);
@@ -957,13 +966,13 @@ public class Test : MonoBehaviour {
                     }
                     else if (hit.collider.gameObject.tag == "Lupas")
                     {
-                        if((q[6]||q[7]) && !fishTrigger1 && !fishTrigger2)
+                        if ((q[6] || q[7]) && !fishTrigger1 && !fishTrigger2)
                         {
                             probFish = 0.6f;
                             hintFish = true;
                             StartCoroutine(Hint());
                         }
-                        else if(fishTrigger1 && !fishTrigger2)
+                        else if (fishTrigger1 && !fishTrigger2)
                         {
                             probFish = 0.8f;
                             StartCoroutine(Hint());
@@ -1070,7 +1079,7 @@ public class Test : MonoBehaviour {
                     }
                 }
 
-                else if (!taxActivated && (q[4] || q[5]) && !q[1] && !q[6] && !q[7] && !q[2] && !q[3])
+                if (!taxActivated && (q[4] || q[5]) && !q[1] && !q[6] && !q[7] && !q[2] && !q[3])
                 {
                     if (hit.collider.gameObject.tag == "AmaLupas")
                     {
@@ -1097,13 +1106,13 @@ public class Test : MonoBehaviour {
                     }
                     else if (hit.collider.gameObject.tag == "Piyan")
                     {
-                        if((q[4]||q[5]) && !taxTrigger1 && !taxTrigger2 && !taxTrigger3)
+                        if ((q[4] || q[5]) && !taxTrigger1 && !taxTrigger2 && !taxTrigger3)
                         {
                             probTax = 0.6f;
                             hintTax = true;
                             StartCoroutine(Hint());
                         }
-                        else if(taxTrigger1 && !taxTrigger2 && !taxTrigger3)
+                        else if (taxTrigger1 && !taxTrigger2 && !taxTrigger3)
                         {
                             probTax = 0.7f;
                             StartCoroutine(Hint());
@@ -1236,7 +1245,7 @@ public class Test : MonoBehaviour {
                     }
                 }
 
-                else if (!taroActivated && q[2] && !q[1] && !q[6] && !q[7])
+                if (!taroActivated && q[2] && !q[1] && !q[6] && !q[7])
                 {
                     if (hit.collider.gameObject.tag == "AmaLupas")
                     {
@@ -1355,7 +1364,9 @@ public class Test : MonoBehaviour {
                     }
                 }
 
-                else if (!stakeActivated && q[3] && !q[1] && !q[6] && !q[7])
+                // && !q[1] && !q[6] && !q[7]
+
+                if (!stakeActivated && q[3])
                 {
                     if (hit.collider.gameObject.tag == "Lupas")
                     {
@@ -1426,6 +1437,7 @@ public class Test : MonoBehaviour {
                 }
 
                 ////INFO GATHERING
+                // Adjust
 
                 if (!weedFinish && fishingFinish && taxFinish)
                 {
@@ -1635,7 +1647,7 @@ public class Test : MonoBehaviour {
         if (!q[9] && !q[1] && !q[2] && !q[3] && !q[4] && !q[5] && !q[6] && !q[7] && !q[8] && !q[10] && !q[11])
         {
             Test.postTest = true;
-            SceneManager.LoadScene(1);
+            //SceneManager.LoadScene(1);
         }
 
         if (!q[1] && !q[4] && !q[5] && !q[6] && !q[7])
