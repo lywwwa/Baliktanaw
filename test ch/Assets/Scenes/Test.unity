@@ -2129,6 +2129,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8ec000716ca3cef479e6788f3d40ef32, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  d_Datu: {fileID: 0}
+  buttonclick: 0
+  postflag: 0
+  randomQuestion: 0
   correct: {fileID: 839026993}
   wrong: {fileID: 984923444}
   s0: {fileID: 912892951}
