@@ -17,4 +17,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Barangay.unity
     guid: 3f6320cc5ec818c4c87ffef154cb4e29
+  - enabled: 1
+    path: Assets/Scenes/Credit.unity
+    guid: 62053f1ed2334ac489cb5eda7898b36b
   m_configObjects: {}

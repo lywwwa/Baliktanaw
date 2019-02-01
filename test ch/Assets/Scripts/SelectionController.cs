@@ -7,6 +7,9 @@ public class SelectionController : MonoBehaviour {
 	public GameObject selectedObject;
 
 	private bool buttonSelected;
+	public GameObject warningPanel;
+	public GameObject title;
+	public AudioSource titleAudio;
 
 	// Use this for initialization
 	void Start () {
@@ -22,8 +25,13 @@ public class SelectionController : MonoBehaviour {
 			buttonSelected = true;
 		}
 
-		if (Input.GetButton("BButton")) {
+		if (Input.GetButton("BButton") || Input.GetKeyDown("space")) {
 			Debug.Log ("b button clicked");
+
+			title.SetActive(true);
+			warningPanel.SetActive(false);
+			titleAudio.Play();
+			Debug.Log("b button clicked");
 		}
 	}
 
@@ -36,5 +44,17 @@ public class SelectionController : MonoBehaviour {
 	{
 		
 	}
+
+	//public void warningDisable()
+	//{
+	//	//if (Input.GetButton("BButton") || Input.GetKeyDown("a"))
+	//	if (Input.GetKeyDown("a"))
+	//	{
+	//		title.SetActive(true);
+	//		warningPanel.SetActive(false);
+	//		titleAudio.Play();
+	//		Debug.Log("b button clicked");
+	//	}
+	//}
 
 }
