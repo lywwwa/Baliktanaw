@@ -5,7 +5,6 @@ using UnityEngine.SceneManagement;
 
 public class Credits : MonoBehaviour {
 
-    public LoadScreen loadScreen;
     public GameObject lastText;
 
 	// Use this for initialization
@@ -15,15 +14,14 @@ public class Credits : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		transform.Translate(0, 0.08f, 0);
-
-		if (lastText.transform.position.y >= 99f)
+		transform.Translate(0, 0.08f, 0.01f);
+		if (lastText.transform.position.y >= 206f)
         {
             //Debug.Log(lastText.transform.position.y);
             //loadScreen.LoadLevel(3);
             // SceneManager.LoadScene(3);
             Debug.Log("Done");
-            loadScreen.LoadLevel();
+            SceneManager.LoadScene(0);
 
         }
 	}

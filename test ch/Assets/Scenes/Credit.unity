@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657844, g: 0.49641222, b: 0.57481694, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -222,7 +222,6 @@ GameObject:
   - component: {fileID: 465879162}
   - component: {fileID: 465879165}
   - component: {fileID: 465879164}
-  - component: {fileID: 465879166}
   - component: {fileID: 465879163}
   m_Layer: 0
   m_Name: B
@@ -248,17 +247,15 @@ Transform:
 --- !u!114 &465879163
 MonoBehaviour:
   m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 114999852874228218, guid: 4fe07a106ddde9244aa5f46f0337c9e6,
-    type: 2}
+  m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 465879161}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: efbeb360ba9764c4db7ed063b87a0756, type: 3}
+  m_Script: {fileID: 11500000, guid: 1dac6644e552c8e45a953ea55b829b20, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  loadScreen: {fileID: 0}
-  lastText: {fileID: 1141616028}
+  lastText: {fileID: 551413467}
 --- !u!102 &465879164
 TextMesh:
   serializedVersion: 3
@@ -317,19 +314,6 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!114 &465879166
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 465879161}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1dac6644e552c8e45a953ea55b829b20, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  loadScreen: {fileID: 0}
-  lastText: {fileID: 0}
 --- !u!1 &482086718
 GameObject:
   m_ObjectHideFlags: 0
@@ -341,7 +325,6 @@ GameObject:
   - component: {fileID: 482086719}
   - component: {fileID: 482086722}
   - component: {fileID: 482086721}
-  - component: {fileID: 482086723}
   - component: {fileID: 482086720}
   m_Layer: 0
   m_Name: Text1 (1)
@@ -367,17 +350,15 @@ Transform:
 --- !u!114 &482086720
 MonoBehaviour:
   m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 114345467165902286, guid: 4fe07a106ddde9244aa5f46f0337c9e6,
-    type: 2}
+  m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 482086718}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: efbeb360ba9764c4db7ed063b87a0756, type: 3}
+  m_Script: {fileID: 11500000, guid: 1dac6644e552c8e45a953ea55b829b20, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  loadScreen: {fileID: 0}
-  lastText: {fileID: 551413467}
+  lastText: {fileID: 0}
 --- !u!102 &482086721
 TextMesh:
   serializedVersion: 3
@@ -459,19 +440,6 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!114 &482086723
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 482086718}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1dac6644e552c8e45a953ea55b829b20, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  loadScreen: {fileID: 0}
-  lastText: {fileID: 551413467}
 --- !u!1 &520854730
 GameObject:
   m_ObjectHideFlags: 0
@@ -483,7 +451,6 @@ GameObject:
   - component: {fileID: 520854731}
   - component: {fileID: 520854734}
   - component: {fileID: 520854733}
-  - component: {fileID: 520854735}
   - component: {fileID: 520854732}
   m_Layer: 0
   m_Name: B (1)
@@ -509,17 +476,15 @@ Transform:
 --- !u!114 &520854732
 MonoBehaviour:
   m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 114999852874228218, guid: 4fe07a106ddde9244aa5f46f0337c9e6,
-    type: 2}
+  m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 520854730}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: efbeb360ba9764c4db7ed063b87a0756, type: 3}
+  m_Script: {fileID: 11500000, guid: 1dac6644e552c8e45a953ea55b829b20, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  loadScreen: {fileID: 0}
-  lastText: {fileID: 551413467}
+  lastText: {fileID: 0}
 --- !u!102 &520854733
 TextMesh:
   serializedVersion: 3
@@ -578,19 +543,6 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!114 &520854735
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 520854730}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1dac6644e552c8e45a953ea55b829b20, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  loadScreen: {fileID: 0}
-  lastText: {fileID: 551413467}
 --- !u!1 &551413467
 GameObject:
   m_ObjectHideFlags: 0
@@ -602,7 +554,6 @@ GameObject:
   - component: {fileID: 551413468}
   - component: {fileID: 551413471}
   - component: {fileID: 551413470}
-  - component: {fileID: 551413472}
   - component: {fileID: 551413469}
   m_Layer: 0
   m_Name: Text1 (3)
@@ -619,7 +570,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 551413467}
   m_LocalRotation: {x: -0.40821788, y: 0.23456968, z: -0.10938163, w: 0.8754261}
-  m_LocalPosition: {x: 24.399998, y: -66.9, z: 162.6}
+  m_LocalPosition: {x: 24.399998, y: -68.1, z: 163.2}
   m_LocalScale: {x: 1, y: 1.0000001, z: 0.99999994}
   m_Children: []
   m_Father: {fileID: 1831569099}
@@ -628,17 +579,15 @@ Transform:
 --- !u!114 &551413469
 MonoBehaviour:
   m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 114070187168462526, guid: 4fe07a106ddde9244aa5f46f0337c9e6,
-    type: 2}
+  m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 551413467}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: efbeb360ba9764c4db7ed063b87a0756, type: 3}
+  m_Script: {fileID: 11500000, guid: 1dac6644e552c8e45a953ea55b829b20, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  loadScreen: {fileID: 0}
-  lastText: {fileID: 551413467}
+  lastText: {fileID: 0}
 --- !u!102 &551413470
 TextMesh:
   serializedVersion: 3
@@ -718,19 +667,6 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!114 &551413472
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 551413467}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1dac6644e552c8e45a953ea55b829b20, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  loadScreen: {fileID: 0}
-  lastText: {fileID: 551413467}
 --- !u!1001 &665076426
 Prefab:
   m_ObjectHideFlags: 0
@@ -795,6 +731,11 @@ Prefab:
       propertyPath: Credit
       value: 
       objectReference: {fileID: 1831569098}
+    - target: {fileID: 114681743342224840, guid: 25e10a706cc5cd449b31b1e48794f983,
+        type: 2}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 114581204167043774, guid: 25e10a706cc5cd449b31b1e48794f983, type: 2}
   m_SourcePrefab: {fileID: 100100000, guid: 25e10a706cc5cd449b31b1e48794f983, type: 2}
@@ -815,7 +756,6 @@ GameObject:
   - component: {fileID: 1141616029}
   - component: {fileID: 1141616032}
   - component: {fileID: 1141616031}
-  - component: {fileID: 1141616033}
   - component: {fileID: 1141616030}
   m_Layer: 0
   m_Name: Text1 (2)
@@ -841,17 +781,15 @@ Transform:
 --- !u!114 &1141616030
 MonoBehaviour:
   m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 114070187168462526, guid: 4fe07a106ddde9244aa5f46f0337c9e6,
-    type: 2}
+  m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1141616028}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: efbeb360ba9764c4db7ed063b87a0756, type: 3}
+  m_Script: {fileID: 11500000, guid: 1dac6644e552c8e45a953ea55b829b20, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  loadScreen: {fileID: 0}
-  lastText: {fileID: 1141616028}
+  lastText: {fileID: 0}
 --- !u!102 &1141616031
 TextMesh:
   serializedVersion: 3
@@ -931,19 +869,6 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!114 &1141616033
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1141616028}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1dac6644e552c8e45a953ea55b829b20, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  loadScreen: {fileID: 0}
-  lastText: {fileID: 0}
 --- !u!1001 &1517805171
 Prefab:
   m_ObjectHideFlags: 0
@@ -1077,7 +1002,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1831569098}
   m_LocalRotation: {x: 0.40821788, y: -0.23456968, z: 0.10938163, w: 0.8754261}
-  m_LocalPosition: {x: 0, y: 3, z: 0}
+  m_LocalPosition: {x: 6.8, y: -55, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 465879162}
@@ -1100,7 +1025,6 @@ GameObject:
   - component: {fileID: 1848926851}
   - component: {fileID: 1848926854}
   - component: {fileID: 1848926853}
-  - component: {fileID: 1848926855}
   - component: {fileID: 1848926852}
   m_Layer: 0
   m_Name: Text1
@@ -1126,17 +1050,15 @@ Transform:
 --- !u!114 &1848926852
 MonoBehaviour:
   m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 114345467165902286, guid: 4fe07a106ddde9244aa5f46f0337c9e6,
-    type: 2}
+  m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1848926850}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: efbeb360ba9764c4db7ed063b87a0756, type: 3}
+  m_Script: {fileID: 11500000, guid: 1dac6644e552c8e45a953ea55b829b20, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  loadScreen: {fileID: 0}
-  lastText: {fileID: 1141616028}
+  lastText: {fileID: 0}
 --- !u!102 &1848926853
 TextMesh:
   serializedVersion: 3
@@ -1218,16 +1140,3 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!114 &1848926855
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1848926850}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1dac6644e552c8e45a953ea55b829b20, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  loadScreen: {fileID: 0}
-  lastText: {fileID: 0}

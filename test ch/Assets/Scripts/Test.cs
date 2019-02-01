@@ -141,22 +141,9 @@ public class Test : MonoBehaviour
 	public AudioSource correct;
 	public AudioSource wrong;
 
-    public GameObject s0;
-	public GameObject s1;
-	public GameObject s2;
-	public GameObject s3;
-	public GameObject s4;
-	public GameObject s5;
-	public GameObject s6;
-	public GameObject s7;
-	public GameObject s8;
-	public GameObject s9;
-	public GameObject s10;
-	public GameObject s11;
-	public GameObject s12;
+    public AudioSource datuSound;
 
-
-	public GameObject canvas;
+    public GameObject canvas;
 
 	public GameObject dialogueBox;
 	public GameObject dialogueText;
@@ -242,6 +229,8 @@ public class Test : MonoBehaviour
 	Node taxNode2;
 	StateContext fTrueTime0;
 	StateContext fFalseTime0;
+
+    AudioSource[] datuSources;
 
 	bool stop = false;
 	bool storyActive = false;
@@ -381,16 +370,11 @@ public class Test : MonoBehaviour
 		Debug.Log(sceneName);
 		if (sceneName == "Barangay")
 		{
+            Test.q[1] = true;
 
-			//Test.q[1] = false ;
-			//Test.q[6] = true ;
+            datuSources = datuSound.GetComponents<AudioSource>();
 
-			Test.q[1] = false;
-			Test.q[6] = false;
-			Test.q[7] = false;
-			Test.q[2] = true;
-
-			gabi.SetActive(false);
+            gabi.SetActive(false);
 
 			Prob();
 
@@ -944,10 +928,18 @@ public class Test : MonoBehaviour
 						ActivateDialogue();
 						nameText.GetComponentInChildren<Text>().text = hit.collider.gameObject.tag;
 						dialogueText.GetComponentInChildren<Text>().text = scriptDatu[0];
-						
-						//d_Datu[0].SetActive(true);
-						//SetInactiveDialogue();
-					}
+
+                        //Debug.Log("Dis is it, malgkit");
+
+                        //var aSources =GetComponents(AudioSource); audio1 = aSources[0]; audio2 = aSources[1];
+
+                        var voice = datuSources[0];
+                        voice.Play();
+
+                        //d1.Play();
+                        //d_Datu[0].SetActive(true);
+                        //SetInactiveDialogue();
+                    }
 					else if (hit.collider.gameObject.tag == "AmaLupas")
 					{
 						AmaLupas(hit.collider.gameObject);
@@ -2265,18 +2257,18 @@ public class Test : MonoBehaviour
 				correct.Play();
 				Debug.Log("TAMA");
 				Test.scoreCount++;
-				Test.q[x] = false;
+				Test.q[randomQuestion] = false;
 				x++;
 			}
 			else
 			{
 				wrong.Play();
 				Debug.Log("MALI");
-				Test.q[x] = true;
+				Test.q[randomQuestion] = true;
 				x++;
 			}
-
-		}
+            GameObject.Find("ScoreCount").GetComponentInChildren<Text>().text = scoreCount + "/12";
+        }
 		else if (postflag && x < 12)
         {
 			if (randomQuestion == 5 || randomQuestion == 6 || randomQuestion == 10)
@@ -2307,18 +2299,19 @@ public class Test : MonoBehaviour
 				correct.Play();
 				Debug.Log("TAMA");
 				Test.scoreCount++;
-				Test.q[x] = false;
+				Test.q[randomQuestion] = false;
 				x++;
 			}
 			else
 			{
 				wrong.Play();
 				Debug.Log("MALI");
-				Test.q[x] = true;
+				Test.q[randomQuestion] = true;
 				//this lies the effect if not answered
 				x++;
 			}
-		}
+            GameObject.Find("ScoreCount").GetComponentInChildren<Text>().text = scoreCount + "/12";
+        }
 		else if (postflag && x < 12)
 		{
 			if (randomQuestion == 0 || randomQuestion == 1 || randomQuestion == 3 || randomQuestion == 8 || randomQuestion == 11)
@@ -2349,19 +2342,19 @@ public class Test : MonoBehaviour
 				correct.Play();
 				Debug.Log("TAMA");
 				Test.scoreCount++;
-				Test.q[x] = false;
+				Test.q[randomQuestion] = false;
 				x++;
 			}
 			else
 			{
 				wrong.Play();
 				Debug.Log("MALI");
-				Test.q[x] = true;
+				Test.q[randomQuestion] = true;
 				//this lies the effect if not answered
 				x++;
 			}
-
-		}
+            GameObject.Find("ScoreCount").GetComponentInChildren<Text>().text = scoreCount + "/12";
+        }
 		else if (postflag && x<12)
         {
 			if (randomQuestion == 2 || randomQuestion == 4 || randomQuestion == 7 || randomQuestion == 9)
