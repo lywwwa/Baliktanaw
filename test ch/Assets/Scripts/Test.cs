@@ -12,18 +12,18 @@ public class Test : MonoBehaviour
 {
 
 
-	static string[] question = new string[]{ "1.)	Ang lipunan ay nahahati sa tatlong antas: datu, timawa, at oripun. Ang mga oripun ay may iba’t ibang uri. Ano ang tawag sa mga naninirahan sa bahay ng kanilang panginoon (master) at nagtatrabaho para sa kanila ng tatlong araw sa kada apat na araw?",
-											 "2.)	Sa pagtatanim, mahalaga ang prosesong ito upang masiguro na makukuha ng mga pananim ang sustansiya ng lupa.",
-											 "3.)	Ang karaniwang itinatamin ng mga tao ay mga halamang ugat. Sa mga halamang ugat, ano ang itinuturing nilang pinakamasustansiya?",
-											 "4.)	Ano ang prosesong ginagawa upang magkaroon ng palatandaan ang kanilang itinanim sa mga damus (a field of root crop)?",
-											 "5.)	Bukod sa serbisyo, ang buwis (tribute) na natatanggap ng datu mula sa kanyang nasasakupan ay maaaring _______.",
-											 "6.)	Sino ang mga hindi kabilang sa pagbabayad ng buwis (tribute)?",
-											 "7.)	Isa sa mga pangunahing ikinabubuhay ng mga tao ay ang pangingisda. Gumamit sila ng iba’t ibang kagamitan tulad ng busog at pana, paggiyod (a type of net), at ____________.",
-											 "8.)	Ang mga anyong tubig ay sagana sa isda. Ang mga taong naninirahan malapit sa pampang ay kadalasang nangingisda sa karagatan samantalang ang mga nakatira sa kabundukan ay sa _________.",
-											 "9.)	Ang batuk (tattoo) ay nagpapahiwatig ng katapangan ng mga lalaki at nagpapatunay na sila ay may naitulong sa mga digmaan. Saang bahagi ng katawan inuumpisahan ang paglalagay ng batuk?",
-											 "10.)	Ang datu ay may kapangyarihang gumawa at magpatupad ng mga batas. Sino naman ang nagpapahayag nito sa buong barangay?",
-											 "11.)	May mga mito (myth) na pinaniniwalaan ang mga tao na nagsasalaysay ng pinagmulan ng bagay tulad ng araw at buwan. Sa isang mito tungkol sa pinagmulan ng daigdig, anong hayop ang nagdulot ng pagkakabuo ng mga isla?",
-											 "12.)	Isinalasay din sa mito ng pinagmulan ng daigdig ang pinagmulan ng unang lalaki at babae. Saan lumabas ang unang lalaki at babae?"};
+	static string[] question = new string[]{ "Ang lipunan ay nahahati sa tatlong antas: datu, timawa, at oripun. Ang mga oripun ay may iba’t ibang uri. Ano ang tawag sa mga naninirahan sa bahay ng kanilang panginoon (master) at nagtatrabaho para sa kanila ng tatlong araw sa kada apat na araw?",
+											 "Sa pagtatanim, mahalaga ang prosesong ito upang masiguro na makukuha ng mga pananim ang sustansiya ng lupa.",
+											 "Ang karaniwang itinatamin ng mga tao ay mga halamang ugat. Sa mga halamang ugat, ano ang itinuturing nilang pinakamasustansiya?",
+											 "Ano ang prosesong ginagawa upang magkaroon ng palatandaan ang kanilang itinanim sa mga damus (a field of root crop)?",
+											 "Bukod sa serbisyo, ang buwis (tribute) na natatanggap ng datu mula sa kanyang nasasakupan ay maaaring _______.",
+											 "Sino ang mga hindi kabilang sa pagbabayad ng buwis (tribute)?",
+											 "Isa sa mga pangunahing ikinabubuhay ng mga tao ay ang pangingisda. Gumamit sila ng iba’t ibang kagamitan tulad ng busog at pana, paggiyod (a type of net), at ____________.",
+											 "Ang mga anyong tubig ay sagana sa isda. Ang mga taong naninirahan malapit sa pampang ay kadalasang nangingisda sa karagatan samantalang ang mga nakatira sa kabundukan ay sa _________.",
+											 "Ang batuk (tattoo) ay nagpapahiwatig ng katapangan ng mga lalaki at nagpapatunay na sila ay may naitulong sa mga digmaan. Saang bahagi ng katawan inuumpisahan ang paglalagay ng batuk?",
+											 "Ang datu ay may kapangyarihang gumawa at magpatupad ng mga batas. Sino naman ang nagpapahayag nito sa buong barangay?",
+											 "May mga mito (myth) na pinaniniwalaan ang mga tao na nagsasalaysay ng pinagmulan ng bagay tulad ng araw at buwan. Sa isang mito tungkol sa pinagmulan ng daigdig, anong hayop ang nagdulot ng pagkakabuo ng mga isla?",
+											 "Isinalasay din sa mito ng pinagmulan ng daigdig ang pinagmulan ng unang lalaki at babae. Saan lumabas ang unang lalaki at babae?"};
 	static string[] OneChoice = new string[] {"a.	tumataban",
 											  "a.	paghihiwalay ng mga pananim",
 											  "a.	camote",
@@ -136,12 +136,12 @@ public class Test : MonoBehaviour
 
 	public bool postflag;
 
-	public int randomQuestion;
+    int randomQuestion;
 
 	public AudioSource correct;
 	public AudioSource wrong;
 
-	public GameObject s0;
+    public GameObject s0;
 	public GameObject s1;
 	public GameObject s2;
 	public GameObject s3;
@@ -286,6 +286,7 @@ public class Test : MonoBehaviour
 	bool movePiyan = false;
 	bool moveMakindo = false;
 
+    bool[] randQuest = new bool[12];
 
 	public static bool questActive = false;
 
@@ -294,45 +295,58 @@ public class Test : MonoBehaviour
 		//Changing the texts of questions and choices every time the player answers
 		if (x < 12)
 		{
-
 			//Debug.Log("I am the Test");
 
 			//Debug.Log(OneChoice[x]); 
 
 			Text txt = gameObject.GetComponent<Text>();
-			GameObject.Find("btn1").GetComponentInChildren<Text>().text = OneChoice[x];
-			GameObject.Find("btn2").GetComponentInChildren<Text>().text = TwoChoice[x];
-			GameObject.Find("btn3").GetComponentInChildren<Text>().text = ThreeChoice[x];
-			if (postflag == true)
-			{
+			//if (postflag)
+			//{
 				if (buttonclick == 0)
 				{
-					randomQuestion = Random.Range(0, question.Length);
-					//if (rand[randomQuestion] == true)
-					//{
-					txt.text = Convert.ToString(question[randomQuestion]);
-					buttonclick = 1;
+                    //randomQuestion = Random.Range(0, question.Length);
+                    do
+                    {
+                        //Debug.Log("Pumapasok dito!");
+                        randomQuestion = Random.Range(0, question.Length);
+                    } while (randQuest[randomQuestion]);
+
+                    txt.text = Convert.ToString(question[randomQuestion]);
+                    GameObject.Find("btn1").GetComponentInChildren<Text>().text = OneChoice[randomQuestion];
+                    GameObject.Find("btn2").GetComponentInChildren<Text>().text = TwoChoice[randomQuestion];
+                    GameObject.Find("btn3").GetComponentInChildren<Text>().text = ThreeChoice[randomQuestion];
+
+                    randQuest[randomQuestion] = true;
+                    
+                    //if (rand[randomQuestion] == true)
+
+                    //Debug.Log(randomQuestion + " " + randQuest[randomQuestion]);
+                    //{
+                    buttonclick = 1;
 					//}
 					//rand[randomQuestion] = false;
 				}
-			}
-			else
-			{
-				txt.text = Convert.ToString(question[x]);
-			}
+			//}
+			//else
+			//{
+			//	//txt.text = Convert.ToString(question[x]);
+			//}
 		}
-		else if (x >= 12 && !postTest)
+		else if (x >= 12 && !postflag)
 		{
 			Debug.Log("Loadlevel");
 			//levelLoader.FadeToLevel();
 			//SceneManager.LoadScene(2);
 			loadscreen.LoadLevel();
 		}
-		else
+		else if (x == 12)
 		{
-			canvas.SetActive(true);
-			GameObject.Find("txt1").GetComponentInChildren<Text>().text = Convert.ToString(scoreCount);
-			GameObject.Find("txt2").GetComponentInChildren<Text>().text = Convert.ToString(postCount);
+			//canvas.SetActive(true);
+
+            GameObject.Find("PreScore").GetComponentInChildren<Text>().text = "Pre-Test " + scoreCount + "/ 12";
+            GameObject.Find("PostScore").GetComponentInChildren<Text>().text = "Post-Test " + postCount + "/ 12";
+            //GameObject.Find("txt1").GetComponentInChildren<Text>().text = Convert.ToString(scoreCount);
+			//GameObject.Find("txt2").GetComponentInChildren<Text>().text = Convert.ToString(postCount);
 
 			Debug.Log(scoreCount);
 			Debug.Log(postCount);
@@ -354,6 +368,11 @@ public class Test : MonoBehaviour
 
 		if (sceneName == "Test")
 		{
+            for(int z=0; z<12; z++)
+            {
+                randomQuestion = Random.Range(0, 12);
+                randQuest[z] = false;
+            }
 			x = 0;
 			Debug.Log("Hello this is a test");
 		}
@@ -386,7 +405,7 @@ public class Test : MonoBehaviour
 
 		if (sceneName == "Test")
 		{
-			Text();
+            Text();
 		}
 		else if (sceneName == "Barangay")
 		{
@@ -2238,9 +2257,9 @@ public class Test : MonoBehaviour
 
 	public void ChoiceOne()
 	{
-		if (!postTest)
+		if (!postflag)
 		{
-			if (x == 5 || x == 6 || x == 10)
+			if (randomQuestion == 5 || randomQuestion == 6 || randomQuestion == 10)
 			{
 				correct.Play();
 				Debug.Log("TAMA");
@@ -2257,28 +2276,32 @@ public class Test : MonoBehaviour
 			}
 
 		}
-		else
-		{
-			if (x == 5 || x == 6 || x == 10)
+		else if (postflag && x < 12)
+        {
+			if (randomQuestion == 5 || randomQuestion == 6 || randomQuestion == 10)
 			{
-				Test.postCount++;
+                correct.Play();
+                Test.postCount++;
 				x++;
-			}
+                Debug.Log(postCount);
+            }
 			else
 			{
-				x++;
+                wrong.Play();
+                x++;
 			}
-		}
+            GameObject.Find("ScoreCount").GetComponentInChildren<Text>().text = postCount + "/12";
+        }
 		//rand[randomQuestion] = false;
 		buttonclick = 0;
-		score();
+		//score();
 	}
 
 	public void ChoiceTwo()
 	{
-		if (!postTest)
+		if (!postflag)
 		{
-			if (x == 0 || x == 1 || x == 3 || x == 8 || x == 11)
+			if (randomQuestion == 0 || randomQuestion == 1 || randomQuestion == 3 || randomQuestion == 8 || randomQuestion == 11)
 			{
 				correct.Play();
 				Debug.Log("TAMA");
@@ -2295,28 +2318,32 @@ public class Test : MonoBehaviour
 				x++;
 			}
 		}
-		else
+		else if (postflag && x < 12)
 		{
-			if (x == 0 || x == 1 || x == 3 || x == 8 || x == 11)
+			if (randomQuestion == 0 || randomQuestion == 1 || randomQuestion == 3 || randomQuestion == 8 || randomQuestion == 11)
 			{
-				Test.postCount++;
+                correct.Play();
+                Test.postCount++;
 				x++;
+                Debug.Log(postCount);
 			}
 			else
 			{
-				x++;
+                wrong.Play();
+                x++;
 			}
-		}
+            GameObject.Find("ScoreCount").GetComponentInChildren<Text>().text = postCount + "/12";
+        }
 		//rand[randomQuestion] = false;
 		buttonclick = 0;
-		score();
+		//score();
 	}
 
 	public void ChoiceThree()
 	{
-		if (!postTest)
+		if (!postflag)
 		{
-			if (x == 2 || x == 4 || x == 7 || x == 9)
+			if (randomQuestion == 2 || randomQuestion == 4 || randomQuestion == 7 || randomQuestion == 9)
 			{
 				correct.Play();
 				Debug.Log("TAMA");
@@ -2333,26 +2360,30 @@ public class Test : MonoBehaviour
 				x++;
 			}
 		}
-		else
-		{
-			if (x == 2 || x == 4 || x == 7 || x == 9)
+		else if (postflag && x<12)
+        {
+			if (randomQuestion == 2 || randomQuestion == 4 || randomQuestion == 7 || randomQuestion == 9)
 			{
-				postCount++;
+                correct.Play();
+                Test.postCount++;
 				x++;
-			}
+                Debug.Log(postCount);
+            }
 			else
 			{
-				x++;
+                wrong.Play();
+                x++;
 			}
-		}
+            GameObject.Find("ScoreCount").GetComponentInChildren<Text>().text = postCount + "/12";
+        }
 		//rand[randomQuestion] = false;
 		buttonclick = 0;
-		score();
+		//score();
 	}
 
 	public void score()
 	{
-		if (scoreCount == 0)
+		if (scoreCount == 0 || postCount == 0)
 		{
 			s0.SetActive(true);
 			s1.SetActive(false);
@@ -2368,7 +2399,7 @@ public class Test : MonoBehaviour
 			s11.SetActive(false);
 			s12.SetActive(false);
 		}
-		else if (scoreCount == 1)
+		else if (postCount == 1)
 		{
 			s0.SetActive(false);
 			s1.SetActive(true);
@@ -2384,7 +2415,7 @@ public class Test : MonoBehaviour
 			s11.SetActive(false);
 			s12.SetActive(false);
 		}
-		else if (scoreCount == 2)
+		else if (scoreCount == 2 || postCount == 2)
 		{
 			s0.SetActive(false);
 			s1.SetActive(false);
@@ -2401,7 +2432,7 @@ public class Test : MonoBehaviour
 			s12.SetActive(false);
 
 		}
-		else if (scoreCount == 3)
+		else if (scoreCount == 3 || postCount == 3)
 		{
 			s0.SetActive(false);
 			s1.SetActive(false);
@@ -2417,7 +2448,7 @@ public class Test : MonoBehaviour
 			s11.SetActive(false);
 			s12.SetActive(false);
 		}
-		else if (scoreCount == 4)
+		else if (scoreCount == 4 || postCount == 4)
 		{
 			s0.SetActive(false);
 			s1.SetActive(false);
@@ -2433,7 +2464,7 @@ public class Test : MonoBehaviour
 			s11.SetActive(false);
 			s12.SetActive(false);
 		}
-		else if (scoreCount == 5)
+		else if (scoreCount == 5 || postCount == 5)
 		{
 			s0.SetActive(false);
 			s1.SetActive(false);
@@ -2449,7 +2480,7 @@ public class Test : MonoBehaviour
 			s11.SetActive(false);
 			s12.SetActive(false);
 		}
-		else if (scoreCount == 6)
+		else if (scoreCount == 6 || postCount == 6)
 		{
 			s0.SetActive(false);
 			s1.SetActive(false);
@@ -2465,7 +2496,7 @@ public class Test : MonoBehaviour
 			s11.SetActive(false);
 			s12.SetActive(false);
 		}
-		else if (scoreCount == 7)
+		else if (scoreCount == 7 || postCount == 7)
 		{
 			s0.SetActive(false);
 			s1.SetActive(false);
@@ -2481,7 +2512,7 @@ public class Test : MonoBehaviour
 			s11.SetActive(false);
 			s12.SetActive(false);
 		}
-		else if (scoreCount == 8)
+		else if (scoreCount == 8 || postCount == 8)
 		{
 			s0.SetActive(false);
 			s1.SetActive(false);
@@ -2497,7 +2528,7 @@ public class Test : MonoBehaviour
 			s11.SetActive(false);
 			s12.SetActive(false);
 		}
-		else if (scoreCount == 9)
+		else if (scoreCount == 9 || postCount == 9)
 		{
 			s0.SetActive(false);
 			s1.SetActive(false);
@@ -2513,7 +2544,7 @@ public class Test : MonoBehaviour
 			s11.SetActive(false);
 			s12.SetActive(false);
 		}
-		else if (scoreCount == 10)
+		else if (scoreCount == 10 || postCount == 10)
 		{
 			s0.SetActive(false);
 			s1.SetActive(false);
@@ -2529,7 +2560,7 @@ public class Test : MonoBehaviour
 			s11.SetActive(false);
 			s12.SetActive(false);
 		}
-		else if (scoreCount == 11)
+		else if (scoreCount == 11 || postCount == 11)
 		{
 			s0.SetActive(false);
 			s1.SetActive(false);
@@ -2545,7 +2576,7 @@ public class Test : MonoBehaviour
 			s11.SetActive(true);
 			s12.SetActive(false);
 		}
-		else if (scoreCount == 12)
+		else if (scoreCount == 12 || postCount == 12)
 		{
 			s0.SetActive(false);
 			s1.SetActive(false);

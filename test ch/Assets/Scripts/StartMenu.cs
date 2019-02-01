@@ -18,4 +18,8 @@ public class StartMenu : MonoBehaviour {
 	public void ToStartMenu(){
 		SceneManager.LoadScene("StartMenu");
 	}
+
+    public void ToCreditScene() {
+        SceneManager.LoadScene("Credit");
+    }
 }
