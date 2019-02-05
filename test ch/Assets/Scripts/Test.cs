@@ -140,8 +140,18 @@ public class Test : MonoBehaviour
 
 	public AudioSource correct;
 	public AudioSource wrong;
-
+    
+    public AudioSource umalSound;
+    public AudioSource rarakSound;
+    public AudioSource darokSound;
+    public AudioSource makindoSound;
+    public AudioSource biraSound;
+    public AudioSource lupasSound;
+    public AudioSource piyanSound;
     public AudioSource datuSound;
+    public AudioSource silandaySound;
+    public AudioSource enitaSound;
+    public AudioSource tirugoSound;
 
     public GameObject canvas;
 
@@ -230,7 +240,17 @@ public class Test : MonoBehaviour
 	StateContext fTrueTime0;
 	StateContext fFalseTime0;
 
+    AudioSource[] umalSources;
+    AudioSource[] rarakSources;
+    AudioSource[] darokSources;
+    AudioSource[] makindoSources;
+    AudioSource[] biraSources;
+    AudioSource[] lupasSources;
+    AudioSource[] piyanSources;
     AudioSource[] datuSources;
+    AudioSource[] silandaySources;
+    AudioSource[] enitaSources;
+    AudioSource[] tirugoSources;
 
 	bool stop = false;
 	bool storyActive = false;
@@ -372,7 +392,17 @@ public class Test : MonoBehaviour
 		{
             Test.q[1] = true;
 
+            umalSources = umalSound.GetComponents<AudioSource>();
+            rarakSources = rarakSound.GetComponents<AudioSource>();
+            darokSources = darokSound.GetComponents<AudioSource>();
+            makindoSources = makindoSound.GetComponents<AudioSource>();
+            biraSources = biraSound.GetComponents<AudioSource>();
+            lupasSources = lupasSound.GetComponents<AudioSource>();
+            piyanSources = piyanSound.GetComponents<AudioSource>();
             datuSources = datuSound.GetComponents<AudioSource>();
+            silandaySources = silandaySound.GetComponents<AudioSource>();
+            enitaSources = enitaSound.GetComponents<AudioSource>();
+            tirugoSources = tirugoSound.GetComponents<AudioSource>();
 
             gabi.SetActive(false);
 
@@ -924,12 +954,12 @@ public class Test : MonoBehaviour
 							StartCoroutine(Hint());
 						}
 						LookatPlayer(hit.collider.gameObject);
-						d_Datu.SetActive(false);
+						//d_Datu.SetActive(false);
 						ActivateDialogue();
 						nameText.GetComponentInChildren<Text>().text = hit.collider.gameObject.tag;
 						dialogueText.GetComponentInChildren<Text>().text = scriptDatu[0];
 
-                        //Debug.Log("Dis is it, malgkit");
+                        Debug.Log("Dis is it, malgkit");
 
                         //var aSources =GetComponents(AudioSource); audio1 = aSources[0]; audio2 = aSources[1];
 
@@ -1030,7 +1060,11 @@ public class Test : MonoBehaviour
 					{
 						Neutral(hit.collider.gameObject);
 					}
-					else if (hit.collider.gameObject.tag == "Lupas")
+                    else if (hit.collider.gameObject.tag == "Enita")
+                    {
+                        Neutral(hit.collider.gameObject);
+                    }
+                    else if (hit.collider.gameObject.tag == "Lupas")
 					{
 						if ((q[6] || q[7]) && !fishTrigger1 && !fishTrigger2)
 						{
@@ -1651,7 +1685,10 @@ public class Test : MonoBehaviour
 					ActivateDialogue();
 					nameText.GetComponentInChildren<Text>().text = hit.collider.gameObject.tag;
 					dialogueText.GetComponentInChildren<Text>().text = scriptRarak[0];
-				}
+
+                    var voiceR = rarakSources[1];
+                    voiceR.Play();
+                }
 			}
 
 			if (Input.GetButton("AButton"))
@@ -1728,15 +1765,15 @@ public class Test : MonoBehaviour
 			fishingFinish = true;
 		}
 
-		if (!weedFinish && GameObject.FindGameObjectsWithTag("Grass").Length == 0)
-		{
-			Debug.Log("Quest Weed Finished!");
-			QIndicator.SetActive(true);
-			QIndText.text = "TAPOS ANG MISYON!";
-			QIndicatorAnim.SetBool("isPlaying", true);
-			questActive = false;
-			weedFinish = true;
-		}
+		//if (!weedFinish && GameObject.FindGameObjectsWithTag("Grass").Length == 0)
+		//{
+		//	Debug.Log("Quest Weed Finished!");
+		//	QIndicator.SetActive(true);
+		//	QIndText.text = "TAPOS ANG MISYON!";
+		//	QIndicatorAnim.SetBool("isPlaying", true);
+		//	questActive = false;
+		//	weedFinish = true;
+		//}
 
 		//Debug.Log(currentPage);
 
