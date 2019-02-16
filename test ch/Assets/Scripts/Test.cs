@@ -67,7 +67,8 @@ public class Test : MonoBehaviour
 										"Puntahan mo ang kaibigan mong si Piyan. Kanina ay hinahanap ka niya.",
 										"Galing ito kay Silanday? Siguro ay nagtataka ka kung bakit may nagbibigay ng mga ani sa atin o kaya alagang hayop. Iyon ay tinatawag na buwis. Ibinibigay nila iyon sa atin kapalit ng pamumuno ko sa kanila. Hindi na kabilang sa mga nagbabayad ang mga kapamilya natin.",
 										"Pumunta ka sa iyong ina at tulungan mo siya.",
-										"Ang imbakan natin ay nasa baba ng bahay."};
+										"Ang imbakan natin ay nasa baba ng bahay.",
+                                        "Kung natulungan mo na ang iyong ina, maaari ka nang bumalik sa iyong mga kaibigan"};
 	string[] scriptLupas = new string[]{ "Kabani, pupunta ako kay ama. Sumama ka sa akin upang may matutunan ka.",
 										 "Alamin natin kay ama kung ano ang maaari nating maitulong.",
 										 "Marahil ay inihahanda pa lang natin ang lupa.",
@@ -121,7 +122,8 @@ public class Test : MonoBehaviour
 	string[] scriptRarak = new string[] { "Ipinagmamalaki ko na mayroon akong mga batuk (tattoo). Patunay lamang na may silbi ako kapag mayroong digmaan. Unang beses kong magkaroon ay sa paa. Kailangan ko pang galingan kung magkakaroon muli ng digmaan." };
 	string[] scriptDarok = new string[]{ "Maganda ang panahon ngayon, hindi ba Kabani?",
 										 "Nakapagtanim na ang asawa ko ng mga halamang ugat. Ngunit umalis siya agad at may pinuntahan. Nakalimutan niyang maglagay ng palatandaan. Hindi ko ito magagawa dahil ako ay lumpo. Maaari ba akong tulungan?",
-										 "Salamat iyong tulong. Ngayon ay may palatandaan na kami na amin ang mga pananim na iyon."};
+										 "Salamat iyong tulong. Ngayon ay may palatandaan na kami na amin ang mga pananim na iyon.",
+                                         "Sa loob ng bahay namin ay may kahoy. Iyon ang gamitin mo at itusok mo iyon sa lupa."};
 	string[] scriptCrowd = new string[] { "Mukhang may bagong batas na nabuo si Datu Gunsad.Marahil ay ipapahayag na ito ni Ibusun.Siya ang ating Umalohokan.Anumang batas ang mabuo ng datu, hindi ito agad ipinatutupad hangga’t hindi ito naipapahayag ng Umalohokan." };
 
 	//3D Text
@@ -152,6 +154,7 @@ public class Test : MonoBehaviour
     public AudioSource silandaySound;
     public AudioSource enitaSound;
     public AudioSource tirugoSound;
+    public AudioSource crowdSound;
 
     public GameObject canvas;
 
@@ -166,6 +169,8 @@ public class Test : MonoBehaviour
 
 	public GameObject gabi;
 	public GameObject chicken;
+
+    public GameObject npcCrowd;
 
 	public GameObject Fish1;
 	public GameObject Fish2;
@@ -251,8 +256,9 @@ public class Test : MonoBehaviour
     AudioSource[] silandaySources;
     AudioSource[] enitaSources;
     AudioSource[] tirugoSources;
+    AudioSource[] crowdSources;
 
-	bool stop = false;
+    bool stop = false;
 	bool storyActive = false;
 
 	struct RandomSelection
@@ -391,6 +397,7 @@ public class Test : MonoBehaviour
 		if (sceneName == "Barangay")
 		{
             Test.q[1] = true;
+            Test.q[0] = true;
 
             umalSources = umalSound.GetComponents<AudioSource>();
             rarakSources = rarakSound.GetComponents<AudioSource>();
@@ -403,6 +410,7 @@ public class Test : MonoBehaviour
             silandaySources = silandaySound.GetComponents<AudioSource>();
             enitaSources = enitaSound.GetComponents<AudioSource>();
             tirugoSources = tirugoSound.GetComponents<AudioSource>();
+            crowdSources = crowdSound.GetComponents<AudioSource>();
 
             gabi.SetActive(false);
 
@@ -811,7 +819,13 @@ public class Test : MonoBehaviour
 
 	bool inHand = false;
 
-	void DDNRaycastDetection()
+    bool biraIntro = true;
+
+    bool movedL = false;
+    bool movedP = false;
+    bool movedM = false;
+
+    void DDNRaycastDetection()
 	{
 		//Debug.Log(Input.GetButton("XButton"));
 		//Debug.Log(q[1]);
@@ -831,6 +845,7 @@ public class Test : MonoBehaviour
 			biramanStory.SetActive(false);
 			storyActive = false;
 			currentPage = 0;
+            biraIntro = true;
 		}
 
 
@@ -851,7 +866,7 @@ public class Test : MonoBehaviour
 			//Debug.Log(weedTrigger2);
 			//Debug.Log(weedTrigger3);
 
-			if (Input.GetButton("BButton")|| Input.GetKeyDown("space"))
+			if (Input.GetButton("BButton"))
 			{
 				//ALL NOT ACTIVATED FUNCTION MUST HAVE A && QUESTION = False
 				if (!weedActivated && q[1])
@@ -901,14 +916,20 @@ public class Test : MonoBehaviour
 							ActivateDialogue();
 							nameText.GetComponentInChildren<Text>().text = hit.collider.gameObject.tag;
 							dialogueText.GetComponentInChildren<Text>().text = scriptLupas[0];
-						}
+
+                            var voice = lupasSources[5];
+                            voice.Play();
+                        }
 						else if (weedCount == 1)
 						{
 							LookatPlayer(hit.collider.gameObject);
 							ActivateDialogue();
 							nameText.GetComponentInChildren<Text>().text = hit.collider.gameObject.tag;
 							dialogueText.GetComponentInChildren<Text>().text = scriptLupas[1];
-						}
+
+                            var voice = lupasSources[6];
+                            voice.Play();
+                        }
 					}
 					else if (hit.collider.gameObject.tag == "Enita")
 					{
@@ -933,7 +954,10 @@ public class Test : MonoBehaviour
 						ActivateDialogue();
 						nameText.GetComponentInChildren<Text>().text = hit.collider.gameObject.tag;
 						dialogueText.GetComponentInChildren<Text>().text = scriptEnita[0];
-					}
+
+                        var voice = enitaSources[0];
+                        voice.Play();
+                    }
 					else if (hit.collider.gameObject.tag == "Datu")
 					{
 						if (q[1] && !weedTrigger1 && !weedTrigger2 && !weedTrigger3)
@@ -1004,7 +1028,10 @@ public class Test : MonoBehaviour
 						ActivateDialogue();
 						nameText.GetComponentInChildren<Text>().text = hit.collider.gameObject.tag;
 						dialogueText.GetComponentInChildren<Text>().text = scriptLupas[2];
-					}
+
+                        var voice = lupasSources[7];
+                        voice.Play();
+                    }
 					else if (hit.collider.gameObject.tag == "Enita")
 					{
 						Neutral(hit.collider.gameObject);
@@ -1019,10 +1046,13 @@ public class Test : MonoBehaviour
 						ActivateDialogue();
 						nameText.GetComponentInChildren<Text>().text = hit.collider.gameObject.tag;
 						dialogueText.GetComponentInChildren<Text>().text = scriptAmal[1];
-					}
+
+                        var voice = tirugoSources[1];
+                        voice.Play();
+                    }
 				}
 
-				else if (weedFinish)
+				else if (weedFinish && !movedL)
 				{
 					if (hit.collider.gameObject.tag == "Lupas")
 					{
@@ -1034,7 +1064,10 @@ public class Test : MonoBehaviour
 						Test.q[1] = false;
 						moveLupas = true;
 						StartCoroutine(Hold());
-					}
+
+                        var voice = lupasSources[8];
+                        voice.Play();
+                    }
 				}
 
 				if (!fishingActivated && (q[6] || q[7]) && !q[1])
@@ -1081,7 +1114,10 @@ public class Test : MonoBehaviour
 						ActivateDialogue();
 						nameText.GetComponentInChildren<Text>().text = hit.collider.gameObject.tag;
 						dialogueText.GetComponentInChildren<Text>().text = scriptLupas[4];
-					}
+
+                        var voice = lupasSources[9];
+                        voice.Play();
+                    }
 					else if (hit.collider.gameObject.tag == "Datu")
 					{
 						if ((q[6] || q[7]) && !fishTrigger1 && !fishTrigger2)
@@ -1099,7 +1135,10 @@ public class Test : MonoBehaviour
 						ActivateDialogue();
 						nameText.GetComponentInChildren<Text>().text = hit.collider.gameObject.tag;
 						dialogueText.GetComponentInChildren<Text>().text = scriptDatu[2];
-					}
+
+                        var voice = datuSources[1];
+                        voice.Play();
+                    }
 					else if (hit.collider.gameObject.tag == "Makindo")
 					{
 						Makindo(hit.collider.gameObject);
@@ -1118,7 +1157,10 @@ public class Test : MonoBehaviour
 							ActivateDialogue();
 							nameText.GetComponentInChildren<Text>().text = hit.collider.gameObject.tag;
 							dialogueText.GetComponentInChildren<Text>().text = scriptMakindo[4];
-						}
+
+                            var voice = makindoSources[9];
+                            voice.Play();
+                        }
 						else if (fishCount == 1)
 						{
 							LookatPlayer(hit.collider.gameObject);
@@ -1127,7 +1169,10 @@ public class Test : MonoBehaviour
 							dialogueText.GetComponentInChildren<Text>().text = scriptMakindo[2];
 							fishActivated = true;
 							StartCoroutine(Hold());
-						}
+
+                            var voice = makindoSources[8];
+                            voice.Play();
+                        }
 					}
 					else if (hit.collider.gameObject.tag == "Piyan")
 					{
@@ -1166,7 +1211,7 @@ public class Test : MonoBehaviour
 					}
 				}
 
-				else if (fishingFinish)
+				else if (fishingFinish && !movedM)
 				{
 					if (hit.collider.gameObject.tag == "Makindo")
 					{
@@ -1176,7 +1221,10 @@ public class Test : MonoBehaviour
 						dialogueText.GetComponentInChildren<Text>().text = scriptMakindo[5];
 						moveMakindo = true;
 						StartCoroutine(Hold());
-					}
+
+                        var voice = makindoSources[10];
+                        voice.Play();
+                    }
 				}
 
 				if (!taxActivated && (q[4] || q[5]) && !q[1] && !q[6] && !q[7] && !q[2] && !q[3])
@@ -1191,7 +1239,10 @@ public class Test : MonoBehaviour
 						ActivateDialogue();
 						nameText.GetComponentInChildren<Text>().text = hit.collider.gameObject.tag;
 						dialogueText.GetComponentInChildren<Text>().text = scriptLupas[6];
-					}
+
+                        var voice = lupasSources[10];
+                        voice.Play();
+                    }
 					else if (hit.collider.gameObject.tag == "Darok")
 					{
 						Darok(hit.collider.gameObject);
@@ -1226,7 +1277,10 @@ public class Test : MonoBehaviour
 						ActivateDialogue();
 						nameText.GetComponentInChildren<Text>().text = hit.collider.gameObject.tag;
 						dialogueText.GetComponentInChildren<Text>().text = scriptPiyan[1];
-					}
+
+                        var voice = piyanSources[6];
+                        voice.Play();
+                    }
 					else if (hit.collider.gameObject.tag == "Enita")
 					{
 						if ((q[4] || q[5]) && !taxTrigger1 && !taxTrigger2 && !taxTrigger3)
@@ -1249,7 +1303,10 @@ public class Test : MonoBehaviour
 						ActivateDialogue();
 						nameText.GetComponentInChildren<Text>().text = hit.collider.gameObject.tag;
 						dialogueText.GetComponentInChildren<Text>().text = scriptEnita[2];
-					}
+
+                        var voice = enitaSources[2];
+                        voice.Play();
+                    }
 					else if (hit.collider.gameObject.tag == "Datu")
 					{
 						if ((q[4] || q[5]) && !taxTrigger1 && !taxTrigger2 && !taxTrigger3)
@@ -1272,7 +1329,10 @@ public class Test : MonoBehaviour
 						ActivateDialogue();
 						nameText.GetComponentInChildren<Text>().text = hit.collider.gameObject.tag;
 						dialogueText.GetComponentInChildren<Text>().text = scriptDatu[3];
-					}
+
+                        var voice = datuSources[2];
+                        voice.Play();
+                    }
 					else if (hit.collider.gameObject.tag == "Silanday")
 					{
 						Silanday(hit.collider.gameObject);
@@ -1291,7 +1351,10 @@ public class Test : MonoBehaviour
 						ActivateDialogue();
 						nameText.GetComponentInChildren<Text>().text = hit.collider.gameObject.tag;
 						dialogueText.GetComponentInChildren<Text>().text = scriptPiyan[2];
-					}
+
+                        var voice = piyanSources[7];
+                        voice.Play();
+                    }
 					else if (hit.collider.gameObject.tag == "Darok")
 					{
 						Neutral(hit.collider.gameObject);
@@ -1313,7 +1376,10 @@ public class Test : MonoBehaviour
 						ActivateDialogue();
 						nameText.GetComponentInChildren<Text>().text = hit.collider.gameObject.tag;
 						dialogueText.GetComponentInChildren<Text>().text = scriptLupas[6];
-					}
+
+                        var voice = lupasSources[10];
+                        voice.Play();
+                    }
 					else if (hit.collider.gameObject.tag == "Enita")
 					{
 						Neutral(hit.collider.gameObject);
@@ -1333,7 +1399,10 @@ public class Test : MonoBehaviour
 							ActivateDialogue();
 							nameText.GetComponentInChildren<Text>().text = hit.collider.gameObject.tag;
 							dialogueText.GetComponentInChildren<Text>().text = scriptDatu[4];
-						}
+
+                            var voice = datuSources[4];
+                            voice.Play();
+                        }
 						else
 						{
 							Neutral(hit.collider.gameObject);
@@ -1357,7 +1426,10 @@ public class Test : MonoBehaviour
 						ActivateDialogue();
 						nameText.GetComponentInChildren<Text>().text = hit.collider.gameObject.tag;
 						dialogueText.GetComponentInChildren<Text>().text = scriptLupas[6];
-					}
+
+                        var voice = lupasSources[10];
+                        voice.Play();
+                    }
 					else if (hit.collider.gameObject.tag == "Piyan")
 					{
 						Neutral(hit.collider.gameObject);
@@ -1391,7 +1463,10 @@ public class Test : MonoBehaviour
 						ActivateDialogue();
 						nameText.GetComponentInChildren<Text>().text = hit.collider.gameObject.tag;
 						dialogueText.GetComponentInChildren<Text>().text = scriptDatu[5];
-					}
+
+                        var voice = datuSources[6];
+                        voice.Play();
+                    }
 					else if (hit.collider.gameObject.tag == "Ibusun")
 					{
 						if (q[2] && !taroTrigger1 && !taroTrigger2)
@@ -1409,7 +1484,10 @@ public class Test : MonoBehaviour
 						ActivateDialogue();
 						nameText.GetComponentInChildren<Text>().text = hit.collider.gameObject.tag;
 						dialogueText.GetComponentInChildren<Text>().text = scriptIbusun[1];
-					}
+
+                        var voice = umalSources[1];
+                        voice.Play();
+                    }
 					else if (hit.collider.gameObject.tag == "Enita")
 					{
 						Enita(hit.collider.gameObject);
@@ -1432,21 +1510,30 @@ public class Test : MonoBehaviour
 						ActivateDialogue();
 						nameText.GetComponentInChildren<Text>().text = hit.collider.gameObject.tag;
 						dialogueText.GetComponentInChildren<Text>().text = scriptEnita[4];
-					}
+
+                        var voice = enitaSources[4];
+                        voice.Play();
+                    }
 					else if (hit.collider.gameObject.tag == "Datu")
 					{
 						LookatPlayer(hit.collider.gameObject);
 						ActivateDialogue();
 						nameText.GetComponentInChildren<Text>().text = hit.collider.gameObject.tag;
 						dialogueText.GetComponentInChildren<Text>().text = scriptDatu[6];
-					}
+
+                        var voice = datuSources[7];
+                        voice.Play();
+                    }
 					else if (hit.collider.gameObject.tag == "Ibusun")
 					{
 						LookatPlayer(hit.collider.gameObject);
 						ActivateDialogue();
 						nameText.GetComponentInChildren<Text>().text = hit.collider.gameObject.tag;
 						dialogueText.GetComponentInChildren<Text>().text = scriptIbusun[2];
-					}
+
+                        var voice = umalSources[2];
+                        voice.Play();
+                    }
 					else
 					{
 						Neutral(hit.collider.gameObject);
@@ -1461,7 +1548,10 @@ public class Test : MonoBehaviour
 						ActivateDialogue();
 						nameText.GetComponentInChildren<Text>().text = hit.collider.gameObject.tag;
 						dialogueText.GetComponentInChildren<Text>().text = scriptEnita[5];
-					}
+
+                        var voice = enitaSources[5];
+                        voice.Play();
+                    }
 				}
 
 				// && !q[1] && !q[6] && !q[7]
@@ -1474,7 +1564,10 @@ public class Test : MonoBehaviour
 						ActivateDialogue();
 						nameText.GetComponentInChildren<Text>().text = hit.collider.gameObject.tag;
 						dialogueText.GetComponentInChildren<Text>().text = scriptLupas[6];
-					}
+
+                        var voice = lupasSources[10];
+                        voice.Play();
+                    }
 					else if (hit.collider.gameObject.tag == "Silanday")
 					{
 						Silanday(hit.collider.gameObject);
@@ -1499,7 +1592,10 @@ public class Test : MonoBehaviour
 						ActivateDialogue();
 						nameText.GetComponentInChildren<Text>().text = hit.collider.gameObject.tag;
 						dialogueText.GetComponentInChildren<Text>().text = scriptAmal[4];
-					}
+
+                        var voice = tirugoSources[4];
+                        voice.Play();
+                    }
 					else if (hit.collider.gameObject.tag == "Darok")
 					{
 						Darok(hit.collider.gameObject);
@@ -1518,7 +1614,10 @@ public class Test : MonoBehaviour
 						ActivateDialogue();
 						nameText.GetComponentInChildren<Text>().text = hit.collider.gameObject.tag;
 						dialogueText.GetComponentInChildren<Text>().text = scriptAmal[5];
-					}
+
+                        var voice = tirugoSources[5];
+                        voice.Play();
+                    }
 					else
 					{
 						Neutral(hit.collider.gameObject);
@@ -1533,7 +1632,10 @@ public class Test : MonoBehaviour
 						ActivateDialogue();
 						nameText.GetComponentInChildren<Text>().text = hit.collider.gameObject.tag;
 						dialogueText.GetComponentInChildren<Text>().text = scriptDarok[2];
-					}
+
+                        var voice = darokSources[3];
+                        voice.Play();
+                    }
 				}
 
 				////INFO GATHERING
@@ -1547,14 +1649,20 @@ public class Test : MonoBehaviour
 						ActivateDialogue();
 						nameText.GetComponentInChildren<Text>().text = hit.collider.gameObject.tag;
 						dialogueText.GetComponentInChildren<Text>().text = "Nasaan na kaya si Lupas?";
-					}
+
+                        var voice = makindoSources[0];
+                        voice.Play();
+                    }
 					else if (hit.collider.gameObject.tag == "Piyan")
 					{
 						LookatPlayer(hit.collider.gameObject);
 						ActivateDialogue();
 						nameText.GetComponentInChildren<Text>().text = hit.collider.gameObject.tag;
 						dialogueText.GetComponentInChildren<Text>().text = "Nasaan na kaya si Lupas?";
-					}
+
+                        var voice = piyanSources[0];
+                        voice.Play();
+                    }
 				}
 
 				else if (weedFinish && !fishingFinish && taxFinish)
@@ -1565,14 +1673,20 @@ public class Test : MonoBehaviour
 						ActivateDialogue();
 						nameText.GetComponentInChildren<Text>().text = hit.collider.gameObject.tag;
 						dialogueText.GetComponentInChildren<Text>().text = "Nasaan na kaya si Makindo?";
-					}
+
+                        var voice = lupasSources[0];
+                        voice.Play();
+                    }
 					else if (hit.collider.gameObject.tag == "Piyan")
 					{
 						LookatPlayer(hit.collider.gameObject);
 						ActivateDialogue();
 						nameText.GetComponentInChildren<Text>().text = hit.collider.gameObject.tag;
 						dialogueText.GetComponentInChildren<Text>().text = "Nasaan na kaya si Makindo?";
-					}
+
+                        var voice = piyanSources[1];
+                        voice.Play();
+                    }
 				}
 
 				else if (weedFinish && fishingFinish && !taxFinish)
@@ -1583,14 +1697,20 @@ public class Test : MonoBehaviour
 						ActivateDialogue();
 						nameText.GetComponentInChildren<Text>().text = hit.collider.gameObject.tag;
 						dialogueText.GetComponentInChildren<Text>().text = "Nasaan na kaya si Piyan?";
-					}
+
+                        var voice = lupasSources[1];
+                        voice.Play();
+                    }
 					else if (hit.collider.gameObject.tag == "Makindo")
 					{
 						LookatPlayer(hit.collider.gameObject);
 						ActivateDialogue();
 						nameText.GetComponentInChildren<Text>().text = hit.collider.gameObject.tag;
 						dialogueText.GetComponentInChildren<Text>().text = "Nasaan na kaya si Piyan?";
-					}
+
+                        var voice = makindoSources[1];
+                        voice.Play();
+                    }
 				}
 
 				else if (!weedFinish && !fishingFinish && taxFinish)
@@ -1601,7 +1721,10 @@ public class Test : MonoBehaviour
 						ActivateDialogue();
 						nameText.GetComponentInChildren<Text>().text = hit.collider.gameObject.tag;
 						dialogueText.GetComponentInChildren<Text>().text = "Nasaan na kaya sina Lupas at Makindo?";
-					}
+
+                        var voice = piyanSources[2];
+                        voice.Play();
+                    }
 				}
 
 				else if (!weedFinish && fishingFinish && !taxFinish)
@@ -1612,7 +1735,10 @@ public class Test : MonoBehaviour
 						ActivateDialogue();
 						nameText.GetComponentInChildren<Text>().text = hit.collider.gameObject.tag;
 						dialogueText.GetComponentInChildren<Text>().text = "Nasaan na kaya sina Lupas at Piyan?";
-					}
+
+                        var voice = makindoSources[2];
+                        voice.Play();
+                    }
 				}
 
 				else if (weedFinish && !fishingFinish && !taxFinish)
@@ -1623,7 +1749,10 @@ public class Test : MonoBehaviour
 						ActivateDialogue();
 						nameText.GetComponentInChildren<Text>().text = hit.collider.gameObject.tag;
 						dialogueText.GetComponentInChildren<Text>().text = "Nasaan na kaya sina Makindo at Piyan?";
-					}
+
+                        var voice = lupasSources[2];
+                        voice.Play();
+                    }
 				}
 
 				else if (weedFinish && fishingFinish && taxFinish)
@@ -1634,49 +1763,49 @@ public class Test : MonoBehaviour
 						ActivateDialogue();
 						nameText.GetComponentInChildren<Text>().text = hit.collider.gameObject.tag;
 						dialogueText.GetComponentInChildren<Text>().text = scriptLupas[7];
-					}
+
+                        var voice = lupasSources[4];
+                        voice.Play();
+                    }
 					else if (hit.collider.gameObject.tag == "Makindo")
 					{
 						LookatPlayer(hit.collider.gameObject);
 						ActivateDialogue();
 						nameText.GetComponentInChildren<Text>().text = hit.collider.gameObject.tag;
 						dialogueText.GetComponentInChildren<Text>().text = scriptMakindo[6];
-					}
+
+                        var voice = makindoSources[4];
+                        voice.Play();
+                    }
 					else if (hit.collider.gameObject.tag == "Piyan")
 					{
 						LookatPlayer(hit.collider.gameObject);
 						ActivateDialogue();
 						nameText.GetComponentInChildren<Text>().text = hit.collider.gameObject.tag;
 						dialogueText.GetComponentInChildren<Text>().text = scriptPiyan[3];
-					}
+
+                        Test.q[0] = false;
+
+                        var voice = piyanSources[4];
+                        voice.Play();
+                    }
 				}
 
-				//Umalohokan
-
-				if (q[9] && !q[1] && !q[2] && !q[3] && !q[4] && !q[5] && !q[6] && !q[7] && !q[8] && !q[10] && !q[11])
-				{
-
-					if (hit.collider.gameObject.tag == "Crowd")
-					{
-						LookatPlayer(hit.collider.gameObject);
-						dialogueBox.SetActive(true);
-						nameText.GetComponentInChildren<Text>().text = hit.collider.gameObject.tag;
-						dialogueText.GetComponentInChildren<Text>().text = scriptCrowd[0];
-						StartCoroutine(Umalohokan());
-					}
-				}
 
 				//INFO TATOO AND MYTH
 
-				if (hit.collider.gameObject.tag == "Biraman")
+				if (hit.collider.gameObject.tag == "Biraman" && biraIntro)
 				{
 					LookatPlayer(hit.collider.gameObject);
 					dialogueBox.SetActive(true);
 					nameText.GetComponentInChildren<Text>().text = hit.collider.gameObject.tag;
 					dialogueText.GetComponentInChildren<Text>().text = scriptBiraman[0];
 					storyActive = true;
-					biramanStory.SetActive(true);
-				}
+                    questPanel.SetActive(false);
+
+                    var voice = biraSources[0];
+                    voice.Play();
+                }
 
 				if (hit.collider.gameObject.tag == "Rarak")
 				{
@@ -1691,7 +1820,29 @@ public class Test : MonoBehaviour
                 }
 			}
 
-			if (Input.GetButton("AButton"))
+
+
+
+            //Umalohokan
+
+            if (q[9] && !q[1] && !q[2] && !q[3] && !q[4] && !q[5] && !q[6] && !q[7] && !q[8] && !q[10] && !q[11])
+            {
+                npcCrowd.SetActive(true);
+                if (hit.collider.gameObject.tag == "Crowd" && Input.GetButton("BButton"))
+                {
+                    LookatPlayer(hit.collider.gameObject);
+                    dialogueBox.SetActive(true);
+                    nameText.GetComponentInChildren<Text>().text = hit.collider.gameObject.tag;
+                    dialogueText.GetComponentInChildren<Text>().text = scriptCrowd[0];
+                    StartCoroutine(Umalohokan());
+
+                    var voice = crowdSources[0];
+                    voice.Play();
+                }
+            }
+
+
+            if (Input.GetButton("AButton"))
 			{
 				if (weedActivated && hit.collider.gameObject.tag == "Grass")
 				{
@@ -1748,9 +1899,11 @@ public class Test : MonoBehaviour
 		}
 
 
-		if (!q[9] && !q[1] && !q[2] && !q[3] && !q[4] && !q[5] && !q[6] && !q[7] && !q[8] && !q[10] && !q[11])
+		if (!q[9] && !q[0] && !q[1] && !q[2] && !q[3] && !q[4] && !q[5] && !q[6] && !q[7] && !q[8] && !q[10] && !q[11])
 		{
 			Test.postTest = true;
+
+            Debug.Log("EndGame");
 			//SceneManager.LoadScene(1);
 		}
 
@@ -1763,23 +1916,29 @@ public class Test : MonoBehaviour
 			weedFinish = true;
 			taxFinish = true;
 			fishingFinish = true;
-		}
 
-		//if (!weedFinish && GameObject.FindGameObjectsWithTag("Grass").Length == 0)
-		//{
-		//	Debug.Log("Quest Weed Finished!");
-		//	QIndicator.SetActive(true);
-		//	QIndText.text = "TAPOS ANG MISYON!";
-		//	QIndicatorAnim.SetBool("isPlaying", true);
-		//	questActive = false;
-		//	weedFinish = true;
-		//}
+            movedL = true;
+            movedM = true;
+            movedP = true;
+        }
 
-		//Debug.Log(currentPage);
+        if (!weedFinish && GameObject.FindGameObjectsWithTag("Grass").Length == 0)
+        {
+            Debug.Log("Quest Weed Finished!");
+            QIndicator.SetActive(true);
+            QIndText.text = "TAPOS ANG MISYON!";
+            QIndicatorAnim.SetBool("isPlaying", true);
+            questActive = false;
+            weedFinish = true;
+        }
 
-		if (storyActive && Input.GetButtonUp("BButton"))
+        //Debug.Log(currentPage);
+
+        if (storyActive && Input.GetButtonUp("BButton"))
 		{
-			switch (currentPage)
+            biraIntro = false;
+            var voice = biraSources[1];
+            switch (currentPage)
 			{
 				case 0:
 					page1.SetActive(false); page2.SetActive(false); page3.SetActive(false); page4.SetActive(false); page5.SetActive(false); page6.SetActive(false);
@@ -1790,50 +1949,78 @@ public class Test : MonoBehaviour
 					page7.SetActive(false); page8.SetActive(false); page8.SetActive(false); currentPage++;
 					break;
 				case 2:
-					page1.SetActive(true); page2.SetActive(false); page3.SetActive(false); page4.SetActive(false); page5.SetActive(false); page6.SetActive(false);
+                    biramanStory.SetActive(true);
+                    page1.SetActive(true); page2.SetActive(false); page3.SetActive(false); page4.SetActive(false); page5.SetActive(false); page6.SetActive(false);
 					page7.SetActive(false); page8.SetActive(false); page8.SetActive(false); currentPage++;
 					dialogueText.GetComponentInChildren<Text>().text = scriptBiraman[currentPage - 2];
-					break;
+                    voice.Stop();
+                    voice = biraSources[1];
+                    voice.Play();
+                    break;
 				case 3:
 					page1.SetActive(false); page2.SetActive(true); page3.SetActive(false); page4.SetActive(false); page5.SetActive(false); page6.SetActive(false);
 					page7.SetActive(false); page8.SetActive(false); page8.SetActive(false); currentPage++;
 					dialogueText.GetComponentInChildren<Text>().text = scriptBiraman[currentPage - 2];
-					break;
+                    voice.Stop();
+                    voice = biraSources[2];
+                    voice.Play();
+                    break;
 				case 4:
 					page1.SetActive(false); page2.SetActive(false); page3.SetActive(true); page4.SetActive(false); page5.SetActive(false); page6.SetActive(false);
 					page7.SetActive(false); page8.SetActive(false); page8.SetActive(false); currentPage++;
 					dialogueText.GetComponentInChildren<Text>().text = scriptBiraman[currentPage - 2];
-					break;
+                    voice.Stop();
+                    voice = biraSources[3];
+                    voice.Play();
+                    break;
 				case 5:
 					page1.SetActive(false); page2.SetActive(false); page3.SetActive(false); page4.SetActive(true); page5.SetActive(false); page6.SetActive(false);
 					page7.SetActive(false); page8.SetActive(false); page8.SetActive(false); currentPage++;
 					dialogueText.GetComponentInChildren<Text>().text = scriptBiraman[currentPage - 2];
-					break;
+                    voice.Stop();
+                    voice = biraSources[4];
+                    voice.Play();
+                    break;
 				case 6:
 					page1.SetActive(false); page2.SetActive(false); page3.SetActive(false); page4.SetActive(false); page5.SetActive(true); page6.SetActive(false);
 					page7.SetActive(false); page8.SetActive(false); page9.SetActive(false); currentPage++;
 					dialogueText.GetComponentInChildren<Text>().text = scriptBiraman[currentPage - 2];
-					break;
+                    voice.Stop();
+                    voice = biraSources[5];
+                    voice.Play();
+                    break;
 				case 7:
 					page1.SetActive(false); page2.SetActive(false); page3.SetActive(false); page4.SetActive(false); page5.SetActive(false); page6.SetActive(true);
 					page7.SetActive(false); page8.SetActive(false); page9.SetActive(false); currentPage++;
 					dialogueText.GetComponentInChildren<Text>().text = scriptBiraman[currentPage - 2];
-					break;
+                    voice.Stop();
+                    voice = biraSources[6];
+                    voice.Play();
+                    break;
 				case 8:
 					page1.SetActive(false); page2.SetActive(false); page3.SetActive(false); page4.SetActive(false); page5.SetActive(false); page6.SetActive(false);
 					page7.SetActive(true); page8.SetActive(false); page8.SetActive(false); currentPage++;
 					dialogueText.GetComponentInChildren<Text>().text = scriptBiraman[currentPage - 2];
-					break;
+                    voice.Stop();
+                    voice = biraSources[7];
+                    voice.Play();
+                    break;
 				case 9:
 					page1.SetActive(false); page2.SetActive(false); page3.SetActive(false); page4.SetActive(false); page5.SetActive(false); page6.SetActive(false);
 					page7.SetActive(false); page8.SetActive(true); page9.SetActive(false); currentPage++;
 					dialogueText.GetComponentInChildren<Text>().text = scriptBiraman[currentPage - 2];
-					break;
+                    voice.Stop();
+                    voice = biraSources[8];
+                    voice.Play();
+                    break;
 				case 10:
 					page1.SetActive(false); page2.SetActive(false); page3.SetActive(false); page4.SetActive(false); page5.SetActive(false); page6.SetActive(false);
 					page7.SetActive(false); page8.SetActive(false); page9.SetActive(true); currentPage++;
 					dialogueText.GetComponentInChildren<Text>().text = scriptBiraman[currentPage - 2];
-					if (q[10] || q[11])
+                    voice.Stop();
+                    voice = biraSources[9];
+                    voice.Play();
+                    if (q[10] || q[11])
 					{
 						q[10] = false; q[11] = false;
 					}
@@ -1851,35 +2038,64 @@ public class Test : MonoBehaviour
 			ActivateDialogue();
 			nameText.GetComponentInChildren<Text>().text = hit.tag;
 			dialogueText.GetComponentInChildren<Text>().text = scriptMakindo[0];
-		}
+
+            var voice = makindoSources[5];
+            voice.Play();
+        }
 		else if (hit.tag == "Piyan")
 		{
 			LookatPlayer(hit);
 			ActivateDialogue();
 			nameText.GetComponentInChildren<Text>().text = hit.tag;
 			dialogueText.GetComponentInChildren<Text>().text = scriptPiyan[0];
-		}
+
+            var voice = piyanSources[5];
+            voice.Play();
+        }
 		else if (hit.tag == "Darok")
 		{
-			LookatPlayer(hit);
-			ActivateDialogue();
-			nameText.GetComponentInChildren<Text>().text = hit.tag;
-			dialogueText.GetComponentInChildren<Text>().text = scriptDarok[0];
-		}
+            if (stakeActivated)
+            {
+                LookatPlayer(hit);
+                ActivateDialogue();
+                nameText.GetComponentInChildren<Text>().text = hit.tag;
+                dialogueText.GetComponentInChildren<Text>().text = scriptDarok[3];
+
+                var voice = darokSources[2];
+                voice.Play();
+            }
+            else
+            {
+                LookatPlayer(hit);
+                ActivateDialogue();
+                nameText.GetComponentInChildren<Text>().text = hit.tag;
+                dialogueText.GetComponentInChildren<Text>().text = scriptDarok[0];
+
+                var voice = darokSources[0];
+                voice.Play();
+
+            }
+        }
 		else if (hit.tag == "Silanday")
 		{
 			LookatPlayer(hit);
 			ActivateDialogue();
 			nameText.GetComponentInChildren<Text>().text = hit.tag;
 			dialogueText.GetComponentInChildren<Text>().text = scriptSilanday[0];
-		}
+
+            var voice = silandaySources[0];
+            voice.Play();
+        }
 		else if (hit.tag == "Ibusun")
 		{
 			LookatPlayer(hit);
 			ActivateDialogue();
 			nameText.GetComponentInChildren<Text>().text = hit.tag;
 			dialogueText.GetComponentInChildren<Text>().text = scriptIbusun[0];
-		}
+
+            var voice = umalSources[0];
+            voice.Play();
+        }
 		else if (hit.tag == "Lupas")
 		{
 			LookatPlayer(hit);
@@ -1893,22 +2109,55 @@ public class Test : MonoBehaviour
 			ActivateDialogue();
 			nameText.GetComponentInChildren<Text>().text = hit.tag;
 			dialogueText.GetComponentInChildren<Text>().text = scriptEnita[1];
-		}
+
+            var voice = enitaSources[1];
+            voice.Play();
+        }
 		else if (hit.tag == "Datu")
 		{
-			LookatPlayer(hit);
-			ActivateDialogue();
-			nameText.GetComponentInChildren<Text>().text = hit.tag;
-			dialogueText.GetComponentInChildren<Text>().text = scriptDatu[1];
+            if (taroFinish)
+            {
+                LookatPlayer(hit);
+                ActivateDialogue();
+                nameText.GetComponentInChildren<Text>().text = hit.tag;
+                dialogueText.GetComponentInChildren<Text>().text = scriptDatu[7];
 
+                var voice = datuSources[8];
+                voice.Play();
+            }
+            else
+            {
+                LookatPlayer(hit);
+                ActivateDialogue();
+                nameText.GetComponentInChildren<Text>().text = hit.tag;
+                dialogueText.GetComponentInChildren<Text>().text = scriptDatu[1];
 
-		}
+                var voice = datuSources[3];
+                voice.Play();
+            }
+        }
 		else if (hit.tag == "AmaLupas")
 		{
-			LookatPlayer(hit);
-			ActivateDialogue();
-			nameText.GetComponentInChildren<Text>().text = hit.tag;
-			dialogueText.GetComponentInChildren<Text>().text = scriptAmal[3];
+            if (weedFinish)
+            {
+                LookatPlayer(hit);
+                ActivateDialogue();
+                nameText.GetComponentInChildren<Text>().text = hit.tag;
+                dialogueText.GetComponentInChildren<Text>().text = scriptAmal[2];
+
+                var voice = tirugoSources[2];
+                voice.Play();
+            }
+            else
+            {
+                LookatPlayer(hit);
+                ActivateDialogue();
+                nameText.GetComponentInChildren<Text>().text = hit.tag;
+                dialogueText.GetComponentInChildren<Text>().text = scriptAmal[3];
+
+                var voice = tirugoSources[3];
+                voice.Play();
+            }
 		}
 	}
 
@@ -1972,7 +2221,10 @@ public class Test : MonoBehaviour
 		nameText.GetComponentInChildren<Text>().text = "Ibusun";
 		dialogueText.GetComponentInChildren<Text>().text = scriptIbusun[3];
 
-		Test.q[9] = false;
+        var voice = umalSources[4];
+        voice.Play();
+
+        Test.q[9] = false;
 	}
 
 	IEnumerator Hold()
@@ -2136,7 +2388,10 @@ public class Test : MonoBehaviour
 			indicatorWeed = true;
 			weedCount++;
 			StartCoroutine(Hold());
-		}
+
+            var voice = tirugoSources[2];
+            voice.Play();
+        }
 		else
 		{
 			indicatorWeed = true;
@@ -2144,7 +2399,10 @@ public class Test : MonoBehaviour
 			ActivateDialogue();
 			nameText.GetComponentInChildren<Text>().text = hit.tag;
 			dialogueText.GetComponentInChildren<Text>().text = scriptAmal[3];
-		}
+
+            var voice = tirugoSources[3];
+            voice.Play();
+        }
 	}
 
 	IEnumerator RandomProbFish(GameObject hit)
@@ -2171,7 +2429,10 @@ public class Test : MonoBehaviour
 			questActive = true;
 			fishCount++;
 			StartCoroutine(Hold());
-		}
+
+            var voice = makindoSources[6];
+            voice.Play();
+        }
 		else
 		{
 			indicatorFish = true;
@@ -2205,7 +2466,10 @@ public class Test : MonoBehaviour
 			questActive = true;
 			taxCount++;
 			StartCoroutine(Hold());
-		}
+
+            var voice = silandaySources[1];
+            voice.Play();
+        }
 		else
 		{
 			indicatorTax = true;
@@ -2239,7 +2503,10 @@ public class Test : MonoBehaviour
 			questActive = true;
 			taroCount++;
 			StartCoroutine(Hold());
-		}
+
+            var voice = enitaSources[3];
+            voice.Play();
+        }
 		else
 		{
 			indicatorTaro = true;
@@ -2247,7 +2514,10 @@ public class Test : MonoBehaviour
 			ActivateDialogue();
 			nameText.GetComponentInChildren<Text>().text = hit.tag;
 			dialogueText.GetComponentInChildren<Text>().text = scriptEnita[1];
-		}
+
+            var voice = enitaSources[1];
+            voice.Play();
+        }
 	}
 
 	IEnumerator RandomProbStake(GameObject hit)
@@ -2273,7 +2543,10 @@ public class Test : MonoBehaviour
 			questActive = true;
 			stakeCount++;
 			StartCoroutine(Hold());
-		}
+
+            var voice = darokSources[1];
+            voice.Play();
+        }
 		else
 		{
 			indicatorStake = true;

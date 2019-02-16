@@ -108,7 +108,7 @@ public class TridentController : MonoBehaviour
                 Test.stakeFinish = true;
                 Test.q[3] = false;
                 Test.questActive = false;
-
+                Test.stakeActivated = false;
             }
         }
     }
