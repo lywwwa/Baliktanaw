@@ -7,6 +7,7 @@ public class Intro : MonoBehaviour {
 
     public LoadScreen loadScreen;
     public GameObject lastText;
+    public AudioSource intro;
 
 	// Use this for initialization
 	void Start () {
@@ -15,7 +16,7 @@ public class Intro : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		transform.Translate(0, 0.08f, 0);
+		transform.Translate(0, 0.045f, 0);
 
         if(lastText.transform.position.y >= 99f)
         {
@@ -25,6 +26,12 @@ public class Intro : MonoBehaviour {
             Debug.Log("Done");
             loadScreen.LoadLevel();
 
+        }
+        else if (Input.GetButton("XButton"))
+        {
+            var voice = intro;
+            voice.Stop();
+            loadScreen.LoadLevel();
         }
 	}
 }

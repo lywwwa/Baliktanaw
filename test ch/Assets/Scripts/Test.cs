@@ -136,7 +136,8 @@ public class Test : MonoBehaviour
 
 	public int buttonclick = 0;
 
-	public bool postflag;
+    public GameObject ping;
+	public static bool postflag;
 
     int randomQuestion;
 
@@ -396,9 +397,6 @@ public class Test : MonoBehaviour
 		Debug.Log(sceneName);
 		if (sceneName == "Barangay")
 		{
-            Test.q[1] = true;
-            Test.q[0] = true;
-
             umalSources = umalSound.GetComponents<AudioSource>();
             rarakSources = rarakSound.GetComponents<AudioSource>();
             darokSources = darokSound.GetComponents<AudioSource>();
@@ -1061,8 +1059,10 @@ public class Test : MonoBehaviour
 						ActivateDialogue();
 						nameText.GetComponentInChildren<Text>().text = hit.collider.gameObject.tag;
 						dialogueText.GetComponentInChildren<Text>().text = scriptLupas[3];
+                        questPanel.SetActive(false);
 						Test.q[1] = false;
 						moveLupas = true;
+                        movedL = true;
 						StartCoroutine(Hold());
 
                         var voice = lupasSources[8];
@@ -1219,7 +1219,9 @@ public class Test : MonoBehaviour
 						ActivateDialogue();
 						nameText.GetComponentInChildren<Text>().text = hit.collider.gameObject.tag;
 						dialogueText.GetComponentInChildren<Text>().text = scriptMakindo[5];
+                        questPanel.SetActive(false);
 						moveMakindo = true;
+                        movedM = true;
 						StartCoroutine(Hold());
 
                         var voice = makindoSources[10];
@@ -1395,6 +1397,8 @@ public class Test : MonoBehaviour
 							Test.q[5] = false;
 							questActive = false;
 
+                            questPanel.SetActive(false);
+
 							LookatPlayer(hit.collider.gameObject);
 							ActivateDialogue();
 							nameText.GetComponentInChildren<Text>().text = hit.collider.gameObject.tag;
@@ -1506,6 +1510,7 @@ public class Test : MonoBehaviour
 							taroFinish = true;
 							Test.q[2] = false;
 						}
+                        questPanel.SetActive(false);
 						LookatPlayer(hit.collider.gameObject);
 						ActivateDialogue();
 						nameText.GetComponentInChildren<Text>().text = hit.collider.gameObject.tag;
@@ -1626,6 +1631,7 @@ public class Test : MonoBehaviour
 
 				else if (stakeFinish)
 				{
+                    questPanel.SetActive(false);
 					if (hit.collider.gameObject.tag == "Darok")
 					{
 						LookatPlayer(hit.collider.gameObject);
@@ -1639,9 +1645,8 @@ public class Test : MonoBehaviour
 				}
 
 				////INFO GATHERING
-				// Adjust
 
-				if (!weedFinish && fishingFinish && taxFinish)
+				if (!weedFinish && fishingFinish && taxFinish && movedM && movedP)
 				{
 					if (hit.collider.gameObject.tag == "Makindo")
 					{
@@ -1665,7 +1670,7 @@ public class Test : MonoBehaviour
                     }
 				}
 
-				else if (weedFinish && !fishingFinish && taxFinish)
+				else if (weedFinish && !fishingFinish && taxFinish && movedL && movedP)
 				{
 					if (hit.collider.gameObject.tag == "Lupas")
 					{
@@ -1689,7 +1694,7 @@ public class Test : MonoBehaviour
                     }
 				}
 
-				else if (weedFinish && fishingFinish && !taxFinish)
+				else if (weedFinish && fishingFinish && !taxFinish && movedM && movedL)
 				{
 					if (hit.collider.gameObject.tag == "Lupas")
 					{
@@ -1713,7 +1718,7 @@ public class Test : MonoBehaviour
                     }
 				}
 
-				else if (!weedFinish && !fishingFinish && taxFinish)
+				else if (!weedFinish && !fishingFinish && taxFinish && movedP)
 				{
 					if (hit.collider.gameObject.tag == "Piyan")
 					{
@@ -1727,7 +1732,7 @@ public class Test : MonoBehaviour
                     }
 				}
 
-				else if (!weedFinish && fishingFinish && !taxFinish)
+				else if (!weedFinish && fishingFinish && !taxFinish && movedM)
 				{
 					if (hit.collider.gameObject.tag == "Makindo")
 					{
@@ -1741,7 +1746,7 @@ public class Test : MonoBehaviour
                     }
 				}
 
-				else if (weedFinish && !fishingFinish && !taxFinish)
+				else if (weedFinish && !fishingFinish && !taxFinish && movedL)
 				{
 					if (hit.collider.gameObject.tag == "Lupas")
 					{
@@ -1755,7 +1760,7 @@ public class Test : MonoBehaviour
                     }
 				}
 
-				else if (weedFinish && fishingFinish && taxFinish)
+				else if (weedFinish && fishingFinish && taxFinish && movedM && movedP && movedL)
 				{
 					if (hit.collider.gameObject.tag == "Lupas")
 					{
@@ -1820,12 +1825,15 @@ public class Test : MonoBehaviour
                 }
 			}
 
+            ping.GetComponent<TextMesh>().text = q[0] + " " + q[1] + " " + q[2] + " " + q[3] + " " + q[4] + " " + q[5] + " " + q[6] + " " + q[7] + " " + q[8] + " " + q[9] + " " +
+                q[10] + " " + q[11];
 
-
+            //Debug.Log(q[0] + " " + q[1] + " " + q[2] + " " + q[3] + " " + q[4] + " " + q[5] + " " + q[6] + " " + q[7] + " " + q[8] + " " + q[9] + " " +
+            //    q[10] + " " + q[11]);
 
             //Umalohokan
 
-            if (q[9] && !q[1] && !q[2] && !q[3] && !q[4] && !q[5] && !q[6] && !q[7] && !q[8] && !q[10] && !q[11])
+            if (q[9] && !q[0] && !q[1] && !q[2] && !q[3] && !q[4] && !q[5] && !q[6] && !q[7] && !q[8] && !q[10] && !q[11])
             {
                 npcCrowd.SetActive(true);
                 if (hit.collider.gameObject.tag == "Crowd" && Input.GetButton("BButton"))
@@ -1885,7 +1893,9 @@ public class Test : MonoBehaviour
 					questActive = false;
 
 					Debug.Log("Quest Fishing Done!");
-				}
+
+                    questPanel.SetActive(false);
+                }
 
 				if (taxActivated && hit.collider.gameObject.tag == "Chicken" && !inHand)
 				{
@@ -1901,10 +1911,11 @@ public class Test : MonoBehaviour
 
 		if (!q[9] && !q[0] && !q[1] && !q[2] && !q[3] && !q[4] && !q[5] && !q[6] && !q[7] && !q[8] && !q[10] && !q[11])
 		{
-			Test.postTest = true;
+			Test.postflag = true;
 
             Debug.Log("EndGame");
-			//SceneManager.LoadScene(1);
+
+            StartCoroutine(EndGame());
 		}
 
 		if (!q[1] && !q[4] && !q[5] && !q[6] && !q[7])
@@ -1924,6 +1935,7 @@ public class Test : MonoBehaviour
 
         if (!weedFinish && GameObject.FindGameObjectsWithTag("Grass").Length == 0)
         {
+            questPanel.GetComponentInChildren<Text>().text = "Kausapin si Lupas";
             Debug.Log("Quest Weed Finished!");
             QIndicator.SetActive(true);
             QIndText.text = "TAPOS ANG MISYON!";
@@ -2216,7 +2228,7 @@ public class Test : MonoBehaviour
 
 	IEnumerator Umalohokan()
 	{
-		yield return new WaitForSeconds(2f);
+		yield return new WaitForSeconds(15f);
 		dialogueBox.SetActive(true);
 		nameText.GetComponentInChildren<Text>().text = "Ibusun";
 		dialogueText.GetComponentInChildren<Text>().text = scriptIbusun[3];
@@ -2224,10 +2236,17 @@ public class Test : MonoBehaviour
         var voice = umalSources[4];
         voice.Play();
 
+        yield return new WaitForSeconds(30f);
         Test.q[9] = false;
 	}
 
-	IEnumerator Hold()
+    IEnumerator EndGame()
+    {
+        yield return new WaitForSeconds(10f);
+        SceneManager.LoadScene(1);
+    }
+
+    IEnumerator Hold()
 	{
 		if (weedCount == 1 && !finishWeed)
 		{
@@ -2375,11 +2394,13 @@ public class Test : MonoBehaviour
 			new RandomSelection(ipb, 101, (100 - pb) / 100f)
 		);
 		Debug.Log(random + " " + pb + " " + probWeed);
-		if (random <= pb)
+		if (random <= pb && !weedFinish)
 		{
 			QIndicator.SetActive(true);
 			QIndText.text = "BAGONG MISYON!";
 			QIndicatorAnim.SetBool("isPlaying", true);
+            questPanel.SetActive(true);
+            questPanel.GetComponentInChildren<Text>().text = "Bunutin mga and mga damo";
 			LookatPlayer(hit);
 			ActivateDialogue();
 			nameText.GetComponentInChildren<Text>().text = hit.tag;
@@ -2389,7 +2410,7 @@ public class Test : MonoBehaviour
 			weedCount++;
 			StartCoroutine(Hold());
 
-            var voice = tirugoSources[2];
+            var voice = tirugoSources[0];
             voice.Play();
         }
 		else
@@ -2416,12 +2437,14 @@ public class Test : MonoBehaviour
 			new RandomSelection(ipb, 101, (100 - pb) / 100f)
 		);
 		Debug.Log(random + " " + pb + " " + probFish);
-		if (random <= pb)
+		if (random <= pb && !fishingFinish)
 		{
 			QIndicator.SetActive(true);
 			QIndText.text = "BAGONG MISYON!";
 			QIndicatorAnim.SetBool("isPlaying", true);
-			LookatPlayer(hit);
+            questPanel.SetActive(true);
+            questPanel.GetComponentInChildren<Text>().text = "Manghuli ng mga isda";
+            LookatPlayer(hit);
 			ActivateDialogue();
 			nameText.GetComponentInChildren<Text>().text = hit.tag;
 			dialogueText.GetComponentInChildren<Text>().text = scriptMakindo[1];
@@ -2453,12 +2476,14 @@ public class Test : MonoBehaviour
 			new RandomSelection(0, ipb, pb / 100f),
 			new RandomSelection(ipb, 101, (100 - pb) / 100f)
 		);
-		if (random <= pb)
+		if (random <= pb && !taxFinish)
 		{
 			QIndicator.SetActive(true);
 			QIndText.text = "BAGONG MISYON!";
 			QIndicatorAnim.SetBool("isPlaying", true);
-			LookatPlayer(hit);
+            questPanel.SetActive(true);
+            questPanel.GetComponentInChildren<Text>().text = "Kumuha ng manok at ibigay kay ama";
+            LookatPlayer(hit);
 			ActivateDialogue();
 			nameText.GetComponentInChildren<Text>().text = hit.tag;
 			dialogueText.GetComponentInChildren<Text>().text = scriptSilanday[1];
@@ -2490,12 +2515,14 @@ public class Test : MonoBehaviour
 			new RandomSelection(0, ipb, pb / 100f),
 			new RandomSelection(ipb, 101, (100 - pb) / 100f)
 		);
-		if (random <= pb)
+		if (random <= pb && !taroFinish)
 		{
 			QIndicator.SetActive(true);
 			QIndText.text = "BAGONG MISYON!";
 			QIndicatorAnim.SetBool("isPlaying", true);
-			LookatPlayer(hit);
+            questPanel.SetActive(true);
+            questPanel.GetComponentInChildren<Text>().text = "Kumuha ng taro at ibigay kay ina";
+            LookatPlayer(hit);
 			ActivateDialogue();
 			nameText.GetComponentInChildren<Text>().text = hit.tag;
 			dialogueText.GetComponentInChildren<Text>().text = scriptEnita[3];
@@ -2530,12 +2557,14 @@ public class Test : MonoBehaviour
 			new RandomSelection(0, ipb, pb / 100f),
 			new RandomSelection(ipb, 101, (100 - pb) / 100f)
 		);
-		if (random <= pb)
+		if (random <= pb && !stakeFinish)
 		{
 			QIndicator.SetActive(true);
 			QIndText.text = "BAGONG MISYON!";
 			QIndicatorAnim.SetBool("isPlaying", true);
-			LookatPlayer(hit);
+            questPanel.SetActive(true);
+            questPanel.GetComponentInChildren<Text>().text = "Kumuha ng kahoy at itusok sa lupa";
+            LookatPlayer(hit);
 			ActivateDialogue();
 			nameText.GetComponentInChildren<Text>().text = hit.tag;
 			dialogueText.GetComponentInChildren<Text>().text = scriptDarok[1];
